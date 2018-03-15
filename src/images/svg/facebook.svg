@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>6BACBE97-8641-402D-B953-BB9AB0BD580F</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <path d="M6,6 L6,4.2 C6,3.42 6.18,3 7.44,3 L9,3 L9,0 L6.6,0 C3.6,0 2.4,1.98 2.4,4.2 L2.4,6 L0,6 L0,9 L2.4,9 L2.4,18 L6,18 L6,9 L8.64,9 L9,6 L6,6 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Elements-/-Icons-/-S-/--Facebook">
+            <g id="Color" transform="translate(7.000000, 3.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Shape" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+                <g id="_Resources-/-ChangeColorsHere-/-Silver" mask="url(#mask-2)" fill="#DDE1E6">
+                    <g transform="translate(-7.000000, -3.000000)" id="↳-🎨Color">
+                        <rect x="0" y="0" width="24" height="24" rx="4"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
