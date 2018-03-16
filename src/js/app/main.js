@@ -5,6 +5,8 @@
 
     const $document = $(document)
 
+    const $page = $('.page')
+
     // main slider
     {
       new Swiper('.js-main-slider', {
@@ -74,6 +76,63 @@
           }
         }
       })*/
+    }
+
+    // select menu
+    {
+      $.widget('app.selectmenu', $.ui.selectmenu, {
+        _drawButton: function () {
+          this._super()
+          const selected = this.element.find('[selected]').length
+          const placeholder = this.options.placeholder
+
+          if (!selected && placeholder) {
+            this.buttonItem.text(placeholder)
+          }
+        }
+      })
+
+      const $select = $('.js-select')
+      $select.each((index, el) => {
+        const $this = $(el)
+        $this.selectmenu({
+          placeholder: $this.data('placeholder')
+        })
+      })
+
+      // если ест на странице кастомный селект
+      if ($select.length) {
+        // то по скроллу страницы закрываем попап
+        $page.on('scroll', () => {
+          $select.selectmenu('close')
+        })
+      }
+    }
+
+    // calendar TODO возможно придется менять при разработке
+    {
+      $.datepicker.regional['ru'] = {
+        closeText: 'Закрыть',
+        monthNames: ['январь', 'февраль', 'март', 'апрель', 'май', 'июнь', 'июль', 'август',
+          'сентябрь', 'октябрь', 'ноябрь', 'декабрь'
+        ],
+        monthNamesShort: ['янв', 'фев', 'мар', 'апр', 'май', 'июн', 'июл', 'авг', 'сен', 'окт', 'ноя', 'дек'],
+        dayNamesShort: ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'],
+        dayNamesMin: ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'],
+        dateFormat: 'dd/mm/yy',
+        firstDay: 1,
+        isRTL: false,
+        showMonthAfterYear: false,
+        yearSuffix: ''
+      }
+
+      $.datepicker.setDefaults($.datepicker.regional['ru'])
+
+      const $calendar = $('.js-calendar')
+
+      if ($calendar.length) {
+        $calendar.datepicker()
+      }
     }
 
   })

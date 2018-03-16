@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>1A94CA27-B9AB-47F6-9D80-4D1D15DE4839</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <path d="M8,8 C10.21,8 12,6.21 12,4 C12,1.79 10.21,0 8,0 C5.79,0 4,1.79 4,4 C4,6.21 5.79,8 8,8 Z M8,10 C5.33,10 0,11.34 0,14 L0,16 L16,16 L16,14 C16,11.34 10.67,10 8,10 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Elements-/-Icons-/-S-/--Person">
+            <g id="Color" transform="translate(4.000000, 4.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Shape" fill="#40b550" fill-rule="nonzero" xlink:href="#path-1"></use>
+                <g id="_Resources-/-ChangeColorsHere-/-Silver" mask="url(#mask-2)" fill="#40b550">
+                    <g transform="translate(-2.285714, -2.800000)" id="↳-🎨Color">
+                        <rect x="0" y="0" width="21" height="22" rx="4"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

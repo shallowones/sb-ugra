@@ -8,6 +8,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <link rel="stylesheet" href="fonts/bundle.css">
     <link rel="stylesheet" href="js/vendor/swiper/swiper.min.css">
+    <link rel="stylesheet" href="js/vendor/jquery-ui/jquery-ui.min.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
@@ -26,62 +27,66 @@
                 <ul>
                   <li><a href="#">О фонде</a>
                     <div class="menu-hidden">
-                      <div class="wrapper">
-                        <div class="col-3">
-                          <div class="menu-item with-desc"><a href="#">Официально</a>
-                            <p>Информация о деятельности Фонда поддержки предпринимательства Югры</p>
+                      <div class="menu-hidden-inner">
+                        <div class="wrapper">
+                          <div class="col-3">
+                            <div class="menu-item with-desc"><a href="#">Официально</a>
+                              <p>Информация о деятельности Фонда поддержки предпринимательства Югры</p>
+                            </div>
+                            <div class="menu-item with-desc"><a href="#">Антикоррупционная экспертиза</a>
+                              <p>Описание пункта меню, который необходимо выделить на фоне остальных</p>
+                            </div>
                           </div>
-                          <div class="menu-item with-desc"><a href="#">Антикоррупционная экспертиза</a>
-                            <p>Описание пункта меню, который необходимо выделить на фоне остальных</p>
+                          <div class="col-3 flex space-b">
+                            <div class="col-2">
+                              <div class="menu-item"><a href="#">Руководство</a></div>
+                              <div class="menu-item"><a href="#">Миссия</a></div>
+                              <div class="menu-item"><a href="#">История</a></div>
+                              <div class="menu-item"><a href="#">Партнеры</a></div>
+                            </div>
+                            <div class="col-2">
+                              <div class="menu-item"><a href="#">СМИ о нас</a></div>
+                              <div class="menu-item"><a href="#">Новости</a></div>
+                              <div class="menu-item"><a href="#">Вакансии</a></div>
+                              <div class="menu-item"><a href="#">Контакты</a></div>
+                            </div>
                           </div>
-                        </div>
-                        <div class="col-3 flex space-b">
-                          <div class="col-2">
-                            <div class="menu-item"><a href="#">Руководство</a></div>
-                            <div class="menu-item"><a href="#">Миссия</a></div>
-                            <div class="menu-item"><a href="#">История</a></div>
-                            <div class="menu-item"><a href="#">Партнеры</a></div>
+                          <div class="col-3">
+                            <div class="competition" style="background-image: url('images/slider-1.png')"><span>Прими участие в главном конкурсе Югры<a class="button" href="#">Узнать больше</a></span></div>
                           </div>
-                          <div class="col-2">
-                            <div class="menu-item"><a href="#">СМИ о нас</a></div>
-                            <div class="menu-item"><a href="#">Новости</a></div>
-                            <div class="menu-item"><a href="#">Вакансии</a></div>
-                            <div class="menu-item"><a href="#">Контакты</a></div>
-                          </div>
-                        </div>
-                        <div class="col-3">
-                          <div class="competition" style="background-image: url('images/slider-1.png')"><span>Прими участие в главном конкурсе Югры<a class="button" href="#">Узнать больше</a></span></div>
                         </div>
                       </div>
                     </div>
                   </li>
                   <li><a href="#">Поддержка</a>
                     <div class="menu-hidden">
-                      <div class="wrapper">
-                        <div class="col-3">
-                          <div class="menu-item with-desc"><a href="#">Финансовая поддержка</a>
-                            <ul class="list">
-                              <li>Предоставленние поручительств</li>
-                              <li>Компенсация части затрат по уплате лизинговых платежей</li>
-                              <li>Компенсация банковской процентной ставки</li>
-                              <li>Компенсация части затрат по обучению</li>
-                            </ul>
+                      <div class="menu-hidden-inner">
+                        <div class="wrapper">
+                          <div class="col-3">
+                            <div class="menu-item with-desc"><a href="#">Финансовая поддержка</a>
+                              <ul class="list">
+                                <li>Предоставленние поручительств</li>
+                                <li>Компенсация части затрат по уплате лизинговых платежей</li>
+                                <li>Компенсация банковской процентной ставки</li>
+                                <li>Компенсация части затрат по обучению</li>
+                              </ul>
+                            </div>
                           </div>
-                        </div>
-                        <div class="col-3">
-                          <div class="menu-item with-desc"><a href="#">Образовательная поддержка</a>
-                            <p>Организация Фондом безвозмездных образовательных мероприятий</p>
+                          <div class="col-3">
+                            <div class="menu-item with-desc"><a href="#">Образовательная поддержка</a>
+                              <p>Организация Фондом безвозмездных образовательных мероприятий</p>
+                            </div>
+                            <div class="menu-item with-desc"><a href="#">Информационно-консультационная поддержка</a>
+                              <p>В 2017 году Фондом предоставлено 10 434 консультации</p>
+                            </div>
                           </div>
-                          <div class="menu-item with-desc"><a href="#">Информационно-консультационная поддержка</a>
-                            <p>В 2017 году Фондом предоставлено 10 434 консультации</p>
-                          </div>
-                        </div>
-                        <div class="col-3">
-                          <div class="menu-item with-desc"><a href="#">Имущественная поддержка</a>
-                            <p>В 2017 году имущественную поддержку получили 76 субьекта</p>
-                          </div>
-                          <div class="menu-item with-desc"><a class="external" href="#">Поддержка социально-ориентированной деятельности</a>
-                            <p>Описание пункта меню, который необходимо выделить на фоне остальных</p>
+                          <div class="col-3">
+                            <div class="menu-item with-desc"><a href="#">Имущественная поддержка</a>
+                              <p>В 2017 году имущественную поддержку получили 76 субьекта</p>
+                            </div>
+                            <div class="menu-item with-desc"><a class="external" href="#">Поддержка социально-ориентированной деятельности</a>
+                              <p>Описание пункта меню, который необходимо выделить на фоне остальных</p>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -89,114 +94,116 @@
                   </li>
                   <li><a href="#">Проекты</a>
                     <div class="menu-hidden">
-                      <div class="wrapper projects-block">
-                        <div class="projects-filter">
-                          <div class="projects-filter-left">
-                            <button class="projects-filter__button active" type="button">Все</button>
-                            <button class="projects-filter__button" type="button">События</button>
-                            <button class="projects-filter__button" type="button">Конкурсы</button>
+                      <div class="menu-hidden-inner">
+                        <div class="wrapper projects-block">
+                          <div class="projects-filter">
+                            <div class="projects-filter-left">
+                              <button class="projects-filter__button active" type="button">Все</button>
+                              <button class="projects-filter__button" type="button">События</button>
+                              <button class="projects-filter__button" type="button">Конкурсы</button>
+                            </div>
+                            <div class="projects-filter-right">
+                              <button class="projects-filter__button" type="button">Все<span>9</span></button>
+                              <button class="projects-filter__button active" type="button">Старт<span>6</span></button>
+                              <button class="projects-filter__button" type="button">Развитие<span>2</span></button>
+                              <button class="projects-filter__button" type="button">Бизнес<span>1</span></button>
+                            </div>
                           </div>
-                          <div class="projects-filter-right">
-                            <button class="projects-filter__button" type="button">Все<span>9</span></button>
-                            <button class="projects-filter__button active" type="button">Старт<span>6</span></button>
-                            <button class="projects-filter__button" type="button">Развитие<span>2</span></button>
-                            <button class="projects-filter__button" type="button">Бизнес<span>1</span></button>
-                          </div>
+                          <div class="projects"><a class="projects__item" href="#">
+                              <div class="projects__item-title">Азбука Бизнеса</div>
+                              <div class="projects__item-bottom">
+                                <div class="date">02.02.2018</div><span class="delimiter"></span>
+                                <div class="green">Старт</div>
+                              </div></a><a class="projects__item" href="#">
+                              <div class="projects__item-title">Факультет бизнеса</div>
+                              <div class="projects__item-bottom">
+                                <div class="date">02.02.2018</div><span class="delimiter"></span>
+                                <div class="green">Старт</div>
+                              </div></a><a class="projects__item" href="#">
+                              <div class="projects__item-title">Региональный этап Всероссийского конкурса «Молодой предприниматель России»</div>
+                              <div class="projects__item-bottom">
+                                <div class="date">02.02.2018</div><span class="delimiter"></span>
+                                <div class="green">Конкурс</div>
+                              </div></a><a class="projects__item" href="#">
+                              <div class="projects__item-title">Слёт молодых предпринимателей</div>
+                              <div class="projects__item-bottom">
+                                <div class="date">02.02.2018</div><span class="delimiter"></span>
+                                <div class="green">Событие</div>
+                              </div></a><a class="projects__item" href="#">
+                              <div class="projects__item-title">Школа сервиса</div>
+                              <div class="projects__item-bottom">
+                                <div class="date">02.02.2018</div>
+                                <div class="delimiter"></div>
+                                <div class="green">Старт</div>
+                              </div></a><a class="projects__item" href="#">
+                              <div class="projects__item-title">Бизнес наставничество в Югре</div>
+                              <div class="projects__item-bottom">
+                                <div class="date">02.02.2018</div><span class="delimiter"></span>
+                                <div class="green">Старт</div>
+                                <div class="delimiter"></div>
+                                <div class="green">Бизнес</div>
+                              </div></a><a class="projects__item" href="#">
+                              <div class="projects__item-title">Адаптация молодых людей, отбывающих наказание в местах лишения свободы</div>
+                              <div class="projects__item-bottom">
+                                <div class="date">02.02.2018</div>
+                                <div class="delimiter"></div>
+                                <div class="green">Старт</div>
+                              </div></a><a class="projects__item" href="#">
+                              <div class="projects__item-title">Бизнес Инвестиции</div>
+                              <div class="projects__item-bottom">
+                                <div class="date">02.02.2018</div>
+                                <div class="delimiter"></div>
+                                <div class="green">Развитие</div>
+                              </div></a><a class="projects__item" href="#">
+                              <div class="projects__item-title">Фабрика деловых решений</div>
+                              <div class="projects__item-bottom">
+                                <div class="date">02.02.2018</div>
+                                <div class="delimiter"></div>
+                                <div class="green">Старт</div>
+                              </div></a><a class="projects__item" href="#">
+                              <div class="projects__item-title">Кубок «Точка роста»</div>
+                              <div class="projects__item-bottom">
+                                <div class="date">02.02.2018</div>
+                                <div class="delimiter"></div>
+                                <div class="green">Конкурс</div>
+                              </div></a><a class="projects__item" href="#">
+                              <div class="projects__item-title">Дни предпринимательства в Югре</div>
+                              <div class="projects__item-bottom">
+                                <div class="date">02.02.2018</div>
+                                <div class="delimiter"></div>
+                                <div class="green">Событие</div>
+                              </div></a><a class="projects__item" href="#">
+                              <div class="projects__item-title">Конкурс творческих работ «Предпринимательство сегодня»</div>
+                              <div class="projects__item-bottom">
+                                <div class="date">02.02.2018</div>
+                                <div class="delimiter"></div>
+                                <div class="green">Конкурс</div>
+                              </div></a><a class="projects__item" href="#">
+                              <div class="projects__item-title">Наставничество</div>
+                              <div class="projects__item-bottom">
+                                <div class="date">02.02.2018</div>
+                                <div class="delimiter"></div>
+                                <div class="green">Развитие</div>
+                              </div></a><a class="projects__item" href="#">
+                              <div class="projects__item-title">Форум предпринимателей</div>
+                              <div class="projects__item-bottom">
+                                <div class="date">02.02.2018</div>
+                                <div class="delimiter"></div>
+                                <div class="green">Событие</div>
+                              </div></a><a class="projects__item" href="#">
+                              <div class="projects__item-title">Региональная конференция предпринимателей</div>
+                              <div class="projects__item-bottom">
+                                <div class="date">02.02.2018</div>
+                                <div class="delimiter"></div>
+                                <div class="green">Событие</div>
+                              </div></a><a class="projects__item" href="#">
+                              <div class="projects__item-title">Конкурс журналистского мастерства</div>
+                              <div class="projects__item-bottom">
+                                <div class="date">02.02.2018</div>
+                                <div class="delimiter"></div>
+                                <div class="green">Конкурс</div>
+                              </div></a></div>
                         </div>
-                        <div class="projects"><a class="projects__item" href="#">
-                            <div class="projects__item-title">Азбука Бизнеса</div>
-                            <div class="projects__item-bottom">
-                              <div class="date">02.02.2018</div><span class="delimiter"></span>
-                              <div class="green">Старт</div>
-                            </div></a><a class="projects__item" href="#">
-                            <div class="projects__item-title">Факультет бизнеса</div>
-                            <div class="projects__item-bottom">
-                              <div class="date">02.02.2018</div><span class="delimiter"></span>
-                              <div class="green">Старт</div>
-                            </div></a><a class="projects__item" href="#">
-                            <div class="projects__item-title">Региональный этап Всероссийского конкурса «Молодой предприниматель России»</div>
-                            <div class="projects__item-bottom">
-                              <div class="date">02.02.2018</div><span class="delimiter"></span>
-                              <div class="green">Конкурс</div>
-                            </div></a><a class="projects__item" href="#">
-                            <div class="projects__item-title">Слёт молодых предпринимателей</div>
-                            <div class="projects__item-bottom">
-                              <div class="date">02.02.2018</div><span class="delimiter"></span>
-                              <div class="green">Событие</div>
-                            </div></a><a class="projects__item" href="#">
-                            <div class="projects__item-title">Школа сервиса</div>
-                            <div class="projects__item-bottom">
-                              <div class="date">02.02.2018</div>
-                              <div class="delimiter"></div>
-                              <div class="green">Старт</div>
-                            </div></a><a class="projects__item" href="#">
-                            <div class="projects__item-title">Бизнес наставничество в Югре</div>
-                            <div class="projects__item-bottom">
-                              <div class="date">02.02.2018</div><span class="delimiter"></span>
-                              <div class="green">Старт</div>
-                              <div class="delimiter"></div>
-                              <div class="green">Бизнес</div>
-                            </div></a><a class="projects__item" href="#">
-                            <div class="projects__item-title">Адаптация молодых людей, отбывающих наказание в местах лишения свободы</div>
-                            <div class="projects__item-bottom">
-                              <div class="date">02.02.2018</div>
-                              <div class="delimiter"></div>
-                              <div class="green">Старт</div>
-                            </div></a><a class="projects__item" href="#">
-                            <div class="projects__item-title">Бизнес Инвестиции</div>
-                            <div class="projects__item-bottom">
-                              <div class="date">02.02.2018</div>
-                              <div class="delimiter"></div>
-                              <div class="green">Развитие</div>
-                            </div></a><a class="projects__item" href="#">
-                            <div class="projects__item-title">Фабрика деловых решений</div>
-                            <div class="projects__item-bottom">
-                              <div class="date">02.02.2018</div>
-                              <div class="delimiter"></div>
-                              <div class="green">Старт</div>
-                            </div></a><a class="projects__item" href="#">
-                            <div class="projects__item-title">Кубок «Точка роста»</div>
-                            <div class="projects__item-bottom">
-                              <div class="date">02.02.2018</div>
-                              <div class="delimiter"></div>
-                              <div class="green">Конкурс</div>
-                            </div></a><a class="projects__item" href="#">
-                            <div class="projects__item-title">Дни предпринимательства в Югре</div>
-                            <div class="projects__item-bottom">
-                              <div class="date">02.02.2018</div>
-                              <div class="delimiter"></div>
-                              <div class="green">Событие</div>
-                            </div></a><a class="projects__item" href="#">
-                            <div class="projects__item-title">Конкурс творческих работ «Предпринимательство сегодня»</div>
-                            <div class="projects__item-bottom">
-                              <div class="date">02.02.2018</div>
-                              <div class="delimiter"></div>
-                              <div class="green">Конкурс</div>
-                            </div></a><a class="projects__item" href="#">
-                            <div class="projects__item-title">Наставничество</div>
-                            <div class="projects__item-bottom">
-                              <div class="date">02.02.2018</div>
-                              <div class="delimiter"></div>
-                              <div class="green">Развитие</div>
-                            </div></a><a class="projects__item" href="#">
-                            <div class="projects__item-title">Форум предпринимателей</div>
-                            <div class="projects__item-bottom">
-                              <div class="date">02.02.2018</div>
-                              <div class="delimiter"></div>
-                              <div class="green">Событие</div>
-                            </div></a><a class="projects__item" href="#">
-                            <div class="projects__item-title">Региональная конференция предпринимателей</div>
-                            <div class="projects__item-bottom">
-                              <div class="date">02.02.2018</div>
-                              <div class="delimiter"></div>
-                              <div class="green">Событие</div>
-                            </div></a><a class="projects__item" href="#">
-                            <div class="projects__item-title">Конкурс журналистского мастерства</div>
-                            <div class="projects__item-bottom">
-                              <div class="date">02.02.2018</div>
-                              <div class="delimiter"></div>
-                              <div class="green">Конкурс</div>
-                            </div></a></div>
                       </div>
                     </div>
                   </li>
@@ -210,6 +217,10 @@
       </header>
       <main class="main">
         <div class="swiper-container main-slider js-main-slider">
+          <div class="main-slider-buttons wrapper">
+            <button class="swiper-button-prev main-slider__prev" type="button"></button>
+            <button class="swiper-button-next main-slider__next" type="button"></button>
+          </div>
           <div class="swiper-wrapper">
             <div class="swiper-slide main-slide" style="background-image: url('images/slider-1.png')">
               <div class="wrapper js-main-slide-desc">
@@ -250,10 +261,6 @@
                 </div><a class="button big" href="#">Подать заявку</a><a class="button transparent" href="#">Узнать подробнее</a>
               </div>
             </div>
-          </div>
-          <div class="main-slider-buttons wrapper">
-            <button class="swiper-button-prev main-slider__prev" type="button"></button>
-            <button class="swiper-button-next main-slider__next" type="button"></button>
           </div>
           <div class="main-slider-bottom">
             <div class="wrapper">
@@ -352,7 +359,7 @@
                 </div></a></div>
             <div class="center">
               <!-- во время ajax-запроса добавить атрибут disabled-->
-              <button class="button blue-text more" type="button">Показать еще</button>
+              <button class="button blue-text icon-left load" type="button">Показать еще</button>
             </div>
           </div>
         </div>
@@ -378,8 +385,33 @@
               </div>
             </div>
             <div class="events-right">
+              <div class="events-filter">
+                <select class="select with-icon point js-select" data-placeholder="Город">
+                  <option value="1">Москва</option>
+                  <option value="2">Санкт-Петербург</option>
+                  <option value="3">Ханты-Мансийск</option>
+                </select>
+                <select class="select with-icon person js-select" data-placeholder="Тренер">
+                  <option value="1">Иванов А.С.</option>
+                  <option value="2">Петров Ф.В.</option>
+                  <option value="3">Кульков И.Я.</option>
+                </select>
+                <select class="select with-icon event js-select" data-placeholder="Тип мероприятия">
+                  <option value="1">Творческое</option>
+                  <option value="2">Профессиональное</option>
+                  <option value="3">Координальное</option>
+                </select>
+                <select class="select with-icon project js-select" data-placeholder="Проект">
+                  <option value="1">Старт</option>
+                  <option value="2">Бизнес</option>
+                  <option value="3">Вуман</option>
+                </select>
+                <div class="calendar">
+                  <!-- календарь пока что от jquery ui, при разработке возможна смена-->
+                  <input class="calendar__input js-calendar" type="text" value="Календарь" readonly>
+                </div>
+              </div>
               <div class="events-right-wrapper">
-                <!-- тут фильтр-->
                 <div class="events-list">
                   <div class="events-block">
                     <div class="events-date">
@@ -697,7 +729,7 @@
                   <button class="publications-controls__next js-next" type="button"></button>
                 </div>
               </div>
-              <div class="swiper-wrapper"><a class="swiper-slide partners__item" href="#" style="background-image: url('images/partner-1.jpg')"></a><a class="swiper-slide partners__item" href="#" style="background-image: url('images/partner-2.png')"></a><a class="swiper-slide partners__item" href="#" style="background-image: url('images/partner-1.jpg')"></a><a class="swiper-slide partners__item" href="#" style="background-image: url('images/partner-2.png')"></a><a class="swiper-slide partners__item" href="#" style="background-image: url('images/partner-1.jpg')"></a><a class="swiper-slide partners__item" href="#" style="background-image: url('images/partner-2.png')"></a><a class="swiper-slide partners__item" href="#" style="background-image: url('images/partner-1.jpg')"></a><a class="swiper-slide partners__item" href="#" style="background-image: url('images/partner-2.png')"></a>
+              <div class="swiper-wrapper"><a class="swiper-slide partners__item" href="#" style="background-image: url('images/partner-1.jpg')"></a><a class="swiper-slide partners__item" href="#" style="background-image: url('images/partner-2.jpg')"></a><a class="swiper-slide partners__item" href="#" style="background-image: url('images/partner-3.jpg')"></a><a class="swiper-slide partners__item" href="#" style="background-image: url('images/partner-4.jpg')"></a><a class="swiper-slide partners__item" href="#" style="background-image: url('images/partner-1.jpg')"></a><a class="swiper-slide partners__item" href="#" style="background-image: url('images/partner-2.jpg')"></a><a class="swiper-slide partners__item" href="#" style="background-image: url('images/partner-3.jpg')"></a><a class="swiper-slide partners__item" href="#" style="background-image: url('images/partner-4.jpg')"></a>
               </div>
             </div>
           </div>
@@ -723,6 +755,7 @@
     </div>
     <script src="js/vendor/jquery/jquery-3.3.1.min.js"></script>
     <script src="js/vendor/swiper/swiper.min.js"></script>
+    <script src="js/vendor/jquery-ui/jquery-ui.min.js"></script>
     <script src="js/app/main.js"></script>
   </body>
 </html>

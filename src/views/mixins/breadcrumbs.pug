@@ -1,0 +1,7 @@
+mixin breadcrumbs(...items)
+  .breadcrumbs
+    each item, index in items
+      if (index === items.length - 1)
+        span.breadcrumbs__item= item
+      else
+        a(href="#").breadcrumbs__item= item

@@ -1,0 +1,231 @@
+extends layout
+
+include mixins/breadcrumbs
+
+block content
+
+  -
+    var menuItems = [
+      {
+        name: 'Официально',
+        active: true
+      },
+      {
+        name: 'Антикоррупционная экспертиза',
+        active: false
+      },
+      {
+        name: 'Руководство',
+        active: false
+      },
+      {
+        name: 'СМИ о нас',
+        active: false
+      },
+      {
+        name: 'Миссия',
+        active: false
+      },
+      {
+        name: 'Новости',
+        active: false
+      },
+      {
+        name: 'История',
+        active: false
+      },
+      {
+        name: 'Вакансии',
+        active: false
+      },
+      {
+        name: 'Партнеры',
+        active: false
+      },
+      {
+        name: 'Контакты',
+        active: false
+      }
+    ]
+
+  main.main.detail
+    .wrapper
+      +breadcrumbs('Главная', 'О фонде', 'Официально')
+      h1 Заголовок страницы
+      nav.detail-menu
+        ul
+          each item in menuItems
+            if (item.active)
+              li
+                span= item.name
+            else
+              li
+                a(href="#")
+                  span= item.name
+      h3.blue Надёжный поручитель
+      .inform
+        .inform-left
+          p [тут картинка]
+        .inform-right
+          .inform-title Объявлены победители конкурса
+          .inform-desc.
+            Пример отображения информации об изменнии условий проектаили о смене его
+            статуса для уведомления пользователей <a href="#">об изменениях</a>
+      p.
+        Для развития успешного бизнеса необходимы денежные вливания.
+        Где взять деньги? Можно найти инвестора и отдавать ему свою прибыль.
+        А можно взять кредит в банке. Но там нужен залог. Что делать если собственного
+        имущества недостаточно для залога или нет желания накладывать на него обременение?
+      p.
+        Здесь самое время обратиться в Фонд поддержки предпринимательства Югры.
+        Ведь основное направление Фонда – это предоставление поручительств для
+        субъектов малого и среднего предпринимательства на развитие бизнеса без
+        залога их собственных средств. Для этого разработана специальная Программа
+        «Гарантия». Фонд обеспечит до 70% требуемого залога и станет поручителем
+        перед кредитной организацией.
+
+      br
+      br
+
+      h3.blue Видеоплеер 1
+      .video-block.big
+        .video
+          img(src="images/video.jpg", width="1120", height="638")
+          .video-title Заголовок видеоролика
+          .video-desc Пример описания видеоролика для примера отображения лида в данном блоке
+
+      br
+      br
+
+      h3.blue Видеоплеер 2
+      .video-block
+        .video
+          img(src="images/video.jpg", width="544", height="310")
+          .video-title Заголовок видеоролика
+          .video-desc Пример описания видеоролика для примера отображения лида в данном блоке
+        .video
+          img(src="images/video.jpg", width="544", height="310")
+          .video-title Пример второго видеоролика
+          .video-desc Пример описания видеоролика для примера отображения лида в данном блоке
+        .video
+          img(src="images/video.jpg", width="544", height="310")
+          .video-title Заголовок видеоролика
+          .video-desc Пример описания видеоролика для примера отображения лида в данном блоке
+        .video
+          img(src="images/video.jpg", width="544", height="310")
+          .video-title Пример второго видеоролика
+          .video-desc Пример описания видеоролика для примера отображения лида в данном блоке
+      .center
+        // во время ajax-запроса добавить атрибут disabled
+        button(type="button").button.blue-text.icon-left.load Показать еще
+
+      br
+      br
+
+      h3.blue Калькулятор расчета компенсации
+      form(action="#").form
+        .form-control
+          .form-control-left
+            label(for="control-1").form-control__label
+              | Поддержка не предоставляется субъектам, осуществляющим следующие виды деятельности:
+          .form-control-right
+            select#control-1(data-placeholder="Выберите отрасль").select.js-select
+              option(value="1") Отрасль права
+              option(value="2") Народное хозяйство
+              option(value="3") Отрасль экономики
+            br
+            input(type="checkbox", id="check-select", name="check-select").form-control__check
+            label(for="check-select").form-control__label Деятельность не представлена в списке
+        .form-control
+          .form-control-left
+            label(for="control-2").form-control__label Дата договора:
+          .form-control-right
+            .form-control-calendar
+              input(type="text", placeholder="Выберите дату", readonly)#control-2.form-control__input.js-calendar
+        .form-control
+          .form-control-left
+            label(for="control-3").form-control__label Сумма, рублей:
+          .form-control-right
+            input(type="text", placeholder="1 234 567")#control-3.form-control__input
+        .form-control
+          .form-control-left
+            label(for="control-4").form-control__label Дата окончания гашения договора:
+          .form-control-right
+            .form-control-calendar
+              input(type="text", placeholder="Выберите дату", readonly)#control-4.form-control__input.js-calendar
+        .form-control
+          .form-control-left
+            label(for="control-5").form-control__label Сумма платежей, рублей:
+          .form-control-right
+            input(type="text", placeholder="50 000")#control-5.form-control__input
+        .form-control
+          .form-control-left
+            label(for="control-6").form-control__label Процентная ставка:
+          .form-control-right
+            input(type="text", placeholder="14%")#control-6.form-control__input
+        .form-control
+          .form-control-left
+            label(for="control-7").form-control__label Процентная ставка:
+          .form-control-right
+            .form-control-calendar
+              input(type="text", placeholder="Выберите дату", readonly)#control-7.form-control__input.js-calendar
+        .form-control
+          .form-control-left
+            label.form-control__label Деятельность связана с транспортными услугами:
+          .form-control-right
+            input(type="radio", name="radio-1", checked)#radio-1.form-control__radio
+            label(for="radio-1").form-control__label Да
+            input(type="radio", name="radio-1")#radio-2.form-control__radio
+            label(for="radio-2").form-control__label Нет
+        .form-control
+          .form-control-left
+            label.form-control__label Деятельность связана с транспортными услугами:
+          .form-control-right
+            input(type="radio", name="radio-2", disabled)#radio-3.form-control__radio
+            label(for="radio-3").form-control__label Да
+            input(type="radio", name="radio-2", disabled, checked)#radio-4.form-control__radio
+            label(for="radio-4").form-control__label Нет
+            span [тут инфо]
+        .form-control
+          .form-control-right
+            button(type="submit").button.blue Рассчитать сумму
+            button(type="submit").button.blue-text Сбросить значения
+
+      h3.blue Результаты расчет калькулятора
+      .gray-block
+        .inform-title Результаты расчета
+        .inform-desc.
+          Указанная сумма компенсации является ориентировочной
+          и рассчитана исходя из ежемесячного гашения долга по
+          кредиту равными платежами
+        .result-block
+          .result
+            h3 603 003.16
+            .inform-desc Сумма компенсации банковских<br>процентов, всего (в рублях)
+          .result
+            h3 46 384.86
+            .inform-desc Сумма компенсации банковских<br>процентов, всего (в рублях)
+        .result-controls
+          a(href="#").button.blue.icon-left.mail Отправить запрос на получение поддержки
+          button(type="button").button.blue.icon-left.print Распечатать расчет
+          button(type="button").button.blue-text.blue-bord.icon-left.back Вернуться к калькулятору
+
+      br
+      br
+
+      //-h3.h3 Документы 1
+      //-.files.two-cols
+        a(href="file.doc").file.
+          Типовой бизнес-план на тему: «Создание заготовительного и
+          лесопильного цеха на территории ХМАО
+
+
+
+
+
+
+
+
+
+
+
