@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="fonts/bundle.css">
     <link rel="stylesheet" href="js/vendor/swiper/swiper.min.css">
     <link rel="stylesheet" href="js/vendor/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="js/vendor/fancybox/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="js/vendor/jbox/jbox.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
@@ -98,13 +100,13 @@
                         <div class="wrapper projects-block">
                           <div class="projects-filter">
                             <div class="projects-filter-left">
-                              <button class="projects-filter__button active" type="button">Все</button>
+                              <div class="projects-filter__button active">Все</div>
                               <button class="projects-filter__button" type="button">События</button>
                               <button class="projects-filter__button" type="button">Конкурсы</button>
                             </div>
                             <div class="projects-filter-right">
                               <button class="projects-filter__button" type="button">Все<span>9</span></button>
-                              <button class="projects-filter__button active" type="button">Старт<span>6</span></button>
+                              <div class="projects-filter__button active">Старт<span>6</span></div>
                               <button class="projects-filter__button" type="button">Развитие<span>2</span></button>
                               <button class="projects-filter__button" type="button">Бизнес<span>1</span></button>
                             </div>
@@ -218,8 +220,8 @@
       <main class="main">
         <div class="swiper-container main-slider js-main-slider">
           <div class="main-slider-buttons wrapper">
-            <button class="swiper-button-prev main-slider__prev" type="button"></button>
-            <button class="swiper-button-next main-slider__next" type="button"></button>
+            <button class="swiper-button-prev main-slider__prev js-prev" type="button"></button>
+            <button class="swiper-button-next main-slider__next js-next" type="button"></button>
           </div>
           <div class="swiper-wrapper">
             <div class="swiper-slide main-slide" style="background-image: url('images/slider-1.png')">
@@ -265,9 +267,11 @@
           <div class="main-slider-bottom">
             <div class="wrapper">
               <div class="main-slider-pag">
-                <div class="main-slider-pag__item"><span style="width: 50%"></span></div>
-                <div class="main-slider-pag__item"></div>
-                <div class="main-slider-pag__item"></div>
+                <div class="main-slider-pag__item">
+                  <!--span(style="width: 50%")--><span class="js-timer"></span>
+                </div>
+                <div class="main-slider-pag__item"><span class="js-timer"></span></div>
+                <div class="main-slider-pag__item"><span class="js-timer"></span></div>
               </div>
               <div class="main-numbers">
                 <div class="main-numbers__item">
@@ -756,6 +760,8 @@
     <script src="js/vendor/jquery/jquery-3.3.1.min.js"></script>
     <script src="js/vendor/swiper/swiper.min.js"></script>
     <script src="js/vendor/jquery-ui/jquery-ui.min.js"></script>
+    <script src="js/vendor/fancybox/jquery.fancybox.min.js"></script>
+    <script src="js/vendor/jbox/jbox.min.js"></script>
     <script src="js/app/main.js"></script>
   </body>
 </html>

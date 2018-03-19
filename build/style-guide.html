@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="fonts/bundle.css">
     <link rel="stylesheet" href="js/vendor/swiper/swiper.min.css">
     <link rel="stylesheet" href="js/vendor/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="js/vendor/fancybox/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="js/vendor/jbox/jbox.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
@@ -98,13 +100,13 @@
                         <div class="wrapper projects-block">
                           <div class="projects-filter">
                             <div class="projects-filter-left">
-                              <button class="projects-filter__button active" type="button">Все</button>
+                              <div class="projects-filter__button active">Все</div>
                               <button class="projects-filter__button" type="button">События</button>
                               <button class="projects-filter__button" type="button">Конкурсы</button>
                             </div>
                             <div class="projects-filter-right">
                               <button class="projects-filter__button" type="button">Все<span>9</span></button>
-                              <button class="projects-filter__button active" type="button">Старт<span>6</span></button>
+                              <div class="projects-filter__button active">Старт<span>6</span></div>
                               <button class="projects-filter__button" type="button">Развитие<span>2</span></button>
                               <button class="projects-filter__button" type="button">Бизнес<span>1</span></button>
                             </div>
@@ -236,9 +238,7 @@
           </nav>
           <h3 class="blue">Надёжный поручитель</h3>
           <div class="inform">
-            <div class="inform-left">
-              <p>[тут картинка]</p>
-            </div>
+            <div class="inform-left"><img src="images/cup.svg"></div>
             <div class="inform-right">
               <div class="inform-title">Объявлены победители конкурса</div>
               <div class="inform-desc">
@@ -381,7 +381,11 @@
                 <input class="form-control__radio" type="radio" name="radio-2" disabled id="radio-3">
                 <label class="form-control__label" for="radio-3">Да</label>
                 <input class="form-control__radio" type="radio" name="radio-2" disabled checked id="radio-4">
-                <label class="form-control__label" for="radio-4">Нет</label><span>[тут инфо]</span>
+                <label class="form-control__label" for="radio-4">Нет</label>
+                <button class="info js-info" type="button"><span class="info-inner">
+                    Субъекты предпринимательства, не менее
+                    50 процентов работников которых на последнюю
+                    отчетную дату являются инвалидами</span></button>
               </div>
             </div>
             <div class="form-control">
@@ -414,6 +418,359 @@
               <button class="button blue-text blue-bord icon-left back" type="button">Вернуться к калькулятору</button>
             </div>
           </div><br><br>
+          <h3>Документы 1</h3>
+          <div class="file-block two-cols"><a class="file" href="file.docx">
+              Типовой бизнес-план на тему: «Создание заготовительного и
+              лесопильного цеха на территории ХМАО<span>docx 1.8Мб</span></a><a class="file" href="file.pptx">
+              Типовой бизнес-план на тему: «Создание заготовительного и
+              лесопильного цеха на территории ХМАО<span>pptx 1.8Мб</span></a><a class="file" href="file.rar">
+              Типовой бизнес-план на тему: «Создание заготовительного и
+              лесопильного цеха на территории ХМАО<span>rar 1.8Мб</span></a><a class="file" href="file.xlsx">Типовой бизнес-план на тему<span>xlsx 1.8Мб</span></a><a class="file" href="file.pdf">
+              Типовой бизнес-план на тему: «Создание заготовительного и
+              лесопильного цеха<span>pdf 1.8Мб</span></a><a class="file" href="file.zip">
+              Типовой бизнес-план на тему: «Создание заготовительного и
+              лесопильного цеха<span>zip 1.8Мб</span></a><a class="file" href="file.hz">
+              Типовой бизнес-план на тему: «Создание заготовительного и
+              лесопильного цеха</a></div><br><br>
+          <h3>Документы 2</h3>
+          <div class="file-block three-cols"><a class="file" href="file.docx">
+              Типовой бизнес-план на тему: «Создание заготовительного и
+              лесопильного цеха на территории ХМАО<span>docx 1.8Мб</span></a><a class="file" href="file.pptx">
+              Типовой бизнес-план на тему: «Создание заготовительного и
+              лесопильного цеха на территории ХМАО<span>pptx 1.8Мб</span></a><a class="file" href="file.rar">
+              Типовой бизнес-план на тему: «Создание заготовительного и
+              лесопильного цеха на территории ХМАО<span>rar 1.8Мб</span></a><a class="file" href="file.xlsx">Типовой бизнес-план на тему<span>xlsx 1.8Мб</span></a><a class="file" href="file.pdf">
+              Типовой бизнес-план на тему: «Создание заготовительного и
+              лесопильного цеха<span>pdf 1.8Мб</span></a><a class="file" href="file.zip">
+              Типовой бизнес-план на тему: «Создание заготовительного и
+              лесопильного цеха<span>zip 1.8Мб</span></a></div><br><br>
+          <h3>Нумерованный список этапов</h3>
+          <p>
+            Для предпринимателей, которые уже работали с Фондом, получение
+            следующего кредита на развитие бизнеса не вызывает нервную дрожь.
+            Никто из них не начинает мучительно подсчитывать хватит ли у него
+            личного имущества, чтобы передать его под залог банку.
+          </p>
+          <p>
+            Максимум, что в этом случае предпринимает бизнесмен, так это делает
+            один звонок. Куда? В Фонд поддержки предпринимательства Югры – своему поручителю.
+          </p><br>
+          <ol class="stages">
+            <li>
+              Субъект малого и среднего предпринимательства обращается в один<br>
+              из Банков-партнеров Фонда с заявкой на получение кредита под поручительство
+              Фонда – Программа «Гарантия»
+            </li>
+            <li>
+              Банк рассматривает заявку Заемщика, анализирует документы и его финансовое
+              состояние. Если единственное препятствие к получению кредита — это недостаточная
+              залоговая база, то Банк одобряет кредит под поручительство Фонда
+            </li>
+            <li>
+              Заемщик подписывает заявление на предоставление поручительства и Банк-партнер
+              оперативно направляет в Фонд необходимый пакет документов
+            </li>
+            <li>
+              Фонд в течение 3 (трех) рабочих дней, с момента получения заявления и пакета
+              документов от Банка, принимает решение о предоставлении поручительства Заемщику
+            </li>
+            <li>В случае положительного решения, заключается трехсторонний договор поручительства Фонда</li>
+          </ol><br><br>
+          <h3>Стандартный нумерованный список</h3>
+          <ol>
+            <li>
+              Субъект малого и среднего предпринимательства обращается в один<br>
+              из Банков-партнеров Фонда с заявкой на получение кредита под поручительство
+              Фонда – Программа «Гарантия»
+            </li>
+            <li>
+              Банк рассматривает заявку Заемщика, анализирует документы и его финансовое
+              состояние. Если единственное препятствие к получению кредита — это недостаточная
+              залоговая база, то Банк одобряет кредит под поручительство Фонда
+            </li>
+            <li>
+              Заемщик подписывает заявление на предоставление поручительства и Банк-партнер
+              оперативно направляет в Фонд необходимый пакет документов
+            </li>
+            <li>
+              Фонд в течение 3 (трех) рабочих дней, с момента получения заявления и пакета
+              документов от Банка, принимает решение о предоставлении поручительства Заемщику
+            </li>
+            <li>В случае положительного решения, заключается трехсторонний договор поручительства Фонда</li>
+          </ol><br><br>
+          <h3>Стандартный маркированный список</h3>
+          <ul>
+            <li>Субъект малого и среднего предпринимательства обращается в один</li>
+            <li>
+              из Банков-партнеров Фонда с заявкой на получение кредита под поручительство
+              Фонда – Программа «Гарантия»
+            </li>
+            <li>
+              Банк рассматривает заявку Заемщика, анализирует документы и его финансовое
+              состояние. Если единственное препятствие к получению кредита — это недостаточная
+              залоговая база, то Банк одобряет кредит под поручительство Фонда
+              <ul>
+                <li>
+                  Заемщик подписывает заявление на предоставление поручительства и Банк-партнер
+                  оперативно направляет в Фонд необходимый пакет документов
+                </li>
+                <li>
+                  Фонд в течение 3 (трех) рабочих дней, с момента получения заявления и пакета
+                  документов от Банка, принимает решение о предоставлении поручительства Заемщику
+                </li>
+              </ul>
+            </li>
+            <li>В случае положительного решения, заключается трехсторонний договор поручительства Фонда</li>
+          </ul><br><br>
+          <h3>Выпадающие списки «Аккордеоны»</h3>
+          <div class="accordion">
+            <button class="accordion__button js-accordion" type="button">Могут ли предприниматели выступить поручителем по договору целевого займа?</button>
+            <div class="accordion-hidden">
+              Фонд может предоставить поддержку в форме микрофинасирования. Максимальный размер
+              микрозайма составляет 3 000 000 рублей. Для предпринимателей, осуществляющих свою
+              деятельность не более 6 месяцев с момента государственной регистрации,
+              максимальный размер микрозайма составляет 1 000 000 рублей. Максимальный
+              срок использования заемных средств - 36 месяцев.
+            </div>
+          </div>
+          <div class="accordion">
+            <button class="accordion__button js-accordion" type="button">Что может являться обеспечением микрозайма?</button>
+            <div class="accordion-hidden">Фонд может предоставить поддержку в форме микрофинасирования.</div>
+          </div>
+          <div class="accordion">
+            <button class="accordion__button js-accordion" type="button">
+              Какие виды поддержки оказывает Фонд субъектам малого и среднего предпринимательства
+              зарегистрированным более 3 лет?
+            </button>
+            <div class="accordion-hidden">
+              Фонд может предоставить поддержку в форме микрофинасирования. Максимальный размер
+              микрозайма составляет 3 000 000 рублей. Для предпринимателей, осуществляющих свою
+              деятельность не более 6 месяцев с момента государственной регистрации,
+              максимальный размер микрозайма составляет 1 000 000 рублей. Максимальный
+              срок использования заемных средств - 36 месяцев. Обязательные условия:
+              регистрация и осуществление деятельности на территории автономного округа,
+              отсутствие долгов по налогам и сборам, участие в реализации проекта не менее
+              20 % собственных средств, обеспечение займа.
+            </div>
+          </div>
+          <div class="accordion active">
+            <button class="accordion__button js-accordion" type="button">
+              Какие виды поддержки оказывает Фонд только зарегистрированным субъектам
+              малого и среднего предпринимательства?
+            </button>
+            <div class="accordion-hidden" style="display: block">
+              <p>
+                Фонд может предоставить поддержку в форме микрофинасирования. Максимальный размер
+                микрозайма составляет<br>3 000 000 рублей.
+              </p>
+              <p>
+                Для предпринимателей, осуществляющих свою
+                деятельность не более 6 месяцев<br>с момента государственной регистрации,
+                максимальный размер микрозайма составляет 1 000 000 рублей. Максимальный
+                срок использования заемных средств - 36 месяцев. Обязательные условия:
+                регистрация и осуществление деятельности на территории автономного округа,
+                отсутствие долгов по налогам и сборам, участие в реализации проекта не менее
+                20 % собственных средств, обеспечение займа.
+                
+              </p>
+            </div>
+          </div><br><br>
+          <h3>Форма обратной связи</h3>
+          <form class="form" action="#">
+            <div class="form-flex">
+              <div class="form-cntrl">
+                <div class="form-cntrl-wrap valid">
+                  <label class="form-cntrl__label" for="input-1">Ваше имя</label>
+                  <input class="form-cntrl__input" type="text" id="input-1" value="Nikita">
+                </div>
+                <div class="err">Введите имя</div>
+              </div>
+              <div class="form-cntrl">
+                <div class="form-cntrl-wrap invalid">
+                  <label class="form-cntrl__label" for="input-2">E-mail</label>
+                  <input class="form-cntrl__input" type="text" id="input-2" value="Abushka@гмайл.ком">
+                </div>
+                <div class="err">Введите корректный адрес</div>
+              </div>
+              <div class="form-cntrl">
+                <div class="form-cntrl-wrap valid">
+                  <label class="form-cntrl__label" for="input-3">Номер телефона</label>
+                  <input class="form-cntrl__input" type="text" id="input-3" value="+7 (925) 123–45–67">
+                </div>
+                <div class="err">Введите номер телефона</div>
+              </div>
+            </div>
+            <div class="form-cntrl">
+              <div class="form-cntrl-wrap">
+                <label class="form-cntrl__label" for="textarea">Введите текст сообщения</label>
+                <textarea class="form-cntrl__textarea" id="textarea">Добрый день! Меня интересует на каких условиях Вы оказываете финансовую
+поддержку стартапам в сфере телемедицины и изотерических направлений.</textarea>
+              </div>
+              <div class="err">Введите текст сообщения</div>
+            </div>
+            <div class="form-flex">
+              <div class="left"><img src="images/recaptcha-demo.gif" width="228" height="60">
+                <input class="form-control__check" type="checkbox" id="ch" name="ch">
+                <label class="form-control__label" for="ch">Согласен на обработку моих пользовательских данных</label>
+              </div>
+              <div class="right">
+                <button class="button blue icon-left mail" type="submit">Отправить сообщение</button>
+              </div>
+            </div>
+          </form><br><br><br>
+          <div class="swiper-container gallery js-slider">
+            <div class="publications-top">
+              <h3>Фотогалерея 1</h3>
+              <div class="publications-controls">
+                <button class="publications-controls__prev js-prev" type="button"></button>
+                <button class="publications-controls__next js-next" type="button"></button>
+              </div>
+            </div>
+            <div class="swiper-wrapper"><a class="swiper-slide gallery-item" href="images/gallery-1.jpg" data-fancybox="gal-1">
+                <div class="gallery-item__img" style="background-image: url('images/gallery-1.jpg')"></div>
+                <div class="video-title">Заголовок видеоролика</div>
+                <div class="video-desc">Пример описания видеоролика для примера отображения лида в данном блоке</div></a><a class="swiper-slide gallery-item" href="images/gallery-2.jpg" data-fancybox="gal-1">
+                <div class="gallery-item__img" style="background-image: url('images/gallery-2.jpg')"></div>
+                <div class="video-title">Заголовок видеоролика</div>
+                <div class="video-desc">Пример описания видеоролика для примера отображения лида в данном блоке</div></a><a class="swiper-slide gallery-item" href="images/gallery-3.jpg" data-fancybox="gal-1">
+                <div class="gallery-item__img" style="background-image: url('images/gallery-3.jpg')"></div>
+                <div class="video-title">Заголовок видеоролика</div>
+                <div class="video-desc">Пример описания видеоролика для примера отображения лида в данном блоке</div></a><a class="swiper-slide gallery-item" href="images/gallery-4.jpg" data-fancybox="gal-1">
+                <div class="gallery-item__img" style="background-image: url('images/gallery-4.jpg')"></div>
+                <div class="video-title">Заголовок видеоролика</div>
+                <div class="video-desc">Пример описания видеоролика для примера отображения лида в данном блоке</div></a><a class="swiper-slide gallery-item" href="images/gallery-5.jpg" data-fancybox="gal-1">
+                <div class="gallery-item__img" style="background-image: url('images/gallery-5.jpg')"></div>
+                <div class="video-title">Заголовок видеоролика</div>
+                <div class="video-desc">Пример описания видеоролика для примера отображения лида в данном блоке</div></a><a class="swiper-slide gallery-item" href="images/gallery-6.jpg" data-fancybox="gal-1">
+                <div class="gallery-item__img" style="background-image: url('images/gallery-6.jpg')"></div>
+                <div class="video-title">Заголовок видеоролика</div>
+                <div class="video-desc">Пример описания видеоролика для примера отображения лида в данном блоке</div></a>
+            </div>
+          </div><br><br>
+          <h3>Фотогалерея 2</h3>
+          <div class="gallery full"><a class="gallery-item" href="images/gallery-1.jpg" data-fancybox="gal-2">
+              <div class="gallery-item__img" style="background-image: url('images/gallery-1.jpg')"></div></a><a class="gallery-item" href="images/gallery-2.jpg" data-fancybox="gal-2">
+              <div class="gallery-item__img" style="background-image: url('images/gallery-2.jpg')"></div></a><a class="gallery-item" href="images/gallery-3.jpg" data-fancybox="gal-2">
+              <div class="gallery-item__img" style="background-image: url('images/gallery-3.jpg')"></div></a><a class="gallery-item" href="images/gallery-4.jpg" data-fancybox="gal-2">
+              <div class="gallery-item__img" style="background-image: url('images/gallery-4.jpg')"></div></a><a class="gallery-item" href="images/gallery-5.jpg" data-fancybox="gal-2">
+              <div class="gallery-item__img" style="background-image: url('images/gallery-5.jpg')"></div></a><a class="gallery-item" href="images/gallery-6.jpg" data-fancybox="gal-2">
+              <div class="gallery-item__img" style="background-image: url('images/gallery-6.jpg')"></div></a>
+          </div>
+          <div class="center">
+            <!-- во время ajax-запроса добавить атрибут disabled-->
+            <button class="button blue-text icon-left load" type="button">Показать еще</button>
+          </div><br><br>
+          <h3>Фотогалерея 3</h3>
+          <div class="swiper-container gallery big js-slider-big">
+            <div class="swiper-wrapper"><a class="swiper-slide gallery-item" href="images/gallery-1.jpg" data-fancybox="gal-3">
+                <div class="gallery-item__img" style="background-image: url('images/gallery-1.jpg')"></div>
+                <div class="gallery-item-wrap">
+                  <div class="gallery-item__desc">
+                    <div class="video-title">Заголовок видеоролика</div>
+                    <div class="video-desc">
+                      Текстовое описание изображения. Демонстрация на примере наличия
+                      описания общей длиной в две строки
+                    </div>
+                  </div>
+                </div></a><a class="swiper-slide gallery-item" href="images/gallery-2.jpg" data-fancybox="gal-3">
+                <div class="gallery-item__img" style="background-image: url('images/gallery-2.jpg')"></div>
+                <div class="gallery-item-wrap">
+                  <div class="gallery-item__desc">
+                    <div class="video-title">Заголовок видеоролика</div>
+                    <div class="video-desc">
+                      Текстовое описание изображения. Демонстрация на примере наличия
+                      описания общей длиной в две строки
+                    </div>
+                  </div>
+                </div></a><a class="swiper-slide gallery-item" href="images/gallery-3.jpg" data-fancybox="gal-3">
+                <div class="gallery-item__img" style="background-image: url('images/gallery-3.jpg')"></div>
+                <div class="gallery-item-wrap">
+                  <div class="gallery-item__desc">
+                    <div class="video-title">Заголовок видеоролика</div>
+                    <div class="video-desc">
+                      Текстовое описание изображения. Демонстрация на примере наличия
+                      описания общей длиной в две строки
+                    </div>
+                  </div>
+                </div></a><a class="swiper-slide gallery-item" href="images/gallery-4.jpg" data-fancybox="gal-3">
+                <div class="gallery-item__img" style="background-image: url('images/gallery-4.jpg')"></div>
+                <div class="gallery-item-wrap">
+                  <div class="gallery-item__desc">
+                    <div class="video-title">Заголовок видеоролика</div>
+                    <div class="video-desc">
+                      Текстовое описание изображения. Демонстрация на примере наличия
+                      описания общей длиной в две строки
+                    </div>
+                  </div>
+                </div></a><a class="swiper-slide gallery-item" href="images/gallery-5.jpg" data-fancybox="gal-3">
+                <div class="gallery-item__img" style="background-image: url('images/gallery-5.jpg')"></div>
+                <div class="gallery-item-wrap">
+                  <div class="gallery-item__desc">
+                    <div class="video-title">Заголовок видеоролика</div>
+                    <div class="video-desc">
+                      Текстовое описание изображения. Демонстрация на примере наличия
+                      описания общей длиной в две строки
+                    </div>
+                  </div>
+                </div></a><a class="swiper-slide gallery-item" href="images/gallery-6.jpg" data-fancybox="gal-3">
+                <div class="gallery-item__img" style="background-image: url('images/gallery-6.jpg')"></div>
+                <div class="gallery-item-wrap">
+                  <div class="gallery-item__desc">
+                    <div class="video-title">Заголовок видеоролика</div>
+                    <div class="video-desc">
+                      Текстовое описание изображения. Демонстрация на примере наличия
+                      описания общей длиной в две строки
+                    </div>
+                  </div>
+                </div></a>
+            </div>
+            <div class="publications-controls">
+              <button class="publications-controls__prev js-prev" type="button"></button>
+              <div class="publications-controls__counter">
+                <span class="js-slide-current">1</span>
+                <span class="gray">/ 6</span>
+              </div>
+              <button class="publications-controls__next js-next" type="button"></button>
+            </div>
+          </div><br><br>
+          <h3>Пример таблицы</h3>
+          <table class="table">
+            <tbody>
+              <tr>
+                <th>Орган власти</th>
+                <th>Адрес сайта</th>
+                <th>Описание</th>
+              </tr>
+              <tr>
+                <td><b>Cайт Правительства Ханты-Мансийского автономного<br>округа — Югры</b></td>
+                <td><a href="http://www.admhmao.ru">www.admhmao.ru</a></td>
+                <td>Официальный веб-сайт органов государственной власти ХМАО-Югры</td>
+              </tr>
+              <tr>
+                <td><b>Прокуратура Ханты-Мансийского автономного округа</b></td>
+                <td><a href="http://www.gosuslugi.ru">www.gosuslugi.ru</a></td>
+                <td>
+                  Единый портал оказания государственных услуг. Для получения функциональных
+                  возможностей сайта нужно пройти регистрацию.
+                </td>
+              </tr>
+              <tr>
+                <td><b>Управление Федеральной налоговой службы по Ханты-Мансийскому автономному округу-Югре</b></td>
+                <td><a href="http://www.prokhmao.ru">www.prokhmao.ru</a></td>
+                <td>Информация о деятельности Прокуратуры ХМАО–Югры.</td>
+              </tr>
+              <tr>
+                <td><b>Федеральная служба по надзору в сфере защиты прав потребителей и благополучия человека</b></td>
+                <td><a href="http://www.r86.nalog.ru">www.r86.nalog.ru</a></td>
+                <td>
+                  Информация для налогоплательщиков. Для ИП — <a href="#">здесь</a>,
+                  а для юр. лиц — вот <a href="#">здесь</a>.
+                  
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="pag"><a class="pag__item prev" href="#"></a><span class="pag__item">1</span><a class="pag__item" href="#">2</a><a class="pag__item" href="#">3</a><a class="pag__item" href="#">4</a><a class="pag__item" href="#">5</a><span class="pag__item">…</span><a class="pag__item" href="#">18</a><a class="pag__item next" href="#"></a></div>
         </div>
       </main>
       <footer class="footer">
@@ -437,6 +794,8 @@
     <script src="js/vendor/jquery/jquery-3.3.1.min.js"></script>
     <script src="js/vendor/swiper/swiper.min.js"></script>
     <script src="js/vendor/jquery-ui/jquery-ui.min.js"></script>
+    <script src="js/vendor/fancybox/jquery.fancybox.min.js"></script>
+    <script src="js/vendor/jbox/jbox.min.js"></script>
     <script src="js/app/main.js"></script>
   </body>
 </html>

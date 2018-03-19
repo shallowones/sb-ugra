@@ -4,73 +4,73 @@ block content
 
   -
     var eventButtons = [
-    {
-    name: 'Январь',
-    count: 11,
-    active: false
-    },
-    {
-    name: 'Февраль',
-    count: 14,
-    active: true
-    },
-    {
-    name: 'Март',
-    count: 8,
-    active: false
-    },
-    {
-    name: 'Апрель',
-    count: 11,
-    active: false
-    },
-    {
-    name: 'Май',
-    count: 21,
-    active: false
-    },
-    {
-    name: 'Июнь',
-    count: 6,
-    active: false
-    },
-    {
-    name: 'Июль',
-    count: 4,
-    active: false
-    },
-    {
-    name: 'Август',
-    count: 12,
-    active: false
-    },
-    {
-    name: 'Сентябрь',
-    count: 7,
-    active: false
-    },
-    {
-    name: 'Октябрь',
-    count: 13,
-    active: false
-    },
-    {
-    name: 'Ноябрь',
-    count: 10,
-    active: false
-    },
-    {
-    name: 'Декабрь',
-    count: 16,
-    active: false
-    }
+      {
+        name: 'Январь',
+        count: 11,
+        active: false
+      },
+      {
+        name: 'Февраль',
+        count: 14,
+        active: true
+      },
+      {
+        name: 'Март',
+        count: 8,
+        active: false
+      },
+      {
+        name: 'Апрель',
+        count: 11,
+        active: false
+      },
+      {
+        name: 'Май',
+        count: 21,
+        active: false
+      },
+      {
+        name: 'Июнь',
+        count: 6,
+        active: false
+      },
+      {
+        name: 'Июль',
+        count: 4,
+        active: false
+      },
+      {
+        name: 'Август',
+        count: 12,
+        active: false
+      },
+      {
+        name: 'Сентябрь',
+        count: 7,
+        active: false
+      },
+      {
+        name: 'Октябрь',
+        count: 13,
+        active: false
+      },
+      {
+        name: 'Ноябрь',
+        count: 10,
+        active: false
+      },
+      {
+        name: 'Декабрь',
+        count: 16,
+        active: false
+      }
     ]
 
   main.main
     .swiper-container.main-slider.js-main-slider
       .main-slider-buttons.wrapper
-        button(type="button").swiper-button-prev.main-slider__prev
-        button(type="button").swiper-button-next.main-slider__next
+        button(type="button").swiper-button-prev.main-slider__prev.js-prev
+        button(type="button").swiper-button-next.main-slider__next.js-next
       .swiper-wrapper
         .swiper-slide.main-slide(style="background-image: url('images/slider-1.png')")
           .wrapper.js-main-slide-desc
@@ -115,9 +115,12 @@ block content
         .wrapper
           .main-slider-pag
             .main-slider-pag__item
-              span(style="width: 50%")
+              //span(style="width: 50%")
+              span.js-timer
             .main-slider-pag__item
+              span.js-timer
             .main-slider-pag__item
+              span.js-timer
           .main-numbers
             .main-numbers__item
               h5 1 217

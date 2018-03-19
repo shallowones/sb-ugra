@@ -44,7 +44,8 @@ export function images() {
     './src/images/*.jpg',
     './src/images/*.png',
     './src/images/*.ico',
-    './src/images/*.svg'
+    './src/images/*.svg',
+    './src/images/*.gif'
   ];
   return gulp.src(path, {since: gulp.lastRun('images')})
     .pipe(imageMin({

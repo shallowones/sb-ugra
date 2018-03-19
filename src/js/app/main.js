@@ -1,7 +1,9 @@
-(function ($, Swiper) {
+(function ($, Swiper, jBox) {
   $(function () {
 
     const ACTIVE_CLASS = 'active'
+
+    const GO_CLASS = 'go'
 
     const $document = $(document)
 
@@ -12,10 +14,42 @@
       new Swiper('.js-main-slider', {
         slidesPerView: 'auto',
         navigation: {
-          nextEl: '.main-slider__next',
-          prevEl: '.main-slider__prev'
+          nextEl: '.js-next',
+          prevEl: '.js-prev'
         },
         effect: 'fade',
+        autoplay: {
+          delay: 5000
+        },
+        on: {
+          init: function () {
+            this.$timers = this.$el.find('.js-timer')
+            const $currentTimer = $(this.$timers[this.realIndex])
+            $currentTimer.addClass(GO_CLASS)
+          },
+
+          slideChangeTransitionStart: function () {
+            const {$timers, previousIndex} = this
+            const $prevTimer = $($timers[previousIndex])
+            /*$prevTimer.stop().animate( TODO не работает плавный opacity, чекнуть!
+              { opacity: 0 },
+              2000,
+              () => {
+                setTimeout(() => {
+                  //$prevTimer.removeClass(GO_CLASS)
+                }, 200)
+              }
+            )*/
+            $prevTimer.removeClass(GO_CLASS)
+          },
+
+          slideChangeTransitionEnd: function () {
+            const {$timers, realIndex} = this
+            const $currentTimer = $($timers[realIndex])
+            //$timers.removeAttr('style')
+            $currentTimer.addClass(GO_CLASS)
+          }
+        }
       })
     }
 
@@ -26,6 +60,25 @@
         navigation: {
           nextEl: '.js-next',
           prevEl: '.js-prev'
+        }
+      })
+    }
+
+    // slider big
+    {
+      new Swiper('.js-slider-big', {
+        slidesPerView: 'auto',
+        navigation: {
+          nextEl: '.js-next',
+          prevEl: '.js-prev'
+        },
+        on: {
+          init: function () {
+            this.$currentSlideNumber = this.$el.find('.js-slide-current')
+          },
+          slideChange: function () {
+            this.$currentSlideNumber.text(this.realIndex + 1)
+          }
         }
       })
     }
@@ -135,5 +188,29 @@
       }
     }
 
+    // info popup
+    {
+      new jBox('Tooltip', {
+        attach: '.js-info',
+        onOpen: function () {
+          this.setContent(
+            this.source.html()
+          )
+        }
+      })
+    }
+
+    // accordion
+    {
+      $('.js-accordion').on('click', (e) => {
+        const $this = $(e.currentTarget)
+        const $parent = $this.parent()
+        const isActive = $parent.hasClass(ACTIVE_CLASS)
+        $parent
+          .toggleClass(ACTIVE_CLASS, !isActive)
+          .find('.accordion-hidden').slideToggle(isActive)
+      })
+    }
+
   })
-})(jQuery, Swiper)
+})(jQuery, Swiper, jBox)
