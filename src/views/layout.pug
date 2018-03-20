@@ -32,6 +32,8 @@
     'js/app/main.js'
   ]
 
+include mixins/menu
+
 doctype html
 html(lang="ru")
   head
@@ -47,6 +49,8 @@ html(lang="ru")
       include includes/header
       block content
       include includes/footer
+      .mobile
+        +menu(true)
 
     each item in js
       script(src=item)

@@ -5,6 +5,8 @@
 
     const GO_CLASS = 'go'
 
+    const MOBILE_OPEN_CLASS = 'mobile-open'
+
     const $document = $(document)
 
     const $page = $('.page')
@@ -48,6 +50,13 @@
             const $currentTimer = $($timers[realIndex])
             //$timers.removeAttr('style')
             $currentTimer.addClass(GO_CLASS)
+          },
+
+          slideChange: function () {
+            if (!this.autoplay.running) {
+              this.autoplay.start()
+              this.autoplay.run()
+            }
           }
         }
       })
@@ -95,40 +104,6 @@
         $target.show()
         $this.addClass(ACTIVE_CLASS)
       })
-    }
-
-    // main menu TODO оставил для клика на планшетах и мобилках!
-    {
-      /*const $menu = $('.js-menu')
-      const $hiddenBlocks = $('.menu-hidden')
-      const $menuLi = $menu.find('ul > li')
-      const $menuLinks = $menu.find('ul > li > a')
-      $document.on('mouseover', (e) => {
-        const $this = $(e.target)
-        let isMenuLinks = false
-        $menuLinks.each((index, link) => {
-          if (link === e.target) {
-            isMenuLinks = true
-            return false
-          }
-        })
-        if (isMenuLinks) {
-          $menuLi.removeClass(ACTIVE_CLASS)
-          $this.parent().addClass(ACTIVE_CLASS)
-        } else {
-          let mouseOverHiddenBlock = false
-          $hiddenBlocks.each((index, hidden) => {
-            const $hidden = $(hidden)
-            if ($hidden === $this || $hidden.find($this).length) {
-              mouseOverHiddenBlock = true
-              return false
-            }
-          })
-          if (!mouseOverHiddenBlock) {
-            $menuLi.removeClass(ACTIVE_CLASS)
-          }
-        }
-      })*/
     }
 
     // select menu
@@ -209,6 +184,22 @@
         $parent
           .toggleClass(ACTIVE_CLASS, !isActive)
           .find('.accordion-hidden').slideToggle(isActive)
+      })
+    }
+
+    // mobile
+    {
+      // button
+      $('.js-mobile').on('click', () => {
+        $page.toggleClass(MOBILE_OPEN_CLASS)
+      })
+
+      // menu
+      const $menuLi = $('.mobile .menu > ul > li')
+      $menuLi.on('click', (e) => {
+        e.preventDefault()
+        $menuLi.removeClass(ACTIVE_CLASS)
+        $(e.currentTarget).addClass(ACTIVE_CLASS)
       })
     }
 

@@ -17,7 +17,9 @@
     <div class="page">
       <header class="header">
         <div class="header-top">
-          <div class="wrapper"><a class="header-row phone" href="#">8 800 101 01 01</a><a class="header-row map" href="#">Показать на карте</a><a class="header-row slow" href="#">Версия для слабовидящих</a><a class="header-row search" href="#">Поиск по сайту</a><a class="header-row fb" href="#"></a><a class="header-row vk" href="#"></a><a class="header-row insta" href="#"></a><a class="header-row youtube" href="#"></a></div>
+          <div class="wrapper"><a class="header__logo mobile__logo" href="#"></a><a class="header-row phone" href="#"><span>8 800 101 01 01</span></a><a class="header-row map" href="#"><span>Показать на карте</span></a><a class="header-row slow" href="#"><span>Версия для слабовидящих</span></a><a class="header-row search" href="#"><span>Поиск по сайту</span></a><a class="header-row fb" href="#"></a><a class="header-row vk" href="#"></a><a class="header-row insta" href="#"></a><a class="header-row youtube" href="#"></a>
+            <button class="mobile__button js-mobile" type="button"><span></span><span></span><span></span><span></span></button>
+          </div>
         </div>
         <div class="header-bottom">
           <div class="wrapper">
@@ -226,7 +228,7 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide main-slide" style="background-image: url('images/slider-1.png')">
               <div class="wrapper js-main-slide-desc">
-                <h1>Заголовок слайда</h1>
+                <h1>Заголовок слайда 1</h1>
                 <div class="main-slide__desc">
                   Специальный проект для тех, кто хочет привлечь инвестиции для развития
                   своего проекта или найти проект для вложения своих инвестиций
@@ -239,7 +241,7 @@
             </div>
             <div class="swiper-slide main-slide" style="background-image: url('images/slider-2.png')">
               <div class="wrapper js-main-slide-desc">
-                <h1>Заголовок слайда</h1>
+                <h1>Заголовок слайда 2</h1>
                 <div class="main-slide__desc">
                   Специальный проект для тех, кто хочет привлечь инвестиции для развития
                   своего проекта или найти проект для вложения своих инвестиций
@@ -252,7 +254,7 @@
             </div>
             <div class="swiper-slide main-slide" style="background-image: url('images/slider-3.png')">
               <div class="wrapper js-main-slide-desc">
-                <h1>Заголовок слайда</h1>
+                <h1>Заголовок слайда 3</h1>
                 <div class="main-slide__desc">
                   Специальный проект для тех, кто хочет привлечь инвестиции для развития
                   своего проекта или найти проект для вложения своих инвестиций
@@ -743,19 +745,220 @@
         <div class="wrapper">
           <div class="footer-top"><a class="header__logo" href="#"></a>
             <nav class="footer-menu">
-              <div class="footer-menu-col"><a class="footer-menu__item" href="#">Поддержка</a><a class="footer-menu__item" href="#">Проекты</a><a class="footer-menu__item" href="#">Календарь</a><a class="footer-menu__item" href="#">О фонде</a><a class="footer-menu__item" href="#">Официально</a><a class="footer-menu__item" href="#">Руководство</a><a class="footer-menu__item" href="#">Миссия</a></div>
-              <div class="footer-menu-col"><a class="footer-menu__item" href="#">История</a><a class="footer-menu__item" href="#">Антикоррупционная экспертиза</a><a class="footer-menu__item" href="#">Партнеры</a><a class="footer-menu__item" href="#">СМИ о нас</a><a class="footer-menu__item" href="#">Новости</a><a class="footer-menu__item" href="#">Вакансии</a><a class="footer-menu__item" href="#">Контакты</a></div>
+              <div class="footer-menu-col">
+                <div class="col"><a class="footer-menu__item" href="#">Поддержка</a><a class="footer-menu__item" href="#">Проекты</a><a class="footer-menu__item" href="#">Календарь</a><a class="footer-menu__item" href="#">О фонде</a></div>
+                <div class="col"><a class="footer-menu__item" href="#">Официально</a><a class="footer-menu__item" href="#">Руководство</a><a class="footer-menu__item" href="#">Миссия</a></div>
+              </div>
+              <div class="footer-menu-col">
+                <div class="col"><a class="footer-menu__item" href="#">История</a><a class="footer-menu__item" href="#">Антикоррупционная экспертиза</a><a class="footer-menu__item" href="#">Партнеры</a><a class="footer-menu__item" href="#">СМИ о нас</a></div>
+                <div class="col"><a class="footer-menu__item" href="#">Новости</a><a class="footer-menu__item" href="#">Вакансии</a><a class="footer-menu__item" href="#">Контакты</a></div>
+              </div>
             </nav>
-            <div class="footer-right"><a class="header-row map" href="#">г. Ханты-Мансийск, ул. Пионерская, д. 14</a><a class="header-row phone" href="#">8 (3467) 35-60-30</a><a class="header-row mail" href="#">fond@sb-ugra.ru</a>
-              <div class="footer-social"><a class="header-row fb" href="#"></a><a class="header-row vk" href="#"></a><a class="header-row insta" href="#"></a><a class="header-row youtube" href="#"></a></div><a class="button full with-opacity bold-bord" href="#">Написать сообщение</a>
+            <div class="footer-right">
+              <div class="col"><a class="header-row map" href="#">г. Ханты-Мансийск,<br>ул. Пионерская, д. 14</a></div>
+              <div class="col"><a class="header-row phone" href="#">8 (3467) 35-60-30</a><a class="header-row mail" href="#">fond@sb-ugra.ru</a></div>
+              <div class="col">
+                <div class="footer-social"><a class="header-row fb" href="#"></a><a class="header-row vk" href="#"></a><a class="header-row insta" href="#"></a><a class="header-row youtube" href="#"></a></div><a class="button full with-opacity bold-bord" href="#">Написать сообщение</a>
+              </div>
             </div>
           </div>
           <div class="footer-bottom">
-            <div class="left">2013 Фонд поддержки предпринимательства Югры</div>
+            <div class="left"><a class="header__logo" href="#"></a></div>
+            <div class="middle">2013 Фонд поддержки предпринимательства Югры</div>
             <div class="right">Разработка и техподдержка сайта: <a href="#" class="uw">Югорские Интернет Решения</a></div>
           </div>
         </div>
       </footer>
+      <div class="mobile">
+        <nav class="menu">
+          <ul>
+            <li class="active"><a href="#">О фонде</a>
+              <div class="menu-hidden">
+                <div class="menu-hidden-inner">
+                  <div class="wrapper">
+                    <div class="col-3">
+                      <div class="menu-item with-desc"><a href="#">Официально</a>
+                        <p>Информация о деятельности Фонда поддержки предпринимательства Югры</p>
+                      </div>
+                      <div class="menu-item with-desc"><a href="#">Антикоррупционная экспертиза</a>
+                        <p>Описание пункта меню, который необходимо выделить на фоне остальных</p>
+                      </div>
+                    </div>
+                    <div class="col-3 flex space-b">
+                      <div class="col-2">
+                        <div class="menu-item"><a href="#">Руководство</a></div>
+                        <div class="menu-item"><a href="#">Миссия</a></div>
+                        <div class="menu-item"><a href="#">История</a></div>
+                        <div class="menu-item"><a href="#">Партнеры</a></div>
+                      </div>
+                      <div class="col-2">
+                        <div class="menu-item"><a href="#">СМИ о нас</a></div>
+                        <div class="menu-item"><a href="#">Новости</a></div>
+                        <div class="menu-item"><a href="#">Вакансии</a></div>
+                        <div class="menu-item"><a href="#">Контакты</a></div>
+                      </div>
+                    </div>
+                    <div class="col-3">
+                      <div class="competition" style="background-image: url('images/slider-1.png')"><span>Прими участие в главном конкурсе Югры<a class="button" href="#">Узнать больше</a></span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li><a href="#">Поддержка</a>
+              <div class="menu-hidden">
+                <div class="menu-hidden-inner">
+                  <div class="wrapper">
+                    <div class="col-3">
+                      <div class="menu-item with-desc"><a href="#">Финансовая поддержка</a>
+                        <ul class="list">
+                          <li>Предоставленние поручительств</li>
+                          <li>Компенсация части затрат по уплате лизинговых платежей</li>
+                          <li>Компенсация банковской процентной ставки</li>
+                          <li>Компенсация части затрат по обучению</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-3">
+                      <div class="menu-item with-desc"><a href="#">Образовательная поддержка</a>
+                        <p>Организация Фондом безвозмездных образовательных мероприятий</p>
+                      </div>
+                      <div class="menu-item with-desc"><a href="#">Информационно-консультационная поддержка</a>
+                        <p>В 2017 году Фондом предоставлено 10 434 консультации</p>
+                      </div>
+                    </div>
+                    <div class="col-3">
+                      <div class="menu-item with-desc"><a href="#">Имущественная поддержка</a>
+                        <p>В 2017 году имущественную поддержку получили 76 субьекта</p>
+                      </div>
+                      <div class="menu-item with-desc"><a class="external" href="#">Поддержка социально-ориентированной деятельности</a>
+                        <p>Описание пункта меню, который необходимо выделить на фоне остальных</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li><a href="#">Проекты</a>
+              <div class="menu-hidden">
+                <div class="menu-hidden-inner">
+                  <div class="wrapper projects-block">
+                    <div class="projects-filter">
+                      <div class="projects-filter-left">
+                        <div class="projects-filter__button active">Все</div>
+                        <button class="projects-filter__button" type="button">События</button>
+                        <button class="projects-filter__button" type="button">Конкурсы</button>
+                      </div>
+                      <div class="projects-filter-right">
+                        <button class="projects-filter__button" type="button">Все<span>9</span></button>
+                        <div class="projects-filter__button active">Старт<span>6</span></div>
+                        <button class="projects-filter__button" type="button">Развитие<span>2</span></button>
+                        <button class="projects-filter__button" type="button">Бизнес<span>1</span></button>
+                      </div>
+                    </div>
+                    <div class="projects"><a class="projects__item" href="#">
+                        <div class="projects__item-title">Азбука Бизнеса</div>
+                        <div class="projects__item-bottom">
+                          <div class="date">02.02.2018</div><span class="delimiter"></span>
+                          <div class="green">Старт</div>
+                        </div></a><a class="projects__item" href="#">
+                        <div class="projects__item-title">Факультет бизнеса</div>
+                        <div class="projects__item-bottom">
+                          <div class="date">02.02.2018</div><span class="delimiter"></span>
+                          <div class="green">Старт</div>
+                        </div></a><a class="projects__item" href="#">
+                        <div class="projects__item-title">Региональный этап Всероссийского конкурса «Молодой предприниматель России»</div>
+                        <div class="projects__item-bottom">
+                          <div class="date">02.02.2018</div><span class="delimiter"></span>
+                          <div class="green">Конкурс</div>
+                        </div></a><a class="projects__item" href="#">
+                        <div class="projects__item-title">Слёт молодых предпринимателей</div>
+                        <div class="projects__item-bottom">
+                          <div class="date">02.02.2018</div><span class="delimiter"></span>
+                          <div class="green">Событие</div>
+                        </div></a><a class="projects__item" href="#">
+                        <div class="projects__item-title">Школа сервиса</div>
+                        <div class="projects__item-bottom">
+                          <div class="date">02.02.2018</div>
+                          <div class="delimiter"></div>
+                          <div class="green">Старт</div>
+                        </div></a><a class="projects__item" href="#">
+                        <div class="projects__item-title">Бизнес наставничество в Югре</div>
+                        <div class="projects__item-bottom">
+                          <div class="date">02.02.2018</div><span class="delimiter"></span>
+                          <div class="green">Старт</div>
+                          <div class="delimiter"></div>
+                          <div class="green">Бизнес</div>
+                        </div></a><a class="projects__item" href="#">
+                        <div class="projects__item-title">Адаптация молодых людей, отбывающих наказание в местах лишения свободы</div>
+                        <div class="projects__item-bottom">
+                          <div class="date">02.02.2018</div>
+                          <div class="delimiter"></div>
+                          <div class="green">Старт</div>
+                        </div></a><a class="projects__item" href="#">
+                        <div class="projects__item-title">Бизнес Инвестиции</div>
+                        <div class="projects__item-bottom">
+                          <div class="date">02.02.2018</div>
+                          <div class="delimiter"></div>
+                          <div class="green">Развитие</div>
+                        </div></a><a class="projects__item" href="#">
+                        <div class="projects__item-title">Фабрика деловых решений</div>
+                        <div class="projects__item-bottom">
+                          <div class="date">02.02.2018</div>
+                          <div class="delimiter"></div>
+                          <div class="green">Старт</div>
+                        </div></a><a class="projects__item" href="#">
+                        <div class="projects__item-title">Кубок «Точка роста»</div>
+                        <div class="projects__item-bottom">
+                          <div class="date">02.02.2018</div>
+                          <div class="delimiter"></div>
+                          <div class="green">Конкурс</div>
+                        </div></a><a class="projects__item" href="#">
+                        <div class="projects__item-title">Дни предпринимательства в Югре</div>
+                        <div class="projects__item-bottom">
+                          <div class="date">02.02.2018</div>
+                          <div class="delimiter"></div>
+                          <div class="green">Событие</div>
+                        </div></a><a class="projects__item" href="#">
+                        <div class="projects__item-title">Конкурс творческих работ «Предпринимательство сегодня»</div>
+                        <div class="projects__item-bottom">
+                          <div class="date">02.02.2018</div>
+                          <div class="delimiter"></div>
+                          <div class="green">Конкурс</div>
+                        </div></a><a class="projects__item" href="#">
+                        <div class="projects__item-title">Наставничество</div>
+                        <div class="projects__item-bottom">
+                          <div class="date">02.02.2018</div>
+                          <div class="delimiter"></div>
+                          <div class="green">Развитие</div>
+                        </div></a><a class="projects__item" href="#">
+                        <div class="projects__item-title">Форум предпринимателей</div>
+                        <div class="projects__item-bottom">
+                          <div class="date">02.02.2018</div>
+                          <div class="delimiter"></div>
+                          <div class="green">Событие</div>
+                        </div></a><a class="projects__item" href="#">
+                        <div class="projects__item-title">Региональная конференция предпринимателей</div>
+                        <div class="projects__item-bottom">
+                          <div class="date">02.02.2018</div>
+                          <div class="delimiter"></div>
+                          <div class="green">Событие</div>
+                        </div></a><a class="projects__item" href="#">
+                        <div class="projects__item-title">Конкурс журналистского мастерства</div>
+                        <div class="projects__item-bottom">
+                          <div class="date">02.02.2018</div>
+                          <div class="delimiter"></div>
+                          <div class="green">Конкурс</div>
+                        </div></a></div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li><a href="#">Календарь</a></li>
+            <li><a class="more" href="#"></a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
     <script src="js/vendor/jquery/jquery-3.3.1.min.js"></script>
     <script src="js/vendor/swiper/swiper.min.js"></script>
