@@ -19,16 +19,17 @@
     'js/vendor/swiper/swiper.min.css',
     'js/vendor/jquery-ui/jquery-ui.min.css',
     'js/vendor/fancybox/jquery.fancybox.min.css',
-    'js/vendor/jbox/jbox.css',
+    'js/vendor/jbox/jbox.min.css',
     'css/main.css'
   ]
 
   var js = [
-    'js/vendor/jquery/jquery-3.3.1.min.js',
+    'js/vendor/jquery/jquery.min.js',
     'js/vendor/swiper/swiper.min.js',
     'js/vendor/jquery-ui/jquery-ui.min.js',
     'js/vendor/fancybox/jquery.fancybox.min.js',
     'js/vendor/jbox/jbox.min.js',
+    'js/vendor/scrollmagic/scrollmagic.min.js',
     'js/app/main.js'
   ]
 
@@ -49,8 +50,8 @@ html(lang="ru")
       include includes/header
       block content
       include includes/footer
-      .mobile
-        +menu(true)
+      include includes/mobile
 
     each item in js
       script(src=item)
+    block scripts

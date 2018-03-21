@@ -23,7 +23,6 @@ coverage
 # node-waf configuration
 .lock-wscript
 
-
 # Dependency directories
 bower_components
 node_modules
@@ -107,3 +106,4 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
+/build

@@ -1,5 +1,8 @@
 extends layout
 
+block scripts
+  script(src="js/app/animation.js")
+
 block content
 
   -
@@ -67,6 +70,7 @@ block content
     ]
 
   main.main
+    #animation-trigger-1
     .swiper-container.main-slider.js-main-slider
       .main-slider-buttons.wrapper
         button(type="button").swiper-button-prev.main-slider__prev.js-prev
@@ -83,8 +87,9 @@ block content
                 span Срок подачи заявок
               .main-slide__times-line 17.03 — 25.04
                 span Образовательный этап
-            a(href="#").button.big Подать заявку
-            a(href="#").button.transparent Узнать подробнее
+            .flex
+              a(href="#").button.big Подать заявку
+              a(href="#").button.transparent Узнать подробнее
         .swiper-slide.main-slide(style="background-image: url('images/slider-2.png')")
           .wrapper.js-main-slide-desc
             h1 Заголовок слайда 2
@@ -96,8 +101,9 @@ block content
                 span Срок подачи заявок
               .main-slide__times-line 17.03 — 25.04
                 span Образовательный этап
-            a(href="#").button.big Подать заявку
-            a(href="#").button.transparent Узнать подробнее
+            .flex
+              a(href="#").button.big Подать заявку
+              a(href="#").button.transparent Узнать подробнее
         .swiper-slide.main-slide(style="background-image: url('images/slider-3.png')")
           .wrapper.js-main-slide-desc
             h1 Заголовок слайда 3
@@ -109,34 +115,34 @@ block content
                 span Срок подачи заявок
               .main-slide__times-line 17.03 — 25.04
                 span Образовательный этап
-            a(href="#").button.big Подать заявку
-            a(href="#").button.transparent Узнать подробнее
+            .flex
+              a(href="#").button.big Подать заявку
+              a(href="#").button.transparent Узнать подробнее
       .main-slider-bottom
         .wrapper
           .main-slider-pag
             .main-slider-pag__item
-              //span(style="width: 50%")
               span.js-timer
             .main-slider-pag__item
               span.js-timer
             .main-slider-pag__item
               span.js-timer
-          .main-numbers
+          #animation-1.animation.main-numbers
             .main-numbers__item
               h5 1 217
-              | Всего оказано услуг
+              p Всего оказано услуг
             .main-numbers__item
               h5 596
-              | Предоставлено информационных и консультационных услуг
+              p Предоставлено информационных и консультационных услуг
             .main-numbers__item
               h5 136
-              | Предоставлено услуг в сфере обучения
+              p Предоставлено услуг в сфере обучения
             .main-numbers__item
               h5 10
-              | Предоставлено услуг в сфере обучения
+              p Предоставлено услуг в сфере обучения
             .main-numbers__item
               h5 45
-              | Субъектов получили имущественную поддержку
+              p Субъектов получили имущественную поддержку
     .wrapper
       h2 Новости
       .main-news
