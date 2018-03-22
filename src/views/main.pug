@@ -3,6 +3,10 @@ extends layout
 block scripts
   script(src="js/app/animation.js")
 
+block loader
+  .loader.js-loader
+    .loader__img
+
 block content
 
   -
@@ -119,7 +123,7 @@ block content
               a(href="#").button.big Подать заявку
               a(href="#").button.transparent Узнать подробнее
       .main-slider-bottom
-        .wrapper
+        #animation-1.animation.wrapper
           .main-slider-pag
             .main-slider-pag__item
               span.js-timer
@@ -127,7 +131,7 @@ block content
               span.js-timer
             .main-slider-pag__item
               span.js-timer
-          #animation-1.animation.main-numbers
+          .main-numbers
             .main-numbers__item
               h5 1 217
               p Всего оказано услуг
@@ -143,72 +147,78 @@ block content
             .main-numbers__item
               h5 45
               p Субъектов получили имущественную поддержку
-    .wrapper
-      h2 Новости
+    #animation-trigger-2.wrapper
       .main-news
-        .main-news-top
-          .main-news__item.big(style="background-image: url('images/news-big-1.png')")
-            .main-news__item-inner
-              h3.
-                От мотивации до регистрации.<br>В Югре стартует онлайн обучение
-                основам организации и ведения бизнеса
-              p.
-                1 февраля 2018 года Фонд поддержки предпринимательства Югры
-                запускает дистанционную обучающую программу «Основы организации
-                и ведения бизнеса» для тех, кто желает открыть своё дело.
-              .bottom
-                .left
-                  .date.fixed 18 февраля 2018
-                .right
-                  a(href="#").button.transparent.white-border Узнать больше
-                  a(href="#").button.mar-left Подать заявку
-          .main-news-col
-            a(href="#", style="background-image: url('images/news-small-1.png')").main-news__item
+        #animation-2.animation
+          h2 Новости
+          .main-news-top
+            .main-news__item.big(style="background-image: url('images/news-big-1.png')")
+              .main-news__item-inner
+                h3.
+                  От мотивации до регистрации.<br>В Югре стартует онлайн обучение
+                  основам организации и ведения бизнеса
+                p.
+                  1 февраля 2018 года Фонд поддержки предпринимательства Югры
+                  запускает дистанционную обучающую программу «Основы организации
+                  и ведения бизнеса» для тех, кто желает открыть своё дело.
+                .bottom
+                  .left
+                    .date.fixed 18 февраля 2018
+                  .right
+                    a(href="#").button.transparent.white-border Узнать больше
+                    a(href="#").button.mar-left Подать заявку
+            .main-news-col
+              a(href="#", style="background-image: url('images/news-small-1.png')").main-news__item
+                .main-news__item-inner
+                  p
+                    b.
+                      При наведении блок становится темнее для того, чтобы можно
+                      было легко прочитать описание новости
+                  .bottom
+                    .right
+                      .date.fixed 1 февраля 2018
+              a(href="#", style="background-image: url('images/news-small-2.png')")#animation-trigger-3.main-news__item
+                .main-news__item-inner
+                  p
+                    b Интенсив-тренинг «Психология продаж»
+                  .bottom
+                    .right
+                      .date.fixed 1 февраля 2018
+        #animation-3.animation
+          .main-news-bottom
+            a(href="#", style="background-image: url('images/news-small-3.png')").main-news__item
               .main-news__item-inner
                 p
-                  b.
-                    При наведении блок становится темнее для того, чтобы можно
-                    было легко прочитать описание новости
+                  b «Гармоничное управление персоналом. Ключевые инструменты руководства»
                 .bottom
                   .right
-                    .date.fixed 1 февраля 2018
-            a(href="#", style="background-image: url('images/news-small-2.png')").main-news__item
+                    .date 1 февраля 2018
+            a(href="#", style="background-image: url('images/news-small-4.png')").main-news__item
               .main-news__item-inner
                 p
-                  b Интенсив-тренинг «Психология продаж»
+                  b Ирина Токарева — участница первой инвестиционной сессии
                 .bottom
                   .right
-                    .date.fixed 1 февраля 2018
-        .main-news-bottom
-          a(href="#", style="background-image: url('images/news-small-3.png')").main-news__item
-            .main-news__item-inner
-              p
-                b «Гармоничное управление персоналом. Ключевые инструменты руководства»
-              .bottom
-                .right
-                  .date 1 февраля 2018
-          a(href="#", style="background-image: url('images/news-small-4.png')").main-news__item
-            .main-news__item-inner
-              p
-                b Ирина Токарева — участница первой инвестиционной сессии
-              .bottom
-                .right
-                  .date 1 февраля 2018
-          a(href="#", style="background-image: url('images/news-small-5.png')").main-news__item
-            .main-news__item-inner
-              p
-                b Программа «Азбука предпринимателя»
-              .bottom
-                .right
-                  .date 1 февраля 2018
-        .center
-          // во время ajax-запроса добавить атрибут disabled
-          button(type="button").button.blue-text.icon-left.load Показать еще
+                    .date 1 февраля 2018
+            a(href="#", style="background-image: url('images/news-small-5.png')").main-news__item
+              .main-news__item-inner
+                p
+                  b Программа «Азбука предпринимателя»
+                .bottom
+                  .right
+                    .date 1 февраля 2018
+          .center
+            // во время ajax-запроса добавить атрибут disabled
+            button(type="button").button.blue-text.icon-left.load Показать еще
 
-    .events
+    #animation-trigger-4
+    #animation-trigger-5
+    #animation-trigger-6
+    #animation-trigger-7
+    #animation-4.animation.events
       .events-top
         .events-left
-          .events-inner
+          #animation-5.animation.events-inner(data-delay="0.5")
             h2 Обучающие мероприятия
             .events-months
               each item in eventButtons
@@ -218,8 +228,9 @@ block content
                 else
                   button(type="button").events-months__button= item.name
                     span= item.count
+            #animation-trigger-8
         .events-right
-          .events-filter
+          #animation-6.animation.events-filter(data-delay="0.8")
             select(data-placeholder="Город").select.with-icon.point.js-select
               option(value="1") Москва
               option(value="2") Санкт-Петербург
@@ -239,8 +250,8 @@ block content
             .calendar
               // календарь пока что от jquery ui, при разработке возможна смена
               input(type="text", value="Календарь", readonly).calendar__input.js-calendar
-          .events-right-wrapper
-            .events-list
+          #animation-7.animation.events-right-wrapper(data-delay="1.1")
+            .events-list.js-scrollbar
               each item in [0, 1]
                 .events-block
                   .events-date
@@ -293,7 +304,7 @@ block content
                       .left Начало: 01.02 16:00
                       .right Окончание: 02.02 20:00
       .events-bottom
-        .wrapper
+        #animation-8.animation.wrapper
           .swiper-container.publications.js-slider
             .publications-top
               h2 Имущественная поддержка
@@ -318,8 +329,9 @@ block content
                     поддержки в форме предоставления нежилых помещений в субаренду субъектам …
                   .date 18 февраля 2018
             a(href="#").button.blue Все публикации
+        #animation-trigger-9
 
-    .soc.center
+    #animation-9.animation.soc.center
       .wrapper
         button(type="button", data-target="#vk").soc-tab.js-tab.active Вконтакте
         button(type="button", data-target="#fb").soc-tab.js-tab Facebook
@@ -351,8 +363,9 @@ block content
                   img(src="images/people-1.jpg")
             .soc-counter 1914<br>участников
           a(href="#").button.blue.so-big Присоединиться
+      #animation-trigger-10
 
-    .partners-block
+    #animation-10.animation.partners-block
       .wrapper
         .swiper-container.partners.js-slider
           .publications-top

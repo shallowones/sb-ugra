@@ -20,6 +20,7 @@
     'js/vendor/jquery-ui/jquery-ui.min.css',
     'js/vendor/fancybox/jquery.fancybox.min.css',
     'js/vendor/jbox/jbox.min.css',
+    'js/vendor/simplebar/simplebar.min.css',
     'css/main.css'
   ]
 
@@ -30,10 +31,9 @@
     'js/vendor/fancybox/jquery.fancybox.min.js',
     'js/vendor/jbox/jbox.min.js',
     'js/vendor/scrollmagic/scrollmagic.min.js',
+    'js/vendor/simplebar/simplebar.min.js',
     'js/app/main.js'
   ]
-
-include mixins/menu
 
 doctype html
 html(lang="ru")
@@ -46,6 +46,7 @@ html(lang="ru")
       link(rel="stylesheet", href=item)
 
   body
+    block loader
     .page
       include includes/header
       block content

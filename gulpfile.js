@@ -16,8 +16,8 @@ const babel = require('gulp-babel')
 const stream = require('stream-combiner2')
 const cssNaNo = require('gulp-cssnano')
 const LessAutoPrefix = require('less-plugin-autoprefix')
-const rename = require('gulp-rename');
-const packageJson = require('./package.json');
+const rename = require('gulp-rename')
+const packageJson = require('./package.json')
 const combine = stream.obj
 
 // запуск к продакшену, директория dist
@@ -153,7 +153,7 @@ const vendorScripts = [
   function jBoxCSS () {
     return gulp.src('./node_modules/jbox/Source/jbox.css')
       .pipe(cssNaNo())
-      .pipe(rename({ suffix: '.min' }))
+      .pipe(rename({suffix: '.min'}))
       .pipe(gulp.dest(`./${folder}/js/vendor/jbox`))
   },
   function fancyBoxJS () {
@@ -163,11 +163,22 @@ const vendorScripts = [
   function fancyBoxCSS () {
     return gulp.src('./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css')
       .pipe(gulp.dest(`./${folder}/js/vendor/fancybox`))
-  }
+  },
+  function simpleBarJS () {
+    return gulp.src('./node_modules/simplebar/dist/simplebar.js')
+      .pipe(rename({suffix: '.min'}))
+      .pipe(gulp.dest(`./${folder}/js/vendor/simplebar`))
+  },
+  function simpleBarCSS () {
+    return gulp.src('./node_modules/simplebar/dist/simplebar.css')
+      .pipe(cssNaNo())
+      .pipe(rename({suffix: '.min'}))
+      .pipe(gulp.dest(`./${folder}/js/vendor/simplebar`))
+  },
 ]
 
 const watch = () => {
-  gulp.watch('./src/views/*.pug', views)
+  gulp.watch('./src/views/**/*.pug', views)
   gulp.watch('./src/styles/*.less', styles)
   gulp.watch('./src/images/**/*.{jpg,jpeg,png,svg,gif}', images)
   gulp.watch('./src/js/*.js', scripts)

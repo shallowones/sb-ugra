@@ -11,9 +11,13 @@
     <link rel="stylesheet" href="js/vendor/jquery-ui/jquery-ui.min.css">
     <link rel="stylesheet" href="js/vendor/fancybox/jquery.fancybox.min.css">
     <link rel="stylesheet" href="js/vendor/jbox/jbox.min.css">
+    <link rel="stylesheet" href="js/vendor/simplebar/simplebar.min.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
+    <div class="loader js-loader">
+      <div class="loader__img"></div>
+    </div>
     <div class="page">
       <header class="header">
         <div class="header-top">
@@ -33,7 +37,7 @@
                     <div class="menu-hidden">
                       <div class="menu-hidden-inner">
                         <div class="wrapper">
-                          <div class="col-3">
+                          <div class="col-3 fadein">
                             <div class="menu-item with-desc"><a href="#">Официально</a>
                               <p>Информация о деятельности Фонда поддержки предпринимательства Югры</p>
                             </div>
@@ -41,7 +45,7 @@
                               <p>Описание пункта меню, который необходимо выделить на фоне остальных</p>
                             </div>
                           </div>
-                          <div class="col-3 flex space-b">
+                          <div class="col-3 flex space-b fadein fadein-delay-1">
                             <div class="col-2">
                               <div class="menu-item"><a href="#">Руководство</a></div>
                               <div class="menu-item"><a href="#">Миссия</a></div>
@@ -55,7 +59,7 @@
                               <div class="menu-item"><a href="#">Контакты</a></div>
                             </div>
                           </div>
-                          <div class="col-3">
+                          <div class="col-3 fadein fadein-delay-2">
                             <div class="competition" style="background-image: url('images/slider-1.png')"><span>Прими участие в главном конкурсе Югры<a class="button" href="#">Узнать больше</a></span></div>
                           </div>
                         </div>
@@ -66,7 +70,7 @@
                     <div class="menu-hidden">
                       <div class="menu-hidden-inner">
                         <div class="wrapper">
-                          <div class="col-3">
+                          <div class="col-3 fadein">
                             <div class="menu-item with-desc"><a href="#">Финансовая поддержка</a>
                               <ul class="list">
                                 <li>Предоставленние поручительств</li>
@@ -76,7 +80,7 @@
                               </ul>
                             </div>
                           </div>
-                          <div class="col-3">
+                          <div class="col-3 fadein fadein-delay-1">
                             <div class="menu-item with-desc"><a href="#">Образовательная поддержка</a>
                               <p>Организация Фондом безвозмездных образовательных мероприятий</p>
                             </div>
@@ -84,7 +88,7 @@
                               <p>В 2017 году Фондом предоставлено 10 434 консультации</p>
                             </div>
                           </div>
-                          <div class="col-3">
+                          <div class="col-3 fadein fadein-delay-2">
                             <div class="menu-item with-desc"><a href="#">Имущественная поддержка</a>
                               <p>В 2017 году имущественную поддержку получили 76 субьекта</p>
                             </div>
@@ -100,7 +104,7 @@
                     <div class="menu-hidden">
                       <div class="menu-hidden-inner">
                         <div class="wrapper projects-block">
-                          <div class="projects-filter">
+                          <div class="projects-filter fadein">
                             <div class="projects-filter-left">
                               <div class="projects-filter__button active">Все</div>
                               <button class="projects-filter__button" type="button">События</button>
@@ -113,7 +117,7 @@
                               <button class="projects-filter__button" type="button">Бизнес<span>1</span></button>
                             </div>
                           </div>
-                          <div class="projects"><a class="projects__item" href="#">
+                          <div class="projects fadein fadein-delay-1 js-scrollbar"><a class="projects__item" href="#">
                               <div class="projects__item-title">Азбука Бизнеса</div>
                               <div class="projects__item-bottom">
                                 <div class="date">02.02.2018</div><span class="delimiter"></span>
@@ -271,13 +275,13 @@
             </div>
           </div>
           <div class="main-slider-bottom">
-            <div class="wrapper">
+            <div class="animation wrapper" id="animation-1">
               <div class="main-slider-pag">
                 <div class="main-slider-pag__item"><span class="js-timer"></span></div>
                 <div class="main-slider-pag__item"><span class="js-timer"></span></div>
                 <div class="main-slider-pag__item"><span class="js-timer"></span></div>
               </div>
-              <div class="animation main-numbers" id="animation-1">
+              <div class="main-numbers">
                 <div class="main-numbers__item">
                   <h5>1 217</h5>
                   <p>Всего оказано услуг</p>
@@ -302,84 +306,92 @@
             </div>
           </div>
         </div>
-        <div class="wrapper">
-          <h2>Новости</h2>
+        <div class="wrapper" id="animation-trigger-2">
           <div class="main-news">
-            <div class="main-news-top">
-              <div class="main-news__item big" style="background-image: url('images/news-big-1.png')">
-                <div class="main-news__item-inner">
-                  <h3>
-                    От мотивации до регистрации.<br>В Югре стартует онлайн обучение
-                    основам организации и ведения бизнеса
-                  </h3>
-                  <p>
-                    1 февраля 2018 года Фонд поддержки предпринимательства Югры
-                    запускает дистанционную обучающую программу «Основы организации
-                    и ведения бизнеса» для тех, кто желает открыть своё дело.
-                  </p>
-                  <div class="bottom">
-                    <div class="left">
-                      <div class="date fixed">18 февраля 2018</div>
+            <div class="animation" id="animation-2">
+              <h2>Новости</h2>
+              <div class="main-news-top">
+                <div class="main-news__item big" style="background-image: url('images/news-big-1.png')">
+                  <div class="main-news__item-inner">
+                    <h3>
+                      От мотивации до регистрации.<br>В Югре стартует онлайн обучение
+                      основам организации и ведения бизнеса
+                    </h3>
+                    <p>
+                      1 февраля 2018 года Фонд поддержки предпринимательства Югры
+                      запускает дистанционную обучающую программу «Основы организации
+                      и ведения бизнеса» для тех, кто желает открыть своё дело.
+                    </p>
+                    <div class="bottom">
+                      <div class="left">
+                        <div class="date fixed">18 февраля 2018</div>
+                      </div>
+                      <div class="right"><a class="button transparent white-border" href="#">Узнать больше</a><a class="button mar-left" href="#">Подать заявку</a></div>
                     </div>
-                    <div class="right"><a class="button transparent white-border" href="#">Узнать больше</a><a class="button mar-left" href="#">Подать заявку</a></div>
                   </div>
                 </div>
+                <div class="main-news-col"><a class="main-news__item" href="#" style="background-image: url('images/news-small-1.png')">
+                    <div class="main-news__item-inner">
+                      <p><b>
+                          При наведении блок становится темнее для того, чтобы можно
+                          было легко прочитать описание новости</b></p>
+                      <div class="bottom">
+                        <div class="right">
+                          <div class="date fixed">1 февраля 2018</div>
+                        </div>
+                      </div>
+                    </div></a><a class="main-news__item" href="#" style="background-image: url('images/news-small-2.png')" id="animation-trigger-3">
+                    <div class="main-news__item-inner">
+                      <p><b>Интенсив-тренинг «Психология продаж»</b></p>
+                      <div class="bottom">
+                        <div class="right">
+                          <div class="date fixed">1 февраля 2018</div>
+                        </div>
+                      </div>
+                    </div></a></div>
               </div>
-              <div class="main-news-col"><a class="main-news__item" href="#" style="background-image: url('images/news-small-1.png')">
+            </div>
+            <div class="animation" id="animation-3">
+              <div class="main-news-bottom"><a class="main-news__item" href="#" style="background-image: url('images/news-small-3.png')">
                   <div class="main-news__item-inner">
-                    <p><b>
-                        При наведении блок становится темнее для того, чтобы можно
-                        было легко прочитать описание новости</b></p>
+                    <p><b>«Гармоничное управление персоналом. Ключевые инструменты руководства»</b></p>
                     <div class="bottom">
                       <div class="right">
-                        <div class="date fixed">1 февраля 2018</div>
+                        <div class="date">1 февраля 2018</div>
                       </div>
                     </div>
-                  </div></a><a class="main-news__item" href="#" style="background-image: url('images/news-small-2.png')">
+                  </div></a><a class="main-news__item" href="#" style="background-image: url('images/news-small-4.png')">
                   <div class="main-news__item-inner">
-                    <p><b>Интенсив-тренинг «Психология продаж»</b></p>
+                    <p><b>Ирина Токарева — участница первой инвестиционной сессии</b></p>
                     <div class="bottom">
                       <div class="right">
-                        <div class="date fixed">1 февраля 2018</div>
+                        <div class="date">1 февраля 2018</div>
+                      </div>
+                    </div>
+                  </div></a><a class="main-news__item" href="#" style="background-image: url('images/news-small-5.png')">
+                  <div class="main-news__item-inner">
+                    <p><b>Программа «Азбука предпринимателя»</b></p>
+                    <div class="bottom">
+                      <div class="right">
+                        <div class="date">1 февраля 2018</div>
                       </div>
                     </div>
                   </div></a></div>
-            </div>
-            <div class="main-news-bottom"><a class="main-news__item" href="#" style="background-image: url('images/news-small-3.png')">
-                <div class="main-news__item-inner">
-                  <p><b>«Гармоничное управление персоналом. Ключевые инструменты руководства»</b></p>
-                  <div class="bottom">
-                    <div class="right">
-                      <div class="date">1 февраля 2018</div>
-                    </div>
-                  </div>
-                </div></a><a class="main-news__item" href="#" style="background-image: url('images/news-small-4.png')">
-                <div class="main-news__item-inner">
-                  <p><b>Ирина Токарева — участница первой инвестиционной сессии</b></p>
-                  <div class="bottom">
-                    <div class="right">
-                      <div class="date">1 февраля 2018</div>
-                    </div>
-                  </div>
-                </div></a><a class="main-news__item" href="#" style="background-image: url('images/news-small-5.png')">
-                <div class="main-news__item-inner">
-                  <p><b>Программа «Азбука предпринимателя»</b></p>
-                  <div class="bottom">
-                    <div class="right">
-                      <div class="date">1 февраля 2018</div>
-                    </div>
-                  </div>
-                </div></a></div>
-            <div class="center">
-              <!-- во время ajax-запроса добавить атрибут disabled-->
-              <button class="button blue-text icon-left load" type="button">Показать еще</button>
+              <div class="center">
+                <!-- во время ajax-запроса добавить атрибут disabled-->
+                <button class="button blue-text icon-left load" type="button">Показать еще</button>
+              </div>
             </div>
           </div>
         </div>
-        <div class="events">
+        <div id="animation-trigger-4"></div>
+        <div id="animation-trigger-5"></div>
+        <div id="animation-trigger-6"></div>
+        <div id="animation-trigger-7"></div>
+        <div class="animation events" id="animation-4">
           <div class="events-top">
             <div class="events-left">
-              <div class="events-inner">
+              <div class="animation events-inner" id="animation-5" data-delay="0.5">
                 <h2>Обучающие мероприятия</h2>
                 <div class="events-months">
                   <button class="events-months__button" type="button">Январь<span>11</span></button>
@@ -395,10 +407,11 @@
                   <button class="events-months__button" type="button">Ноябрь<span>10</span></button>
                   <button class="events-months__button" type="button">Декабрь<span>16</span></button>
                 </div>
+                <div id="animation-trigger-8"></div>
               </div>
             </div>
             <div class="events-right">
-              <div class="events-filter">
+              <div class="animation events-filter" id="animation-6" data-delay="0.8">
                 <select class="select with-icon point js-select" data-placeholder="Город">
                   <option value="1">Москва</option>
                   <option value="2">Санкт-Петербург</option>
@@ -424,8 +437,8 @@
                   <input class="calendar__input js-calendar" type="text" value="Календарь" readonly>
                 </div>
               </div>
-              <div class="events-right-wrapper">
-                <div class="events-list">
+              <div class="animation events-right-wrapper" id="animation-7" data-delay="1.1">
+                <div class="events-list js-scrollbar">
                   <div class="events-block">
                     <div class="events-date">
                       <h5>1</h5>пн
@@ -547,7 +560,7 @@
             </div>
           </div>
           <div class="events-bottom">
-            <div class="wrapper">
+            <div class="animation wrapper" id="animation-8">
               <div class="swiper-container publications js-slider">
                 <div class="publications-top">
                   <h2>Имущественная поддержка</h2>
@@ -590,9 +603,10 @@
                 </div><a class="button blue" href="#">Все публикации</a>
               </div>
             </div>
+            <div id="animation-trigger-9"></div>
           </div>
         </div>
-        <div class="soc center">
+        <div class="animation soc center" id="animation-9">
           <div class="wrapper">
             <button class="soc-tab js-tab active" type="button" data-target="#vk">Вконтакте</button>
             <button class="soc-tab js-tab" type="button" data-target="#fb">Facebook</button>
@@ -731,8 +745,9 @@
               </div><a class="button blue so-big" href="#">Присоединиться</a>
             </div>
           </div>
+          <div id="animation-trigger-10"></div>
         </div>
-        <div class="partners-block">
+        <div class="animation partners-block" id="animation-10">
           <div class="wrapper">
             <div class="swiper-container partners js-slider">
               <div class="publications-top">
@@ -982,6 +997,7 @@
     <script src="js/vendor/fancybox/jquery.fancybox.min.js"></script>
     <script src="js/vendor/jbox/jbox.min.js"></script>
     <script src="js/vendor/scrollmagic/scrollmagic.min.js"></script>
+    <script src="js/vendor/simplebar/simplebar.min.js"></script>
     <script src="js/app/main.js"></script>
     <script src="js/app/animation.js"></script>
   </body>

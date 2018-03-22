@@ -41,13 +41,14 @@
     "gulp-rename": "^1.2.2"
   },
   "dependencies": {
+    "@fancyapps/fancybox": "^3.2.5",
     "gsap": "^1.20.2",
     "jbox": "^0.4.8",
     "jquery": "^3.3.1",
-    "@fancyapps/fancybox": "^3.2.5",
     "jquery.datepicker-selectmenu": "^1.0.0",
     "normalize.css": "^7.0.0",
     "scrollmagic": "^2.0.5",
+    "simplebar": "^2.6.0",
     "swiper": "^4.1.6"
   },
   "eslintConfig": {
@@ -64,7 +65,8 @@
       "TweenMax": true,
       "TimelineLite": true,
       "Swiper": true,
-      "jBox": true
+      "jBox": true,
+      "SimpleBar": true
     }
   },
   "browserslist": {

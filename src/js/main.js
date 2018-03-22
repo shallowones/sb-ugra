@@ -1,65 +1,17 @@
-(function ($, Swiper, jBox) {
+(function ($, Swiper, jBox, SimpleBar) {
   $(function () {
 
     const ACTIVE_CLASS = 'active'
 
-    const GO_CLASS = 'go'
-
     const MOBILE_OPEN_CLASS = 'mobile-open'
 
-    const UP_CLASS = 'up'
-
-    const END_CLASS = 'end'
-
-    const $document = $(document)
+    const PLAN_WIDTH = 1024
 
     const $html = $('html')
 
-    const $page = $('.page')
+    const $window = $(window)
 
-    // main slider
-    {
-      new Swiper('.js-main-slider', {
-        slidesPerView: 'auto',
-        navigation: {
-          nextEl: '.js-next',
-          prevEl: '.js-prev'
-        },
-        effect: 'fade',
-        speed: 500,
-        autoplay: {
-          delay: 5000
-        },
-        on: {
-          init: function () {
-            const {realIndex} = this
-            this.$timers = this.$el.find('.js-timer')
-            const $currentSlide = $(this.slides[realIndex])
-            const $currentTimer = $(this.$timers[realIndex])
-            $currentTimer.addClass(GO_CLASS)
-            $currentSlide.addClass(UP_CLASS)
-          },
-          slideChangeTransitionStart: function () {
-            const {$timers, previousIndex} = this
-            const $previousSlide = $(this.slides[previousIndex])
-            const $prevTimer = $($timers[previousIndex])
-            $prevTimer.addClass(END_CLASS)
-            $previousSlide.removeClass(UP_CLASS)
-          },
-          slideChangeTransitionEnd: function () {
-            const {$timers, realIndex, previousIndex} = this
-            const $currentSlide = $(this.slides[realIndex])
-            const $currentTimer = $($timers[realIndex])
-            const $previousSlide = $(this.slides[previousIndex])
-            const $prevTimer = $($timers[previousIndex])
-            $prevTimer.removeClass(GO_CLASS + ' ' + END_CLASS)
-            $currentTimer.addClass(GO_CLASS)
-            $previousSlide.removeClass(UP_CLASS)
-            $currentSlide.addClass(UP_CLASS)
-          }
-        }
-      })
-    }
+    const $page = $('.page')
 
     // slider
     {
@@ -208,12 +160,20 @@
         $menuSection.removeClass(ACTIVE_CLASS)
         $section.addClass(ACTIVE_CLASS)
       })
+
+      $window.resize((e) => {
+        if (e.currentTarget.innerWidth > PLAN_WIDTH) {
+          $html.removeClass(MOBILE_OPEN_CLASS)
+        }
+      })
     }
 
-    // animation
+    // scroll
     {
-
+      $('.js-scrollbar').each((index, el) => {
+        new SimpleBar(el, { autoHide: false })
+      })
     }
 
   })
-})(jQuery, Swiper, jBox, ScrollMagic, TweenMax, TimelineLite)
+})(jQuery, Swiper, jBox, SimpleBar)
