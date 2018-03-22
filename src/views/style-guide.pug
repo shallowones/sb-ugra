@@ -135,7 +135,7 @@ block content
               option(value="3") Отрасль экономики
             br
             input(type="checkbox", id="check-select", name="check-select").form-control__check
-            label(for="check-select").form-control__label Деятельность не представлена в списке
+            label(for="check-select").form-control__label.no-mar Деятельность не представлена в списке
         .form-control
           .form-control-left
             label(for="control-2").form-control__label Дата договора:
@@ -170,7 +170,7 @@ block content
             .form-control-calendar
               input(type="text", placeholder="Выберите дату", readonly)#control-7.form-control__input.js-calendar
         .form-control
-          .form-control-left
+          .form-control-left.min-pad
             label.form-control__label Деятельность связана с транспортными услугами:
           .form-control-right
             input(type="radio", name="radio-1", checked)#radio-1.form-control__radio
@@ -178,7 +178,7 @@ block content
             input(type="radio", name="radio-1")#radio-2.form-control__radio
             label(for="radio-2").form-control__label Нет
         .form-control
-          .form-control-left
+          .form-control-left.min-pad
             label.form-control__label Деятельность связана с транспортными услугами:
           .form-control-right
             input(type="radio", name="radio-2", disabled)#radio-3.form-control__radio

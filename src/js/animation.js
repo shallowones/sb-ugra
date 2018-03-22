@@ -49,6 +49,12 @@
         delay: 5000,
         disableOnInteraction: false
       },
+      simulateTouch: false,
+      breakpoints: {
+        480: {
+          simulateTouch: true
+        }
+      },
       on: {
         init: function () {
           const {realIndex} = this

@@ -175,5 +175,26 @@
       })
     }
 
+    // popup
+    {
+      new jBox('Modal', {
+        attach: '.js-popup',
+        onOpen: function () {
+          const $source = this.source
+          const $target = $($source.data('target'))
+          const html = $target.html()
+          $target.html('')
+          this.setContent(html)
+        },
+        onCloseComplete: function () {
+          const $source = this.source
+          const $target = $($source.data('target'))
+          const html = this.content.html()
+          this.setContent('')
+          $target.html(html)
+        }
+      })
+    }
+
   })
 })(jQuery, Swiper, jBox, SimpleBar)

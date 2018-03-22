@@ -216,9 +216,102 @@
                     </div>
                   </li>
                   <li><a href="#">Календарь</a></li>
-                  <li><a class="more" href="#"></a></li>
+                  <li>
+                    <button class="more" type="button"></button>
+                    <div class="menu-hidden">
+                      <div class="menu-hidden-inner">
+                        <div class="wrapper">
+                          <div class="col-3 fadein">
+                            <div class="menu-item"><a href="#">Горячая линия</a></div>
+                            <div class="menu-item"><a href="#">Полезная информация</a></div>
+                            <div class="menu-item"><a href="#">Объявления</a></div>
+                            <div class="menu-item"><a href="#">Контакты</a></div>
+                          </div>
+                          <div class="col-3 fadein fadein-delay-1">
+                            <div class="menu-item"><a href="#">Уполномоченный по защите прав предпринимателей Югры</a></div>
+                            <div class="menu-item"><a href="#">Молодёжное предпринимательство</a></div>
+                            <div class="menu-item"><a href="#">Центр инноваций социальной сферы</a></div>
+                            <div class="menu-item"><a href="#">Организации инфраструктуры поддержки предпринимательства</a></div>
+                          </div>
+                          <div class="col-3"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
                 </ul>
-              </nav><a class="button blue big" href="#">Задать вопрос</a>
+              </nav>
+              <button class="button blue big center js-popup" type="button" data-target="#ask">Задать вопрос</button>
+              <div class="display-none" id="ask">
+                <form class="form popup" action="#">
+                  <div class="center">
+                    <h3>Задайте нам вопрос</h3>
+                  </div>
+                  <div class="form-control">
+                    <div class="form-control-left">
+                      <label class="form-control__label" for="ask-input-1">ФИО<span class="req">*</span></label>
+                    </div>
+                    <div class="form-control-right">
+                      <input class="form-control__input" type="text" id="ask-input-1">
+                    </div>
+                  </div>
+                  <div class="form-control invalid">
+                    <div class="form-control-left">
+                      <label class="form-control__label" for="ask-input-2">Телефон<span class="req">*</span></label>
+                    </div>
+                    <div class="form-control-right">
+                      <input class="form-control__input" type="text" id="ask-input-2">
+                    </div>
+                  </div>
+                  <div class="form-control">
+                    <div class="form-control-left">
+                      <label class="form-control__label" for="ask-input-3">E-mail<span class="req">*</span></label>
+                    </div>
+                    <div class="form-control-right">
+                      <input class="form-control__input" type="text" id="ask-input-3">
+                    </div>
+                  </div>
+                  <div class="form-control">
+                    <div class="form-control-left">
+                      <label class="form-control__label" for="ask-input-4">Вид деятельности<span class="req">*</span></label>
+                    </div>
+                    <div class="form-control-right">
+                      <input class="form-control__input" type="text" id="ask-input-4">
+                    </div>
+                  </div>
+                  <div class="form-control">
+                    <div class="form-control-left">
+                      <label class="form-control__label" for="ask-input-5">Тема<span class="req">*</span></label>
+                    </div>
+                    <div class="form-control-right">
+                      <select class="select js-select" id="ask-input-5">
+                        <option value="1">Бизнес образование</option>
+                        <option value="2">Консультация по грантам</option>
+                        <option value="3">Консультация по предоставлению компенсации затрат</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-control">
+                    <div class="form-control-left">
+                      <label class="form-control__label" for="ask-input-6">Текст сообщения<span class="req">*</span></label>
+                    </div>
+                    <div class="form-control-right">
+                      <textarea class="form-control__textarea" id="ask-input-6"></textarea>
+                    </div>
+                  </div>
+                  <div>
+                    <input class="form-control__check" type="checkbox" name="checkbox-10" id="ask-radio-1">
+                    <label class="form-control__label" for="ask-radio-1">Я согласен на обработку персональных данных<span class="req">*</span></label>
+                    <input class="form-control__check" type="checkbox" name="checkbox-10" checked id="ask-radio-2">
+                    <label class="form-control__label" for="ask-radio-2">Я согласен с правилами пользования сайта<span class="req">*</span></label>
+                  </div>
+                  <div class="form-control min-mar">
+                    <div class="text-right gray small"><span class="req">*</span><i>– поля, обязательные для заполнения</i></div>
+                  </div>
+                  <div class="form-control bottom"><img src="images/recaptcha-demo.gif" width="308" height="82">
+                    <button class="button big" type="submit">Отправить</button>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
@@ -442,37 +535,35 @@
                   <div class="events-block">
                     <div class="events-date">
                       <h5>1</h5>пн
-                    </div>
-                    <div class="events__item"><a class="events__item-link place" href="#">Урай</a>
+                    </div><a class="events__item" href="#">
+                      <div class="events__item-blue place">Урай</div>
                       <div class="events__item-title">
                         Круглый стол «Взаимодействие контрольно-надзорных органов
                         и власти с бизнес-сообществом»
-                      </div><a class="events__item-link" href="#">Центр инноваций социальной сферы</a>
+                      </div>
+                      <div class="events__item-blue">Центр инноваций социальной сферы</div>
                       <div class="events__item-times">
                         <div class="left">Начало: 01.02 16:00</div>
                         <div class="right">Окончание: 02.02 20:00</div>
-                      </div>
-                    </div>
-                    <div class="events__item"><a class="events__item-link place" href="#">Октябрьское</a>
+                      </div></a><a class="events__item" href="#">
+                      <div class="events__item-blue place">Октябрьское</div>
                       <div class="events__item-title">Очный курс «Основы организации ведения бизнеса»</div>
                       <div class="events__item-times">
                         <div class="left">Начало: 01.02 16:00</div>
                         <div class="right">Окончание: 02.02 20:00</div>
-                      </div>
-                    </div>
-                    <div class="events__item"><a class="events__item-link place" href="#">Ханты-Мансийск</a>
+                      </div></a><a class="events__item" href="#">
+                      <div class="events__item-blue place">Ханты-Мансийск</div>
                       <div class="events__item-title">Программа «Азбука<br>предпринимателя»</div>
                       <div class="events__item-times">
                         <div class="left">Начало: 01.02 16:00</div>
                         <div class="right">Окончание: 02.02 20:00</div>
-                      </div>
-                    </div>
+                      </div></a>
                   </div>
                   <div class="events-block">
                     <div class="events-date">
                       <h5>6</h5>ср
-                    </div>
-                    <div class="events__item"><a class="events__item-link place" href="#">Ханты-Мансийск</a>
+                    </div><a class="events__item" href="#">
+                      <div class="events__item-blue place">Ханты-Мансийск</div>
                       <div class="events__item-title">
                         Тренинг "Юридические аспекты предпринимательства
                         и система налогообложения"
@@ -480,57 +571,52 @@
                       <div class="events__item-times">
                         <div class="left">Начало: 01.02 16:00</div>
                         <div class="right">Окончание: 02.02 20:00</div>
-                      </div>
-                    </div>
-                    <div class="events__item"><a class="events__item-link place" href="#">Лангепас</a>
+                      </div></a><a class="events__item" href="#">
+                      <div class="events__item-blue place">Лангепас</div>
                       <div class="events__item-title">Интенсив-тренинг "Как Ценностное предложение увеличит продажи в 2 раза"</div>
                       <div class="events__item-times">
                         <div class="left">Начало: 01.02 16:00</div>
                         <div class="right">Окончание: 02.02 20:00</div>
-                      </div>
-                    </div>
-                    <div class="events__item"><a class="events__item-link place" href="#">Ханты-Мансийск</a>
+                      </div></a><a class="events__item" href="#">
+                      <div class="events__item-blue place">Ханты-Мансийск</div>
                       <div class="events__item-title">Интенсив «Психология продаж»</div>
                       <div class="events__item-times">
                         <div class="left">Начало: 01.02 16:00</div>
                         <div class="right">Окончание: 02.02 20:00</div>
-                      </div>
-                    </div>
+                      </div></a>
                   </div>
                   <div class="events-block">
                     <div class="events-date">
                       <h5>1</h5>пн
-                    </div>
-                    <div class="events__item"><a class="events__item-link place" href="#">Урай</a>
+                    </div><a class="events__item" href="#">
+                      <div class="events__item-blue place">Урай</div>
                       <div class="events__item-title">
                         Круглый стол «Взаимодействие контрольно-надзорных органов
                         и власти с бизнес-сообществом»
-                      </div><a class="events__item-link" href="#">Центр инноваций социальной сферы</a>
+                      </div>
+                      <div class="events__item-blue">Центр инноваций социальной сферы</div>
                       <div class="events__item-times">
                         <div class="left">Начало: 01.02 16:00</div>
                         <div class="right">Окончание: 02.02 20:00</div>
-                      </div>
-                    </div>
-                    <div class="events__item"><a class="events__item-link place" href="#">Октябрьское</a>
+                      </div></a><a class="events__item" href="#">
+                      <div class="events__item-blue place">Октябрьское</div>
                       <div class="events__item-title">Очный курс «Основы организации ведения бизнеса»</div>
                       <div class="events__item-times">
                         <div class="left">Начало: 01.02 16:00</div>
                         <div class="right">Окончание: 02.02 20:00</div>
-                      </div>
-                    </div>
-                    <div class="events__item"><a class="events__item-link place" href="#">Ханты-Мансийск</a>
+                      </div></a><a class="events__item" href="#">
+                      <div class="events__item-blue place">Ханты-Мансийск</div>
                       <div class="events__item-title">Программа «Азбука<br>предпринимателя»</div>
                       <div class="events__item-times">
                         <div class="left">Начало: 01.02 16:00</div>
                         <div class="right">Окончание: 02.02 20:00</div>
-                      </div>
-                    </div>
+                      </div></a>
                   </div>
                   <div class="events-block">
                     <div class="events-date">
                       <h5>6</h5>ср
-                    </div>
-                    <div class="events__item"><a class="events__item-link place" href="#">Ханты-Мансийск</a>
+                    </div><a class="events__item" href="#">
+                      <div class="events__item-blue place">Ханты-Мансийск</div>
                       <div class="events__item-title">
                         Тренинг "Юридические аспекты предпринимательства
                         и система налогообложения"
@@ -538,22 +624,19 @@
                       <div class="events__item-times">
                         <div class="left">Начало: 01.02 16:00</div>
                         <div class="right">Окончание: 02.02 20:00</div>
-                      </div>
-                    </div>
-                    <div class="events__item"><a class="events__item-link place" href="#">Лангепас</a>
+                      </div></a><a class="events__item" href="#">
+                      <div class="events__item-blue place">Лангепас</div>
                       <div class="events__item-title">Интенсив-тренинг "Как Ценностное предложение увеличит продажи в 2 раза"</div>
                       <div class="events__item-times">
                         <div class="left">Начало: 01.02 16:00</div>
                         <div class="right">Окончание: 02.02 20:00</div>
-                      </div>
-                    </div>
-                    <div class="events__item"><a class="events__item-link place" href="#">Ханты-Мансийск</a>
+                      </div></a><a class="events__item" href="#">
+                      <div class="events__item-blue place">Ханты-Мансийск</div>
                       <div class="events__item-title">Интенсив «Психология продаж»</div>
                       <div class="events__item-times">
                         <div class="left">Начало: 01.02 16:00</div>
                         <div class="right">Окончание: 02.02 20:00</div>
-                      </div>
-                    </div>
+                      </div></a>
                   </div>
                 </div>
               </div>
@@ -803,12 +886,15 @@
             <li>
               <button type="button" data-target="#menu-3">Проекты</button>
             </li>
-            <li>
-              <button type="button">Календарь</button>
-            </li>
-            <li>
-              <button class="more" type="button"></button>
-            </li>
+            <li><a href="#">Календарь</a></li>
+            <li><a href="#">Горячая линия</a></li>
+            <li><a href="#">Полезная информация</a></li>
+            <li><a href="#">Объявления</a></li>
+            <li><a href="#">Контакты</a></li>
+            <li><a href="#">Уполномоченный по защ...</a></li>
+            <li><a href="#">Молодёжное предпринима...</a></li>
+            <li><a href="#">Центр инноваций социальн...</a></li>
+            <li><a href="#">Организации инфраструк...</a></li>
           </ul>
         </nav>
         <section class="menu-section">
