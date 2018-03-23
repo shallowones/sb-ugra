@@ -9,6 +9,8 @@
 
     const $html = $('html')
 
+    const $document = $(document)
+
     const $window = $(window)
 
     const $page = $('.page')
@@ -151,7 +153,7 @@
       // menu
       const $menuItem = $('.mobile .menu > ul > li > button')
       const $menuSection = $('.mobile .menu-section > .menu-hidden')
-        $menuItem.on('click', (e) => {
+      $menuItem.on('click', (e) => {
         e.preventDefault()
         const $this = $(e.currentTarget)
         const $section = $($this.data('target'))
@@ -171,7 +173,7 @@
     // scroll
     {
       $('.js-scrollbar').each((index, el) => {
-        new SimpleBar(el, { autoHide: false })
+        new SimpleBar(el, {autoHide: false})
       })
     }
 
@@ -192,6 +194,53 @@
           const html = this.content.html()
           this.setContent('')
           $target.html(html)
+        }
+      })
+    }
+
+    // menu
+    {
+      const $menu = $('.js-menu')
+      const $menuItems = $('.js-menu > ul > li > a, .js-menu > ul > li > button')
+      const $section = $('.js-menu-section')
+      $menuItems.on('mouseover', (e) => {
+        const $this = $(e.currentTarget)
+        $menuItems.removeClass(ACTIVE_CLASS)
+        $this.addClass(ACTIVE_CLASS)
+        $section.html($this.parent().find('.menu-hidden').html())
+        $section.addClass('show')
+        $section.stop().animate(
+          {opacity: 1},
+          300
+        )
+      })
+
+      $document.on('mouseover', (e) => {
+        const $target = $(e.target)
+        const $menuFind = $menu.find($target)
+        if ((!$menuFind.length || !$menuFind.parent().find('.menu-hidden').length)
+          && !$section.find($target).length) {
+          $section.stop().animate(
+            {opacity: 0},
+            300,
+            () => {
+              $menuItems.removeClass(ACTIVE_CLASS)
+              $section.removeClass('show')
+              $section.html('')
+            }
+          )
+        }
+      })
+    }
+
+    //search
+    {
+      $('.js-search').on('click', (e) => {
+        const $this = $(e.target)
+        const isActive = $this.hasClass(ACTIVE_CLASS)
+        $this.parent().toggleClass(ACTIVE_CLASS)
+        if (!isActive) {
+          $this.parent().find('input').focus()
         }
       })
     }

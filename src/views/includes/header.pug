@@ -8,8 +8,10 @@ header.header
         span Показать на карте
       a(href="#").header-row.slow
         span Версия для слабовидящих
-      a(href="#").header-row.search
-        span Поиск по сайту
+      .header-search
+        input(type="text", placeholder="Введите фразу для поиска").header-search__input
+        button(type="button").header-search__button.js-search
+          span Поиск по сайту
       a(href="#").header-row.fb
       a(href="#").header-row.vk
       a(href="#").header-row.insta

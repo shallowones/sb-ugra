@@ -1,24 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: sketchtool 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
-    <title>DEC6E9D1-5D36-4DA0-B293-8EC1724CDABE</title>
-    <desc>Created with sketchtool.</desc>
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>Elements / Icons / S / Print</title>
+    <desc>Created with Sketch.</desc>
     <defs>
-        <path d="M17,5 L3,5 C1.34,5 0,6.34 0,8 L0,14 L4,14 L4,18 L16,18 L16,14 L20,14 L20,8 C20,6.34 18.66,5 17,5 Z M14,16 L6,16 L6,11 L14,11 L14,16 Z M17,9 C16.45,9 16,8.55 16,8 C16,7.45 16.45,7 17,7 C17.55,7 18,7.45 18,8 C18,8.55 17.55,9 17,9 Z M16,0 L4,0 L4,4 L16,4 L16,0 Z" id="path-1"></path>
+        <path d="M19,8 L5,8 C3.34,8 2,9.34 2,11 L2,17 L6,17 L6,21 L18,21 L18,17 L22,17 L22,11 C22,9.34 20.66,8 19,8 Z M16,19 L8,19 L8,14 L16,14 L16,19 Z M19,12 C18.45,12 18,11.55 18,11 C18,10.45 18.45,10 19,10 C19.55,10 20,10.45 20,11 C20,11.55 19.55,12 19,12 Z M18,3 L6,3 L6,7 L18,7 L18,3 Z" id="path-1"></path>
     </defs>
     <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Elements-/-Icons-/-S-/-Print">
-            <g id="↳-🎨Icon-Color" transform="translate(2.000000, 3.000000)">
-                <mask id="mask-2" fill="white">
-                    <use xlink:href="#path-1"></use>
-                </mask>
-                <use id="Shape" fill="#fff" fill-rule="nonzero" xlink:href="#path-1"></use>
-                <g id="_Resources-/-ChangeColorsHere-/-Platinum" mask="url(#mask-2)" fill="#fff">
-                    <g transform="translate(-2.000000, -3.000000)" id="Rectangle-4-Copy-11">
-                        <rect x="0" y="0" width="24" height="24" rx="4"></rect>
-                    </g>
-                </g>
-            </g>
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Shape" fill="#fff" fill-rule="nonzero" xlink:href="#path-1"></use>
         </g>
     </g>
 </svg>

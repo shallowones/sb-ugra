@@ -1,24 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: sketchtool 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
-    <title>00FA5EDD-D04B-49E6-B104-C6AE3A4EC140</title>
-    <desc>Created with sketchtool.</desc>
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>Elements / Icons / S /  Project</title>
+    <desc>Created with Sketch.</desc>
     <defs>
-        <polygon id="path-1" points="11 16.27 17.18 20 15.54 12.97 21 8.24 13.81 7.63 11 1 8.19 7.63 1 8.24 6.46 12.97 4.82 20"></polygon>
+        <polygon id="path-1" points="12 17.27 18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21"></polygon>
     </defs>
     <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Elements-/-Icons-/-S-/--Project">
-            <g id="Color" transform="translate(1.000000, 1.000000)">
-                <mask id="mask-2" fill="white">
-                    <use xlink:href="#path-1"></use>
-                </mask>
-                <use id="Shape" fill="#40b550" fill-rule="nonzero" xlink:href="#path-1"></use>
-                <g id="_Resources-/-ChangeColorsHere-/-Silver" mask="url(#mask-2)" fill="#40b550">
-                    <g transform="translate(0.714286, 0.200000)" id="↳-🎨Color">
-                        <rect x="0" y="0" width="21" height="22" rx="4"></rect>
-                    </g>
-                </g>
-            </g>
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Shape" fill="#40b550" fill-rule="nonzero" xlink:href="#path-1"></use>
         </g>
     </g>
 </svg>
