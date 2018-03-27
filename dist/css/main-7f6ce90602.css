@@ -4409,12 +4409,15 @@ a.breadcrumbs__item:after {
   font-weight: 500;
   position: relative;
   border-radius: 4px;
+  margin: 1rem 2rem 1rem 0;
   transition: color .3s;
 }
-.file > span {
+.file > span,
+.file > i {
   display: block;
   font-family: 'Circe', sans-serif;
   font-size: 14px;
+  font-style: normal;
   line-height: 20px;
   color: #848e99;
   font-weight: bold;
@@ -4496,11 +4499,20 @@ a.breadcrumbs__item:after {
 .file[href$='.pdf']:before {
   background-image: url('../images/svg/pdf.svg');
 }
+@media (max-width: 1024px) {
+  .file {
+    margin-right: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
 @media (max-width: 480px) {
   .file {
     padding-top: 1rem;
     padding-right: 1rem;
     padding-bottom: 1rem;
+    margin-right: 0;
+    width: 100%;
   }
 }
 .accordion {
