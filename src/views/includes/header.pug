@@ -1,88 +1,89 @@
 header.header
-  .header-top
-    .wrapper
-      a(href="#").header__logo.mobile__logo
-      a(href="#").header-row.phone
-        span 8 800 101 01 01
-      a(href="#").header-row.map
-        span Показать на карте
-      a(href="#").header-row.slow
-        span Версия для слабовидящих
-      .header-search
-        input(type="text", placeholder="Введите фразу для поиска").header-search__input
-        button(type="button").header-search__button.js-search
-          span Поиск по сайту
-      a(href="#").header-row.fb
-      a(href="#").header-row.vk
-      a(href="#").header-row.insta
-      a(href="#").header-row.youtube
-      button(type="button").mobile__button.js-mobile
-        span
-        span
-        span
-        span
-  .header-bottom
-    .wrapper
-      .header-bottom-left
-        a(href="#").header__logo
-        .header-desc Помощь — начинающим, <b>поддержка — успешным!</b>
-      .header-bottom-right
-        include menu
-        button(type="button", data-target="#ask").button.blue.big.center.js-popup Задать вопрос
-        #ask.display-none
-          form(action="#").form.popup
-            .center
-              h3 Задайте нам вопрос
-            .form-control
-              .form-control-left
-                label(for="ask-input-1").form-control__label ФИО
+  .header-wrap.js-float
+    .header-top
+      .wrapper
+        a(href="#").header__logo.mobile__logo
+        a(href="#").header-row.phone
+          span 8 800 101 01 01
+        a(href="#").header-row.map
+          span Показать на карте
+        a(href="#").header-row.slow
+          span Версия для слабовидящих
+        .header-search
+          input(type="text", placeholder="Введите фразу для поиска").header-search__input
+          button(type="button").header-search__button.js-search
+            span Поиск по сайту
+        a(href="#").header-row.fb
+        a(href="#").header-row.vk
+        a(href="#").header-row.insta
+        a(href="#").header-row.youtube
+        button(type="button").mobile__button.js-mobile
+          span
+          span
+          span
+          span
+    .header-bottom
+      .wrapper
+        .header-bottom-left
+          a(href="#").header__logo
+          .header-desc Помощь — начинающим, <b>поддержка — успешным!</b>
+        .header-bottom-right
+          include menu
+          button(type="button", data-target="#ask").button.blue.big.center.js-popup Задать вопрос
+          #ask.display-none
+            form(action="#").form.popup
+              .center
+                h3 Задайте нам вопрос
+              .form-control
+                .form-control-left
+                  label(for="ask-input-1").form-control__label ФИО
+                    span.req *
+                .form-control-right
+                  input(type="text")#ask-input-1.form-control__input
+              .form-control.invalid
+                .form-control-left
+                  label(for="ask-input-2").form-control__label Телефон
+                    span.req *
+                .form-control-right
+                  input(type="text")#ask-input-2.form-control__input
+              .form-control
+                .form-control-left
+                  label(for="ask-input-3").form-control__label E-mail
+                    span.req *
+                .form-control-right
+                  input(type="text")#ask-input-3.form-control__input
+              .form-control
+                .form-control-left
+                  label(for="ask-input-4").form-control__label Вид деятельности
+                    span.req *
+                .form-control-right
+                  input(type="text")#ask-input-4.form-control__input
+              .form-control
+                .form-control-left
+                  label(for="ask-input-5").form-control__label Тема
+                    span.req *
+                .form-control-right
+                  select#ask-input-5.select.js-select
+                    option(value="1") Бизнес образование
+                    option(value="2") Консультация по грантам
+                    option(value="3") Консультация по предоставлению компенсации затрат
+              .form-control
+                .form-control-left
+                  label(for="ask-input-6").form-control__label Текст сообщения
+                    span.req *
+                .form-control-right
+                  textarea#ask-input-6.form-control__textarea
+              div
+                input(type="checkbox", name="checkbox-10")#ask-radio-1.form-control__check
+                label(for="ask-radio-1").form-control__label Я согласен на обработку персональных данных
                   span.req *
-              .form-control-right
-                input(type="text")#ask-input-1.form-control__input
-            .form-control.invalid
-              .form-control-left
-                label(for="ask-input-2").form-control__label Телефон
+                input(type="checkbox", name="checkbox-10", checked)#ask-radio-2.form-control__check
+                label(for="ask-radio-2").form-control__label Я согласен с правилами пользования сайта
                   span.req *
-              .form-control-right
-                input(type="text")#ask-input-2.form-control__input
-            .form-control
-              .form-control-left
-                label(for="ask-input-3").form-control__label E-mail
+              .form-control.min-mar
+                .text-right.gray.small
                   span.req *
-              .form-control-right
-                input(type="text")#ask-input-3.form-control__input
-            .form-control
-              .form-control-left
-                label(for="ask-input-4").form-control__label Вид деятельности
-                  span.req *
-              .form-control-right
-                input(type="text")#ask-input-4.form-control__input
-            .form-control
-              .form-control-left
-                label(for="ask-input-5").form-control__label Тема
-                  span.req *
-              .form-control-right
-                select#ask-input-5.select.js-select
-                  option(value="1") Бизнес образование
-                  option(value="2") Консультация по грантам
-                  option(value="3") Консультация по предоставлению компенсации затрат
-            .form-control
-              .form-control-left
-                label(for="ask-input-6").form-control__label Текст сообщения
-                  span.req *
-              .form-control-right
-                textarea#ask-input-6.form-control__textarea
-            div
-              input(type="checkbox", name="checkbox-10")#ask-radio-1.form-control__check
-              label(for="ask-radio-1").form-control__label Я согласен на обработку персональных данных
-                span.req *
-              input(type="checkbox", name="checkbox-10", checked)#ask-radio-2.form-control__check
-              label(for="ask-radio-2").form-control__label Я согласен с правилами пользования сайта
-                span.req *
-            .form-control.min-mar
-              .text-right.gray.small
-                span.req *
-                i – поля, обязательные для заполнения
-            .form-control.bottom
-              img(src="images/recaptcha-demo.gif", width="308", height="82")
-              button(type="submit").button.big Отправить
+                  i – поля, обязательные для заполнения
+              .form-control.bottom
+                img(src="images/recaptcha-demo.gif", width="308", height="82")
+                button(type="submit").button.big Отправить
