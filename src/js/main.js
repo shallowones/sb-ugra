@@ -249,7 +249,7 @@
     {
       const SCROLL_TOP = 'header-wrap--fixed-scroll-top'
       const SCROLL_BOTTOM = 'header-wrap--fixed-scroll-bottom'
-      
+
       const $float = $('.js-float')
       let previousPosition = 0
       $page.scroll((e) => {
