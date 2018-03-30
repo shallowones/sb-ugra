@@ -75,6 +75,7 @@ block content
 
   main.main
     #animation-trigger-1
+    #animation-trigger-2
     .swiper-container.main-slider.js-main-slider
       .main-slider-buttons.wrapper
         button(type="button").swiper-button-prev.main-slider__prev.js-prev
@@ -131,25 +132,26 @@ block content
               span.js-timer
             .main-slider-pag__item
               span.js-timer
-          .main-numbers
-            .main-numbers__item
-              h5 1 217
-              p Всего оказано услуг
-            .main-numbers__item
-              h5 596
-              p Предоставлено информационных и консультационных услуг
-            .main-numbers__item
-              h5 136
-              p Предоставлено услуг в сфере обучения
-            .main-numbers__item
-              h5 10
-              p Предоставлено услуг в сфере обучения
-            .main-numbers__item
-              h5 45
-              p Субъектов получили имущественную поддержку
-    #animation-trigger-2.wrapper
+      #animation-2.animation.wrapper
+        .main-numbers
+          .main-numbers__item
+            h5 1 217
+            p Всего оказано услуг
+          .main-numbers__item
+            h5 596
+            p Предоставлено информационных и консультационных услуг
+          .main-numbers__item
+            h5 136
+            p Предоставлено услуг в сфере обучения
+          .main-numbers__item
+            h5 10
+            p Предоставлено услуг в сфере обучения
+          .main-numbers__item
+            h5 45
+            p Субъектов получили имущественную поддержку
+    #animation-trigger-3.wrapper
       .main-news
-        #animation-2.animation
+        #animation-3.animation
           h2 Новости
           .main-news-top
             .main-news__item.big(style="background-image: url('images/news-big-1.png')")
@@ -177,14 +179,14 @@ block content
                   .bottom
                     .right
                       .date.fixed 1 февраля 2018
-              a(href="#", style="background-image: url('images/news-small-2.png')")#animation-trigger-3.main-news__item
+              a(href="#", style="background-image: url('images/news-small-2.png')")#animation-trigger-4.main-news__item
                 .main-news__item-inner
                   p
                     b Интенсив-тренинг «Психология продаж»
                   .bottom
                     .right
                       .date.fixed 1 февраля 2018
-        #animation-3.animation
+        #animation-4.animation
           .main-news-bottom
             a(href="#", style="background-image: url('images/news-small-3.png')").main-news__item
               .main-news__item-inner
@@ -211,14 +213,14 @@ block content
             // во время ajax-запроса добавить атрибут disabled
             button(type="button").button.blue-text.icon-left.load Показать еще
 
-    #animation-trigger-4
     #animation-trigger-5
     #animation-trigger-6
     #animation-trigger-7
-    #animation-4.animation.events
+    #animation-trigger-8
+    #animation-5.animation.events
       .events-top
         .events-left
-          #animation-5.animation.events-inner(data-delay="0.5")
+          #animation-6.animation.events-inner(data-delay="0.5")
             h2 Обучающие мероприятия
             .events-months
               each item in eventButtons
@@ -228,9 +230,9 @@ block content
                 else
                   button(type="button").events-months__button= item.name
                     span= item.count
-            #animation-trigger-8
+            #animation-trigger-9
         .events-right
-          #animation-6.animation.events-filter(data-delay="0.8")
+          #animation-7.animation.events-filter(data-delay="0.8")
             select(data-placeholder="Город").select.with-icon.point.js-select
               option(value="1") Москва
               option(value="2") Санкт-Петербург
@@ -250,7 +252,7 @@ block content
             .calendar
               // календарь пока что от jquery ui, при разработке возможна смена
               input(type="text", value="Календарь", readonly).calendar__input.js-calendar
-          #animation-7.animation.events-right-wrapper(data-delay="1.1")
+          #animation-8.animation.events-right-wrapper(data-delay="1.1")
             .events-list.js-scrollbar
               each item in [0, 1]
                 .events-block
@@ -304,7 +306,7 @@ block content
                       .left Начало: 01.02 16:00
                       .right Окончание: 02.02 20:00
       .events-bottom
-        #animation-8.animation.wrapper
+        #animation-9.animation.wrapper
           .swiper-container.publications.js-slider
             .publications-top
               h2 Имущественная поддержка
@@ -329,9 +331,9 @@ block content
                     поддержки в форме предоставления нежилых помещений в субаренду субъектам …
                   .date 18 февраля 2018
             a(href="#").button.blue Все публикации
-        #animation-trigger-9
+        #animation-trigger-10
 
-    #animation-9.animation.soc.center
+    #animation-10.animation.soc.center
       .wrapper
         button(type="button", data-target="#vk").soc-tab.js-tab.active Вконтакте
         button(type="button", data-target="#fb").soc-tab.js-tab Facebook
@@ -363,9 +365,9 @@ block content
                   img(src="images/people-1.jpg")
             .soc-counter 1914<br>участников
           a(href="#").button.blue.so-big Присоединиться
-      #animation-trigger-10
+      #animation-trigger-11
 
-    #animation-10.animation.partners-block
+    #animation-11.animation.partners-block
       .wrapper
         .swiper-container.partners.js-slider
           .publications-top

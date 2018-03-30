@@ -374,16 +374,33 @@ img {
       &-top, &-bottom {
         position: fixed;
         padding-right: 17px;
+
+        @media @plan {
+          position: static;
+        }
       }
 
       &-top {
         animation: moveDown .5s;
+
+        @media @plan {
+          animation: none;
+        }
       }
 
       &-bottom {
         animation: moveUp .5s;
         transform: translateY(-137px);
+
+        @media @plan {
+          animation: none;
+          transform: none;
+        }
       }
+    }
+
+    @media @plan {
+      position: static;
     }
   }
 
@@ -803,6 +820,10 @@ img {
     @media @desktop-mini {
       display: none;
     }
+  }
+
+  @media @plan {
+    padding-bottom: 0;
   }
 }
 
