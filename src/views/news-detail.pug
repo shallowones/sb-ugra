@@ -6,9 +6,9 @@ block content
 
   main.main.detail
     .wrapper
+      include includes/detail-menu
       +breadcrumbs('Главная', 'О фонде', 'Новости')
       h1 Новости
-      include includes/detail-menu
 
       .news-detail
         img(src="images/news-big-1.png").news-detail__img

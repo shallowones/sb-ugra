@@ -3553,9 +3553,9 @@ a.breadcrumbs__item:after {
   padding: 2rem 0;
 }
 .detail .detail-menu {
-  padding-bottom: 2.5rem;
   border-bottom: 1px solid #dde1e6;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 .detail .detail-menu > ul {
   margin-bottom: 0;
@@ -3821,6 +3821,7 @@ a.breadcrumbs__item:after {
   position: relative;
   border-radius: 4px;
   overflow: hidden;
+  outline: none;
 }
 .video__link > img {
   display: block;

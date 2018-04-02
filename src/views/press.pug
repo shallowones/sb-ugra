@@ -35,9 +35,9 @@ block content
 
   main.main.detail
     .wrapper
+      include includes/detail-menu
       +breadcrumbs('Главная', 'О фонде', 'СМИ о нас')
       h1 СМИ о нас
-      include includes/detail-menu
 
       .press
         each item in pressItems
