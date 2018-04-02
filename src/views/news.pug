@@ -1,0 +1,61 @@
+extends layout
+
+include mixins/breadcrumbs
+
+block content
+
+  main.main.detail
+    .wrapper
+      +breadcrumbs('Главная', 'О фонде', 'Новости')
+      h1 Новости
+      include includes/detail-menu
+
+      .news
+        .news-item
+          a(href="#", style="background-image: url('images/news-small-1.png')").news-item__img
+          .news-item-right
+            .date.gray.fixed 07.03.2018
+            a(href="#").news-item__name.
+              Поздравление Генерального директора Фонда поддержки предпринимательства
+              Югры Сергея Стручкова с Международным женским днем - 8 марта!
+        .news-item
+          a(href="#", style="background-image: url('images/news-small-2.png')").news-item__img
+          .news-item-right
+            .date.gray.fixed 12.02.2018
+            a(href="#").news-item__name.
+              Ваш бизнес приносит пользу обществу? Расскажите о своем социальном
+              проекте «от первого лица»
+            p.
+              Фонд поддержки предпринимательства Югры приглашает принять участие в
+              медиа-проекте «Социальное предпринимательство в Югре».
+        .news-item
+          a(href="#", style="background-image: url('images/news-small-3.png')").news-item__img
+          .news-item-right
+            .date.gray.fixed 01.02.2018
+            a(href="#").news-item__name.
+              Окружной конкурс «Предпринимательство сегодня» приглашает югорских
+              школьников и студентов к участию
+            p.
+              1 февраля 2018 года стартует Окружной конкурс творческих работ среди
+              школьников и студентов «Предпринимательство сегодня».
+        .news-item
+          a(href="#", style="background-image: url('images/news-small-4.png')").news-item__img
+          .news-item-right
+            .date.gray 12.03.2018
+            a(href="#").news-item__name.
+              Впиши себя в историю социального предпринимательства Югры!
+            p.
+              Фонд поддержки предпринимательства Югры при содействии Фонда региональных
+              социальных программ «Наше будущее» реализует медиа-проект «Социальное
+              предпринимательство в Югре». Это уникальное издание на страницах которого
+              публикуются истории успешных социальных практик, реализуемых в нашем регионе.
+        .news-item
+          a(href="#", style="background-image: url('images/news-small-5.png')").news-item__img
+          .news-item-right
+            .date.gray 12.03.2018
+            a(href="#").news-item__name.
+              Более 250 югорчан открыли для себя Школу социального предпринимательства
+            p.
+              С 19 февраля по 5 марта в Югре прошли Дни открытых дверей в Школе социального
+              предпринимательства.
+      include includes/pagination

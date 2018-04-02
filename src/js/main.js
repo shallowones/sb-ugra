@@ -249,14 +249,17 @@
     {
       const SCROLL_TOP = 'header-wrap--fixed-scroll-top'
       const SCROLL_BOTTOM = 'header-wrap--fixed-scroll-bottom'
+      const DIFF_MORE = 200
 
       const $float = $('.js-float')
+      const headerTopPosition = $('.header').offset().top
+
       let previousPosition = 0
       $page.scroll((e) => {
         const currentPosition = e.currentTarget.scrollTop
-        if (currentPosition > 0) {
+        if (currentPosition > headerTopPosition) {
           if (previousPosition > currentPosition) {
-            if (previousPosition - currentPosition > 200) {
+            if (previousPosition - currentPosition > DIFF_MORE + headerTopPosition) {
               $float.removeClass(SCROLL_BOTTOM)
               $float.addClass(SCROLL_TOP)
               previousPosition = currentPosition

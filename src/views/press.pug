@@ -1,0 +1,49 @@
+extends layout
+
+include mixins/breadcrumbs
+
+block content
+
+  -
+    var pressItems = [
+      {
+        date: '14.03.2018',
+        name: 'Школу социального предпринимательства в Ханты-Мансийске можно пройти бесплатно!',
+        source: 'ОТРК "Югра"'
+      },
+      {
+        date: '06.03.2018',
+        name: 'Как программа "Ты-Предприниматель" помогает открывать бизнес',
+        source: 'Безформата.RU'
+      },
+      {
+        date: '28.02.2018',
+        name: 'В Югре выучиться на предпринимателя можно онлайн',
+        source: 'NewsDnya.ru'
+      },
+      {
+        date: '27.02.2018',
+        name: 'Делегация Хабаровского края изучает успешный опыт Югры по развитию социального предпринимательства',
+        source: 'Интернет портал Безформата.RU'
+      },
+      {
+        date: '26.02.2018',
+        name: 'Планшет за рисунок! ФПП Югры ждет конкурсные работы от детей (сюжет)',
+        source: 'ОТРК "Югра"'
+      }
+    ]
+
+  main.main.detail
+    .wrapper
+      +breadcrumbs('Главная', 'О фонде', 'СМИ о нас')
+      h1 СМИ о нас
+      include includes/detail-menu
+
+      .press
+        each item in pressItems
+          .press-item
+            .press-item__date.gray= item.date
+            a(href="#").press-item__name= item.name
+            .press-item__source= item.source
+
+      include includes/pagination

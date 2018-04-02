@@ -1,0 +1,54 @@
+-
+  var menuItems = [
+  {
+  name: 'Официально',
+  active: true
+  },
+  {
+  name: 'Антикоррупционная экспертиза',
+  active: false
+  },
+  {
+  name: 'Руководство',
+  active: false
+  },
+  {
+  name: 'СМИ о нас',
+  active: false
+  },
+  {
+  name: 'Миссия',
+  active: false
+  },
+  {
+  name: 'Новости',
+  active: false
+  },
+  {
+  name: 'История',
+  active: false
+  },
+  {
+  name: 'Вакансии',
+  active: false
+  },
+  {
+  name: 'Партнеры',
+  active: false
+  },
+  {
+  name: 'Контакты',
+  active: false
+  }
+  ]
+
+nav.detail-menu
+  ul
+    each item in menuItems
+      if (item.active)
+        li
+          span= item.name
+      else
+        li
+          a(href="#")
+            span= item.name

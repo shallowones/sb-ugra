@@ -4,64 +4,11 @@ include mixins/breadcrumbs
 
 block content
 
-  -
-    var menuItems = [
-      {
-        name: 'Официально',
-        active: true
-      },
-      {
-        name: 'Антикоррупционная экспертиза',
-        active: false
-      },
-      {
-        name: 'Руководство',
-        active: false
-      },
-      {
-        name: 'СМИ о нас',
-        active: false
-      },
-      {
-        name: 'Миссия',
-        active: false
-      },
-      {
-        name: 'Новости',
-        active: false
-      },
-      {
-        name: 'История',
-        active: false
-      },
-      {
-        name: 'Вакансии',
-        active: false
-      },
-      {
-        name: 'Партнеры',
-        active: false
-      },
-      {
-        name: 'Контакты',
-        active: false
-      }
-    ]
-
   main.main.detail
     .wrapper
       +breadcrumbs('Главная', 'О фонде', 'Официально')
       h1 Заголовок страницы
-      nav.detail-menu
-        ul
-          each item in menuItems
-            if (item.active)
-              li
-                span= item.name
-            else
-              li
-                a(href="#")
-                  span= item.name
+      include includes/detail-menu
       h3.blue Надёжный поручитель
       .inform
         .inform-left
@@ -90,7 +37,8 @@ block content
       h3.blue Видеоплеер 1
       .video-block.big
         .video
-          img(src="images/video.jpg")
+          a(href="#").video__link
+            img(src="images/video.jpg")
           .video-title Заголовок видеоролика
           .video-desc Пример описания видеоролика для примера отображения лида в данном блоке
 
@@ -100,19 +48,23 @@ block content
       h3.blue Видеоплеер 2
       .video-block
         .video
-          img(src="images/video.jpg")
+          a(href="#").video__link
+            img(src="images/video.jpg")
           .video-title Заголовок видеоролика
           .video-desc Пример описания видеоролика для примера отображения лида в данном блоке
         .video
-          img(src="images/video.jpg")
+          a(href="#").video__link
+            img(src="images/video.jpg")
           .video-title Пример второго видеоролика
           .video-desc Пример описания видеоролика для примера отображения лида в данном блоке
         .video
-          img(src="images/video.jpg")
+          a(href="#").video__link
+            img(src="images/video.jpg")
           .video-title Заголовок видеоролика
           .video-desc Пример описания видеоролика для примера отображения лида в данном блоке
         .video
-          img(src="images/video.jpg")
+          a(href="#").video__link
+            img(src="images/video.jpg")
           .video-title Пример второго видеоролика
           .video-desc Пример описания видеоролика для примера отображения лида в данном блоке
       .center
@@ -523,13 +475,4 @@ block content
               Информация для налогоплательщиков. Для ИП — <a href="#">здесь</a>,
               а для юр. лиц — вот <a href="#">здесь</a>.
 
-      .pag
-        a(href="#").pag__item.prev
-        span.pag__item 1
-        a(href="#").pag__item 2
-        a(href="#").pag__item 3
-        a(href="#").pag__item 4
-        a(href="#").pag__item 5
-        span.pag__item …
-        a(href="#").pag__item 18
-        a(href="#").pag__item.next
+      include includes/pagination
