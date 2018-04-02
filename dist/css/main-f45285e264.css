@@ -1902,8 +1902,6 @@ img {
 .main-news-bottom {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
 }
 .main-news-bottom > .main-news__item {
   margin-left: 2rem;
@@ -5304,11 +5302,16 @@ a.pag__item:hover {
   }
 }
 .news-detail__img {
-  width: 400px;
+  max-width: 400px;
   height: auto;
   border-radius: 4px;
   float: left;
   margin: 0 2rem 1rem 0;
+}
+@media (max-width: 480px) {
+  .news-detail__img {
+    max-width: 100%;
+  }
 }
 .news-detail .date {
   margin-bottom: 1rem;

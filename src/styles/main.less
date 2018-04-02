@@ -1560,7 +1560,6 @@ img {
 
     &-bottom {
       display: flex;
-      justify-content: space-between;
 
       & > .main-news__item {
         margin-left: 2rem;
@@ -5203,11 +5202,15 @@ a.pag__item {
   &-detail {
 
     &__img {
-      width: 400px;
+      max-width: 400px;
       height: auto;
       border-radius: 4px;
       float: left;
       margin: 0 2rem 1rem 0;
+
+      @media @mobile {
+        max-width: 100%;
+      }
     }
 
     & .date {
