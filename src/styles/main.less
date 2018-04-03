@@ -1449,6 +1449,7 @@ img {
         font-size: 1.625rem;
         line-height: 2rem;
         font-weight: 500;
+        margin-left: 3rem;
 
         & > span {
           display: block;
@@ -1458,16 +1459,13 @@ img {
           font-weight: normal;
         }
 
-        &:last-child {
-          margin-left: 3rem;
-
-          @media @mobile {
-            margin-left: 0;
-          }
+        &:first-child {
+          margin-left: 0;
         }
 
         @media @mobile {
           width: 100%;
+          margin-left: 0;
         }
       }
 
