@@ -1257,7 +1257,7 @@ img {
     margin-bottom: 2.5rem;
     padding-bottom: 40px;
 
-    & > .swiper-wrapper {
+    & .swiper-wrapper {
       z-index: 0;
     }
 
@@ -1311,7 +1311,9 @@ img {
 
     &-bottom {
       width: 100%;
-      margin-top: -140px;
+      position: absolute;
+      left: 0;
+      bottom: 136px;
 
       @media @mobile {
         margin-top: -2rem;
@@ -1321,7 +1323,6 @@ img {
     &-pag {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 1rem;
 
       &__item {
         position: relative;
@@ -1370,6 +1371,12 @@ img {
       }
     }
 
+    & > .wrapper {
+      margin-top: -120px;
+      position: relative;
+      z-index: 1;
+    }
+
     @media @plan {
       margin-bottom: 0;
     }
@@ -1383,7 +1390,7 @@ img {
     background-size: cover;
 
     & > .wrapper {
-      padding: 120px 576px 0 0;
+      padding: 120px 386px 0 0;
       opacity: 0;
       transform: translateY(100px);
       transition: all 1s;
@@ -1397,15 +1404,15 @@ img {
       }
 
       @media @desktop-mini {
-        padding: 6rem 50% 0 2rem;
+        padding: 4rem 12rem 2rem 2rem;
       }
 
       @media @plan {
-        padding: 2rem 2rem 0 2rem;
+        padding: 2rem 2rem 1rem 2rem;
       }
 
       @media @mobile {
-        padding: 1rem;
+        padding: 1rem 1rem 0 1rem;
       }
     }
 
@@ -1478,15 +1485,6 @@ img {
     }
 
     @media @desktop-mini {
-      height: 40rem;
-    }
-
-    @media @plan {
-      height: 32rem;
-    }
-
-    @media @mobile {
-      padding-bottom: 2rem;
       height: auto;
     }
   }
@@ -5294,5 +5292,71 @@ a.pag__item {
 
   @media @mobile {
     margin: 1rem 0;
+  }
+}
+
+.link {
+  color: #1b39ba;
+  transition: color .3s;
+
+  &:hover {
+    color: #40b550;
+  }
+}
+
+.search {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dde1e6;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  & > .link {
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  & > small {
+
+    & > a {
+      color: #1b39ba;
+      transition: color .3s;
+
+      &:hover {
+        color: #40b550;
+      }
+    }
+  }
+
+  & > p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &__input {
+    display: inline-block;
+    vertical-align: top;
+    width: 400px;
+    max-width: 100%;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+
+    @media @mobile {
+      display: block;
+      margin-right: 0;
+    }
+  }
+
+  &-block {
+    margin-top: 1rem;
+  }
+
+  &-search {
+
+    @media @mobile {
+      text-align: center;
+    }
   }
 }

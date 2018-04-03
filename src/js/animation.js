@@ -51,7 +51,7 @@
       },
       simulateTouch: false,
       breakpoints: {
-        480: {
+        1024: {
           simulateTouch: true
         }
       },
