@@ -1732,11 +1732,14 @@ img {
   transform: translateY(100px);
   transition: all 1s;
 }
-.main-slide > .wrapper .button:last-child {
+.main-slide > .wrapper .button {
   margin-left: 1rem;
 }
+.main-slide > .wrapper .button:last-child {
+  margin-left: 0;
+}
 @media (max-width: 480px) {
-  .main-slide > .wrapper .button:last-child {
+  .main-slide > .wrapper .button {
     margin-left: 0;
   }
 }
