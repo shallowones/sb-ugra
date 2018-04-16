@@ -32,6 +32,9 @@
     'js/vendor/jbox/jbox.min.js',
     'js/vendor/scrollmagic/scrollmagic.min.js',
     'js/vendor/simplebar/simplebar.min.js',
+
+    'js/app/fullPage/jquery.fullpage.min.js',
+
     'js/app/main.js'
   ]
 
@@ -45,7 +48,7 @@ html(lang="ru")
     each item in css
       link(rel="stylesheet", href=item)
 
-  body
+  body(data-hijacking="on", data-animation="none")
     block loader
     .page
       include includes/header

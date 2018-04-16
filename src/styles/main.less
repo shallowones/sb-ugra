@@ -3,6 +3,7 @@
 @plan: ~"(max-width: 1024px)";
 @plan-mini: ~"(max-width: 768px)";
 @mobile: ~"(max-width: 480px)";
+@notebook: ~"(max-height: 840px)";
 
 @keyframes loader {
   100% {
@@ -103,7 +104,6 @@ html {
       clip-path: none;
 
       &__button {
-        opacity: 1;
 
         & > span {
 
@@ -424,8 +424,7 @@ img {
     line-height: 20px;
     color: #fff;
     position: relative;
-    opacity: .6;
-    transition: opacity .3s;
+    transition: color .3s;
 
     &:before {
       content: '';
@@ -436,6 +435,7 @@ img {
       height: 100%;
       background: no-repeat left center;
       background-size: 24px;
+      transition: background-image .3s;
 
       @media @plan {
         width: 100%;
@@ -456,6 +456,13 @@ img {
         background-image: url('../images/svg/phone.svg');
       }
 
+      &:hover {
+
+        &:before {
+          background-image: url('../images/svg/phone-green.svg');
+        }
+      }
+
       @media @plan {
         margin-left: auto;
       }
@@ -466,12 +473,28 @@ img {
       &:before {
         background-image: url('../images/svg/point.svg');
       }
+
+      &:hover {
+
+        &:before {
+          background-image: url('../images/svg/point-green.svg');
+        }
+      }
     }
 
     &.slow {
 
       &:before {
+        width: 28px;
         background-image: url('../images/svg/blind.svg');
+        background-size: 28px;
+      }
+
+      &:hover {
+
+        &:before {
+          background-image: url('../images/svg/blind-green.svg');
+        }
       }
 
       @media @plan {
@@ -487,6 +510,13 @@ img {
         background-image: url('../images/svg/facebook.svg');
       }
 
+      &:hover {
+
+        &:before {
+          background-image: url('../images/svg/facebook-green.svg');
+        }
+      }
+
       @media @plan {
         display: none;
       }
@@ -498,6 +528,13 @@ img {
 
       &:before {
         background-image: url('../images/svg/vk.svg');
+      }
+
+      &:hover {
+
+        &:before {
+          background-image: url('../images/svg/vk-green.svg');
+        }
       }
 
       @media @plan {
@@ -513,6 +550,13 @@ img {
         background-image: url('../images/svg/instagram.svg');
       }
 
+      &:hover {
+
+        &:before {
+          background-image: url('../images/svg/instagram-green.svg');
+        }
+      }
+
       @media @plan {
         display: none;
       }
@@ -526,6 +570,13 @@ img {
         background-image: url('../images/svg/youtube.svg');
       }
 
+      &:hover {
+
+        &:before {
+          background-image: url('../images/svg/youtube-green.svg');
+        }
+      }
+
       @media @plan {
         display: none;
       }
@@ -536,10 +587,17 @@ img {
       &:before {
         background-image: url('../images/svg/mail.svg');
       }
+
+      &:hover {
+
+        &:before {
+          background-image: url('../images/svg/mail-green.svg');
+        }
+      }
     }
 
     &:hover {
-      opacity: 1;
+      color: #40b550;
     }
 
     & > span {
@@ -568,8 +626,6 @@ img {
     line-height: 20px;
     color: #fff;
     position: relative;
-    opacity: .6;
-    transition: opacity .3s;
 
     &__button {
       width: 140px;
@@ -578,7 +634,7 @@ img {
       padding-left: 34px;
       padding-right: 0;
       overflow: hidden;
-      transition: width .3s;
+      transition: width .3s, color .3s;
 
       & > span {
         display: block;
@@ -605,6 +661,14 @@ img {
           width: 3rem;
           background-position-x: center;
           background-size: 32px;
+        }
+      }
+
+      &:hover {
+        color: #40b550;
+
+        &:before {
+          background-image: url('../images/svg/search-green.svg');
         }
       }
 
@@ -697,6 +761,13 @@ img {
           background-image: url('../images/svg/close.svg');
         }
 
+        &:hover {
+
+          &:before {
+            background-image: url('../images/svg/close-green.svg');
+          }
+        }
+
         @media @plan {
           width: 3rem;
         }
@@ -715,10 +786,6 @@ img {
         width: ~"calc(100% - 2rem)";
         right: 1rem;
       }
-    }
-
-    &:hover {
-      opacity: 1;
     }
 
     @media @plan {
@@ -747,6 +814,15 @@ img {
       display: flex;
       align-items: center;
       height: 100%;
+    }
+
+    &-right {
+
+      & > .button {
+        font-family: inherit;
+        font-size: 14px;
+        font-weight: 500;
+      }
     }
 
     &:after {
@@ -790,18 +866,22 @@ img {
       height: 100%;
       background-image: url('../images/logo-white.svg');
       background-size: 133px;
-      opacity: .6;
-      transition: opacity .3s;
+      transition: background-image .3s;
 
       &:before {
         width: 100%;
         left: 3px;
         background-image: url('../images/shape-white.svg');
         background-size: 38px;
+        transition: background-image .3s;
       }
 
       &:hover {
-        opacity: 1;
+        background-image: url('../images/logo-green.svg');
+
+        &:before {
+          background-image: url('../images/shape-green.svg');
+        }
       }
 
       @media @plan {
@@ -1222,11 +1302,10 @@ img {
   &.with-opacity {
     border-color: #fff;
     background-color: transparent;
-    opacity: .6;
 
     &:hover {
-      opacity: 1;
-      border-color: #fff;
+      color: #40b550;
+      border-color: #40b550;
       background-color: transparent;
     }
   }
@@ -1398,13 +1477,17 @@ img {
       & .button {
         margin-left: 1rem;
 
-        &:last-child {
+        &:first-child {
           margin-left: 0;
         }
 
         @media @mobile {
           margin-left: 0;
         }
+      }
+
+      @media @notebook {
+        padding-top: 60px;
       }
 
       @media @desktop-mini {
@@ -1484,6 +1567,10 @@ img {
         opacity: 1;
         transform: translateY(0);
       }
+    }
+
+    @media @notebook {
+      height: 600px;
     }
 
     @media @desktop-mini {
@@ -1633,7 +1720,7 @@ img {
         width: 100%;
         height: 100%;
         background-color: #000;
-        opacity: .4;
+        opacity: .3;
         transition: opacity .3s, background-color .3s;
       }
 
@@ -1755,7 +1842,7 @@ a.main-news__item {
 
     &:before {
       background-color: #0b184f;
-      opacity: .9;
+      opacity: .7;
     }
   }
 }
@@ -1846,6 +1933,10 @@ a.main-news__item {
         }
       }
 
+      @media @notebook {
+        height: 650px;
+      }
+
       @media @desktop-mini {
         width: 100%;
         margin-left: 0;
@@ -1859,6 +1950,11 @@ a.main-news__item {
       @media @mobile {
         padding-right: 1rem;
       }
+    }
+
+    @media @notebook {
+      padding-top: 2rem;
+      padding-bottom: 5rem;
     }
 
     @media @desktop-mini {
@@ -1884,6 +1980,11 @@ a.main-news__item {
     color: #fff;
     float: right;
     margin-right: 2rem;
+
+    @media @notebook {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
 
     @media @plan {
       width: 100%;
@@ -2153,6 +2254,10 @@ a.main-news__item {
     flex-wrap: wrap;
     margin-bottom: 2rem;
 
+    @media @notebook {
+      margin-bottom: 1rem;
+    }
+
     @media @desktop-mini {
       width: 100%;
       margin-bottom: 1rem;
@@ -2266,7 +2371,6 @@ a.main-news__item {
     &:last-child {
       margin-right: 0;
     }
-
 
   }
 }
@@ -2408,11 +2512,21 @@ a.main-news__item {
       width: 230px;
       height: 58px;
       background-size: 215px;
+      transition: background-image .3s;
 
       &:before {
         width: 58px;
         background-image: url('../images/shape-white.svg');
         background-size: 58px;
+        transition: background-image .3s;
+      }
+
+      &:hover {
+        background-image: url('../images/logo-green.svg');
+
+        &:before {
+          background-image: url('../images/shape-green.svg');
+        }
       }
 
       @media @plan {
@@ -2492,11 +2606,10 @@ a.main-news__item {
       display: block;
       color: #fff;
       margin-bottom: .5rem;
-      opacity: .6;
-      transition: opacity .3s;
+      transition: color .3s;
 
       &:hover {
-        opacity: 1;
+        color: #40b550;
       }
     }
 
@@ -2616,7 +2729,7 @@ a.main-news__item {
     justify-content: space-between;
     align-items: center;
     padding: 2.75rem 0 3rem;
-    color: #b0b3bb;
+    color: #fff;
 
     & > .left {
       display: none;
@@ -2703,7 +2816,7 @@ a.main-news__item {
   transition: color .3s;
 
   &:hover {
-    color: #fff;
+    color: #40b550;
   }
 }
 
@@ -4912,7 +5025,6 @@ a.pag__item {
     padding: 0;
     cursor: pointer;
     margin-left: 1rem;
-    opacity: .6;
     transition: .3s ease-in-out;
 
     & > span {
@@ -4947,6 +5059,13 @@ a.pag__item {
 
       @media @mobile {
         width: 24px;
+      }
+    }
+
+    &:hover {
+
+      & > span {
+        background-color: #40b550;
       }
     }
 
