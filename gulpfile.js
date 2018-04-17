@@ -175,6 +175,10 @@ const vendorScripts = [
       .pipe(rename({suffix: '.min'}))
       .pipe(gulp.dest(`./${folder}/js/vendor/simplebar`))
   },
+  function jFileStyleJS () {
+    return gulp.src('./node_modules/jfilestyle/src/jquery-filestyle.min.js')
+      .pipe(gulp.dest(`./${folder}/js/vendor/jfilestyle`))
+  }
 ]
 
 const watch = () => {

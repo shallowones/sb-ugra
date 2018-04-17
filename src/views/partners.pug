@@ -1,0 +1,27 @@
+extends layout
+
+include mixins/breadcrumbs
+
+block content
+
+  main.main.detail
+    .wrapper
+      include includes/detail-menu
+      +breadcrumbs('Главная', 'О фонде', 'Партнеры')
+      h1 Партнеры
+
+      h3 Финансовые партнеры:
+      .partners.inner
+        each item in [0, 1]
+          a(href="#", style="background-image: url('images/partner-1.jpg')").partners__item
+          a(href="#", style="background-image: url('images/partner-2.jpg')").partners__item
+          a(href="#", style="background-image: url('images/partner-3.jpg')").partners__item
+          a(href="#", style="background-image: url('images/partner-4.jpg')").partners__item
+
+      h3 Информационные партнеры:
+      .partners.inner
+        each item in [0, 1]
+          a(href="#", style="background-image: url('images/partner-4.jpg')").partners__item
+          a(href="#", style="background-image: url('images/partner-3.jpg')").partners__item
+          a(href="#", style="background-image: url('images/partner-2.jpg')").partners__item
+          a(href="#", style="background-image: url('images/partner-1.jpg')").partners__item

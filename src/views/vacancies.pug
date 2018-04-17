@@ -1,0 +1,128 @@
+extends layout
+
+include mixins/breadcrumbs
+
+block content
+
+  main.main.detail
+    .wrapper
+      include includes/detail-menu
+      +breadcrumbs('Главная', 'О фонде', 'Вакансии')
+      h1 Вакансии
+
+      .gray-block.mar-bot
+        h3 Вниманию соискателей!
+        p.
+          Прием заявок на занятие вакантных должностей осуществляется
+          посредством получения от соискателей резюме. Анкета соискателя
+          заполняется на сайте компании в разделе «Вакансии» и автоматически
+          направляется на обработку специалистам отдела кадров. При условии
+          принятия положительного решения по кандидатуре соискателя, специалисты
+          отдела кадров приглашают кандидата на собеседование.
+        p.
+          Для участия в конкурсе на замещение вакантной должности необходимо
+          заполнить резюме установленной формы, в формате Word (см. ниже).
+        .form-flex
+          a(href="file.docx").file Образец резюме установленной формы
+          button(type="button", data-target="#vacancy").button.js-popup Заполнить анкету
+          #vacancy(hidden)
+            form(action="#").form.popup.auto
+              .center
+                h3 Анкета соискателя<br>"Фонд Поддержки Предпринимательства"
+              .form-control
+                .form-control-left
+                  label(for="vac-input-1").form-control__label ФИО
+                    span.req *
+                .form-control-right
+                  input(type="text", placeholder="Иванов Иван Иванович")#vac-input-1.form-control__input
+              .form-control.invalid
+                .form-control-left
+                  label(for="vac-input-2").form-control__label Телефон
+                    span.req *
+                .form-control-right
+                  input(type="text", placeholder="+7 921 200-56-35")#vac-input-2.form-control__input
+              .form-control
+                .form-control-left
+                  label(for="vac-input-3").form-control__label E-mail
+                    span.req *
+                .form-control-right
+                  input(type="text", placeholder="e_mail@mail.ru")#vac-input-3.form-control__input
+              .form-control.invalid
+                .form-control-left
+                  label(for="vac-input-4").form-control__label Прикрепите резюме
+                    span.req *
+                .form-control-right
+                  input(type="file")#vac-input-4.js-file
+              .form-control
+                .form-control-left
+                  label(for="vac-input-5").form-control__label Расскажите о себе
+                .form-control-right
+                  textarea#vac-input-5(placeholder="Введите текст").form-control__textarea
+              div
+                input(type="checkbox")#vac-radio-1.form-control__check
+                label(for="vac-radio-1").form-control__label Я согласен на обработку персональных данных
+                  span.req *
+              .form-control.min-mar
+                .text-right.gray.small
+                  span.req *
+                  i – поля, обязательные для заполнения
+              .form-control.bottom
+                img(src="images/recaptcha-demo.gif", width="308", height="82")
+                button(type="submit").button.big.blue Отправить
+
+      .vacancies
+        .vacancies__item
+          h3 Главный специалист Центра информационного сопровождения Управления развития
+          p
+            b Требования к образованию и квалификации:
+          ul
+            li Художественный вкус, умение нестандартно мыслить, современный подход;
+            li Высшее образование (журналистика, режиссура, продюсирование, сценарное отделение);
+            li Опыт работы не меньше года на телевидении, в онлайн-СМИ;
+            li Знание основных направлений работы с видео в онлайн-СМИ;
+            li Ориентация в новостных, развлекательных, информационных онлайн-СМИ;
+            li.
+              Знание программ: пакет ADOBE: Premier Pro, After Effects, Photoshop,
+              Audition, Illustrator (уровень – базовый. При наличии навыков)
+            li Знание стилистики, грамматики русского языка;
+            li Стрессоустойчивость, высокий уровень самоорганизованности, гибкость;
+            li Ненормированный рабочий день.
+          p
+            b Обязанности:
+          ul
+            li Работа с прямыми трансляциями на YouTube и в соц.сетях (контроль видео и звука);
+            li Участие в создании идей и сценариев к проектам, в организации съемок;
+            li Публикация видеоматериалов на YouTube;
+            li Базовый монтаж (при наличии навыков);
+            li Формирование сетки вещания видеоматериалов на YouTube канале;
+            li Отслеживание интернет-трендов;
+            li Координация работы группы.
+          p
+            b Заработная плата:
+          ul
+            li От 38 000 до 46 000 руб. (на руки)
+        .vacancies__item
+          h3 Главный специалист Центра образовательных программ
+          p
+            b Требования к образованию и квалификации:
+          ul
+            li Высшее профессиональное;
+            li Готовность к работе в ненормированном графике;
+            li.
+              Ключевые навыки: стрессоустойчивость, коммуникабельность, грамотная речь,
+              клиентоориентированность, организаторские навыки, навыки делового письма.
+          p
+            b Обязанности:
+          ul
+            li Организация и проведение мероприятий;
+            li Привлечение подрядчиков и управление их работой;
+            li Проведение переговоров, подбор площадок, подрядчиков;
+            li Контроль проведения мероприятий;
+            li Ведение документооборота;
+            li Презентация услуг компании.
+          p
+            b Заработная плата:
+          ul
+            li По результатам собеседования
+
+

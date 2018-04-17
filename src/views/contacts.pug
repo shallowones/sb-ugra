@@ -1,0 +1,266 @@
+extends layout
+
+include mixins/breadcrumbs
+
+block content
+
+  -
+    var numbers = [
+      {
+        name: 'Администрация',
+        number: '404'
+      },
+      {
+        name: 'Кадровый отдел',
+        number: '301'
+      },
+      {
+        name: 'Правовой отдел',
+        number: '203'
+      },
+      {
+        name: 'Бухгалтерия',
+        number: '205'
+      },
+      {
+        name: 'Отдел управления рисками',
+        number: '305'
+      },
+      {
+        name: 'Центр информационного сопровождения',
+        number: '310'
+      },
+      {
+        name: 'Центр образовательных программ',
+        number: '312'
+      },
+      {
+        name: 'Центр инноваций социальной сферы',
+        number: '101'
+      },
+      {
+        name: 'Центр сопровождения проектов',
+        number: '208'
+      },
+      {
+        name: 'Центр финансовой поддержки',
+        number: '210'
+      },
+      {
+        name: 'Финансово-экономический отдел',
+        number: '103'
+      },
+      {
+        name: 'Центр бизнес-инкубирования',
+        number: '409'
+      }
+    ]
+
+  main.main.detail
+    .wrapper
+      include includes/detail-menu
+      +breadcrumbs('Главная', 'О фонде', 'Контакты')
+      h1 Контакты
+
+      h4 Фонд поддержки предпринимательства Югры
+      p 628012, Ханты-Мансийский автономный округ-Югра, г. Ханты-Мансийск, ул. Пионерская, д. 14
+      br
+      h4 Единый телефон: 8 (800) 101 01 01
+      br
+
+      table.table.numbers
+        tbody
+          tr
+            th Структурное подразделение
+            th Внутренний номер
+          each item in numbers
+            tr
+              td= item.name
+              td(align="center")= item.number
+
+      h4 Инфраструктура поддержки бизнеса Югры
+
+      .branches
+        .branches__item
+          .branches__item-name г. Белоярский
+          .branches__item-line
+            .left Адрес:
+            .right ул. Центральная, 30, д. 30
+          .branches__item-line
+            .left Телефон:
+            .right
+              a(href="tel:+73467027940").link +7 346 702-79-40
+          .branches__item-line
+            .left Электронный адрес:
+            .right
+              a(href="mailto:bel@sb-ugra.ru").link bel@sb-ugra.ru
+        .branches__item
+          .branches__item-name г. Лангепас
+          .branches__item-line
+            .left Адрес:
+            .right ул. Ленина, д. 23 «А»
+          .branches__item-line
+            .left Телефон:
+            .right
+              a(href="tel:+73466926703").link +7 346 692-67-03
+              a(href="tel:+79505006449").link +7 950 500-64-49
+          .branches__item-line
+            .left Электронный адрес:
+            .right
+              a(href="mailto:langepas@fundmicro86.ru").link langepas@fundmicro86.ru
+        .branches__item
+          .branches__item-name г. Мегион
+          .branches__item-line
+            .left Адрес:
+            .right ул. Чехова, д. 1, офис 1002
+          .branches__item-line
+            .left Телефон:
+            .right
+              a(href="tel:+79088977701").link +7 908 897-77-01
+          .branches__item-line
+            .left Электронный адрес:
+            .right
+              a(href="mailto:megion@sb-ugra.ru").link megion@sb-ugra.ru
+        .branches__item
+          .branches__item-name г. Нефтеюганск
+          .branches__item-line
+            .left Адрес:
+            .right 2 мкр-н, д. 32, 2 этаж, офис 215
+          .branches__item-line
+            .left Телефон:
+            .right
+              a(href="tel:+73463222822").link +7 346 322-28-22
+              a(href="tel:+73463224302").link +7 346 322-43-02
+              a(href="tel:+79088806120").link +7 908 880-61-20
+          .branches__item-line
+            .left Электронный адрес:
+            .right
+              a(href="mailto:ugansk@sb-ugra.ru").link ugansk@sb-ugra.ru
+        .branches__item
+          .branches__item-name г. Нижневартовск
+          .branches__item-line
+            .left Адрес:
+            .right ул. Пермская, д. 10, офисы 15–16
+          .branches__item-line
+            .left Телефон:
+            .right
+              a(href="tel:+73466458317").link +7 346 645-83-17
+              a(href="tel:+73466434542").link +7 346 643-45-42
+              a(href="tel:+73466459221").link +7 346 645-92-21 (факс)
+          .branches__item-line
+            .left Электронный адрес:
+            .right
+              a(href="mailto:nizhnevartovsk@sb-ugra.ru").link nizhnevartovsk@sb-ugra.ru
+        .branches__item
+          .branches__item-name г. Нягань
+          .branches__item-line
+            .left Адрес:
+            .right 2 мкр, д. 14, офис 2
+          .branches__item-line
+            .left Телефон:
+            .right
+              a(href="tel:+73467261016").link +7 346 726-10-16
+          .branches__item-line
+            .left Электронный адрес:
+            .right
+              a(href="mailto:nyagan@sb-ugra.ru").link nyagan@sb-ugra.ru
+        .branches__item
+          .branches__item-name Октябрьский район, пгт Октябрьское
+          .branches__item-line
+            .left Адрес:
+            .right ул. Ленина, д. 40
+          .branches__item-line
+            .left Телефон:
+            .right
+              a(href="tel:+73467820054").link +7 346 782-00-54
+          .branches__item-line
+            .left Электронный адрес:
+            .right
+              a(href="mailto:oktyabrskoe@sb-ugra.ru").link oktyabrskoe@sb-ugra.ru
+        .branches__item
+          .branches__item-name Октябрьский район, пгт Приобье
+          .branches__item-line
+            .left Адрес:
+            .right ул. Школьная, д. 2 «Б»
+          .branches__item-line
+            .left Телефон:
+            .right
+              a(href="tel:+79044660330").link +7 904 466-03-30
+          .branches__item-line
+            .left Электронный адрес:
+            .right
+              a(href="mailto:priobye@sb-ugra.ru").link priobye@sb-ugra.ru
+        .branches__item
+          .branches__item-name г. Радужный
+          .branches__item-line
+            .left Адрес:
+            .right 1 мкр, д. 43 (ОДЦ «Аганград»), корп. 2, офис 3
+          .branches__item-line
+            .left Телефон:
+            .right
+              a(href="tel:+73466835299").link +7 346 683-52-99
+              a(href="tel:+79028597772").link +7 902 859-77-72
+              a(href="tel:+79129334740").link +7 912 933-47-40
+          .branches__item-line
+            .left Электронный адрес:
+            .right
+              a(href="mailto:raduzhnyi@sb-ugra.ru").link raduzhnyi@sb-ugra.ru
+        .branches__item
+          .branches__item-name г. Советский
+          .branches__item-line
+            .left Адрес:
+            .right ул. Юбилейная, д. 54 «В»
+          .branches__item-line
+            .left Телефон:
+            .right
+              a(href="tel:+73467536390").link +7 346 753-63-90
+          .branches__item-line
+            .left Электронный адрес:
+            .right
+              a(href="mailto:sovetsky@sb-ugra.ru").link sovetsky@sb-ugra.ru
+        .branches__item
+          .branches__item-name г. Сургут
+          .branches__item-line
+            .left Адрес:
+            .right ул. 30 лет Победы, д. 34 А, офис 207
+          .branches__item-line
+            .left Телефон:
+            .right
+              a(href="tel:+73462774082").link +7 346 277-40-82
+              a(href="tel:+73462221005").link +7 346 222-10-05
+          .branches__item-line
+            .left Электронный адрес:
+            .right
+              a(href="mailto:surgut@sb-ugra.ru").link surgut@sb-ugra.ru
+        .branches__item
+          .branches__item-name г. Югорск
+          .branches__item-line
+            .left Адрес:
+            .right ул. Попова, д. 11, офис 35
+          .branches__item-line
+            .left Телефон:
+            .right
+              a(href="tel:+73467572325").link +7 346 757-23-25
+              a(href="tel:+79028252416").link +7 902 825-24-16
+          .branches__item-line
+            .left Электронный адрес:
+            .right
+              a(href="mailto:ugorsk@sb-ugra.ru").link ugorsk@sb-ugra.ru
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

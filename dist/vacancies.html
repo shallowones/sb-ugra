@@ -329,61 +329,143 @@
               <li><a href="#"><span>Контакты</span></a></li>
             </ul>
           </nav>
-          <div class="breadcrumbs"><a class="breadcrumbs__item" href="#">Главная</a><a class="breadcrumbs__item" href="#">О фонде</a><span class="breadcrumbs__item">Новости</span>
+          <div class="breadcrumbs"><a class="breadcrumbs__item" href="#">Главная</a><a class="breadcrumbs__item" href="#">О фонде</a><span class="breadcrumbs__item">Вакансии</span>
           </div>
-          <h1>Новости</h1>
-          <div class="news">
-            <div class="news-item"><a class="news-item__img" href="#" style="background-image: url('images/news-small-1.png')"></a>
-              <div class="news-item-right">
-                <div class="date gray fixed">07.03.2018</div><a class="news-item__name" href="#">
-                  Поздравление Генерального директора Фонда поддержки предпринимательства
-                  Югры Сергея Стручкова с Международным женским днем - 8 марта!</a>
-              </div>
-            </div>
-            <div class="news-item"><a class="news-item__img" href="#" style="background-image: url('images/news-small-2.png')"></a>
-              <div class="news-item-right">
-                <div class="date gray fixed">12.02.2018</div><a class="news-item__name" href="#">
-                  Ваш бизнес приносит пользу обществу? Расскажите о своем социальном
-                  проекте «от первого лица»</a>
-                <p>
-                  Фонд поддержки предпринимательства Югры приглашает принять участие в
-                  медиа-проекте «Социальное предпринимательство в Югре».
-                </p>
-              </div>
-            </div>
-            <div class="news-item"><a class="news-item__img" href="#" style="background-image: url('images/news-small-3.png')"></a>
-              <div class="news-item-right">
-                <div class="date gray fixed">01.02.2018</div><a class="news-item__name" href="#">
-                  Окружной конкурс «Предпринимательство сегодня» приглашает югорских
-                  школьников и студентов к участию</a>
-                <p>
-                  1 февраля 2018 года стартует Окружной конкурс творческих работ среди
-                  школьников и студентов «Предпринимательство сегодня».
-                </p>
-              </div>
-            </div>
-            <div class="news-item"><a class="news-item__img" href="#" style="background-image: url('images/news-small-4.png')"></a>
-              <div class="news-item-right">
-                <div class="date gray">12.03.2018</div><a class="news-item__name" href="#">Впиши себя в историю социального предпринимательства Югры!</a>
-                <p>
-                  Фонд поддержки предпринимательства Югры при содействии Фонда региональных
-                  социальных программ «Наше будущее» реализует медиа-проект «Социальное
-                  предпринимательство в Югре». Это уникальное издание на страницах которого
-                  публикуются истории успешных социальных практик, реализуемых в нашем регионе.
-                </p>
-              </div>
-            </div>
-            <div class="news-item"><a class="news-item__img" href="#" style="background-image: url('images/news-small-5.png')"></a>
-              <div class="news-item-right">
-                <div class="date gray">12.03.2018</div><a class="news-item__name" href="#">Более 250 югорчан открыли для себя Школу социального предпринимательства</a>
-                <p>
-                  С 19 февраля по 5 марта в Югре прошли Дни открытых дверей в Школе социального
-                  предпринимательства.
-                </p>
+          <h1>Вакансии</h1>
+          <div class="gray-block mar-bot">
+            <h3>Вниманию соискателей!</h3>
+            <p>
+              Прием заявок на занятие вакантных должностей осуществляется
+              посредством получения от соискателей резюме. Анкета соискателя
+              заполняется на сайте компании в разделе «Вакансии» и автоматически
+              направляется на обработку специалистам отдела кадров. При условии
+              принятия положительного решения по кандидатуре соискателя, специалисты
+              отдела кадров приглашают кандидата на собеседование.
+            </p>
+            <p>
+              Для участия в конкурсе на замещение вакантной должности необходимо
+              заполнить резюме установленной формы, в формате Word (см. ниже).
+            </p>
+            <div class="form-flex"><a class="file" href="file.docx">Образец резюме установленной формы</a>
+              <button class="button js-popup" type="button" data-target="#vacancy">Заполнить анкету</button>
+              <div id="vacancy" hidden>
+                <form class="form popup auto" action="#">
+                  <div class="center">
+                    <h3>Анкета соискателя<br>"Фонд Поддержки Предпринимательства"</h3>
+                  </div>
+                  <div class="form-control">
+                    <div class="form-control-left">
+                      <label class="form-control__label" for="vac-input-1">ФИО<span class="req">*</span></label>
+                    </div>
+                    <div class="form-control-right">
+                      <input class="form-control__input" type="text" placeholder="Иванов Иван Иванович" id="vac-input-1">
+                    </div>
+                  </div>
+                  <div class="form-control invalid">
+                    <div class="form-control-left">
+                      <label class="form-control__label" for="vac-input-2">Телефон<span class="req">*</span></label>
+                    </div>
+                    <div class="form-control-right">
+                      <input class="form-control__input" type="text" placeholder="+7 921 200-56-35" id="vac-input-2">
+                    </div>
+                  </div>
+                  <div class="form-control">
+                    <div class="form-control-left">
+                      <label class="form-control__label" for="vac-input-3">E-mail<span class="req">*</span></label>
+                    </div>
+                    <div class="form-control-right">
+                      <input class="form-control__input" type="text" placeholder="e_mail@mail.ru" id="vac-input-3">
+                    </div>
+                  </div>
+                  <div class="form-control invalid">
+                    <div class="form-control-left">
+                      <label class="form-control__label" for="vac-input-4">Прикрепите резюме<span class="req">*</span></label>
+                    </div>
+                    <div class="form-control-right">
+                      <input class="js-file" type="file" id="vac-input-4">
+                    </div>
+                  </div>
+                  <div class="form-control">
+                    <div class="form-control-left">
+                      <label class="form-control__label" for="vac-input-5">Расскажите о себе</label>
+                    </div>
+                    <div class="form-control-right">
+                      <textarea class="form-control__textarea" id="vac-input-5" placeholder="Введите текст"></textarea>
+                    </div>
+                  </div>
+                  <div>
+                    <input class="form-control__check" type="checkbox" id="vac-radio-1">
+                    <label class="form-control__label" for="vac-radio-1">Я согласен на обработку персональных данных<span class="req">*</span></label>
+                  </div>
+                  <div class="form-control min-mar">
+                    <div class="text-right gray small"><span class="req">*</span><i>– поля, обязательные для заполнения</i></div>
+                  </div>
+                  <div class="form-control bottom"><img src="images/recaptcha-demo.gif" width="308" height="82">
+                    <button class="button big blue" type="submit">Отправить</button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
-          <div class="pag"><a class="pag__item prev" href="#"></a><span class="pag__item">1</span><a class="pag__item" href="#">2</a><a class="pag__item" href="#">3</a><a class="pag__item" href="#">4</a><a class="pag__item" href="#">5</a><span class="pag__item">…</span><a class="pag__item" href="#">18</a><a class="pag__item next" href="#"></a></div>
+          <div class="vacancies">
+            <div class="vacancies__item">
+              <h3>Главный специалист Центра информационного сопровождения Управления развития</h3>
+              <p><b>Требования к образованию и квалификации:</b></p>
+              <ul>
+                <li>Художественный вкус, умение нестандартно мыслить, современный подход;</li>
+                <li>Высшее образование (журналистика, режиссура, продюсирование, сценарное отделение);</li>
+                <li>Опыт работы не меньше года на телевидении, в онлайн-СМИ;</li>
+                <li>Знание основных направлений работы с видео в онлайн-СМИ;</li>
+                <li>Ориентация в новостных, развлекательных, информационных онлайн-СМИ;</li>
+                <li>
+                  Знание программ: пакет ADOBE: Premier Pro, After Effects, Photoshop,
+                  Audition, Illustrator (уровень – базовый. При наличии навыков)
+                </li>
+                <li>Знание стилистики, грамматики русского языка;</li>
+                <li>Стрессоустойчивость, высокий уровень самоорганизованности, гибкость;</li>
+                <li>Ненормированный рабочий день.</li>
+              </ul>
+              <p><b>Обязанности:</b></p>
+              <ul>
+                <li>Работа с прямыми трансляциями на YouTube и в соц.сетях (контроль видео и звука);</li>
+                <li>Участие в создании идей и сценариев к проектам, в организации съемок;</li>
+                <li>Публикация видеоматериалов на YouTube;</li>
+                <li>Базовый монтаж (при наличии навыков);</li>
+                <li>Формирование сетки вещания видеоматериалов на YouTube канале;</li>
+                <li>Отслеживание интернет-трендов;</li>
+                <li>Координация работы группы.</li>
+              </ul>
+              <p><b>Заработная плата:</b></p>
+              <ul>
+                <li>От 38 000 до 46 000 руб. (на руки)</li>
+              </ul>
+            </div>
+            <div class="vacancies__item">
+              <h3>Главный специалист Центра образовательных программ</h3>
+              <p><b>Требования к образованию и квалификации:</b></p>
+              <ul>
+                <li>Высшее профессиональное;</li>
+                <li>Готовность к работе в ненормированном графике;</li>
+                <li>
+                  Ключевые навыки: стрессоустойчивость, коммуникабельность, грамотная речь,
+                  клиентоориентированность, организаторские навыки, навыки делового письма.
+                </li>
+              </ul>
+              <p><b>Обязанности:</b></p>
+              <ul>
+                <li>Организация и проведение мероприятий;</li>
+                <li>Привлечение подрядчиков и управление их работой;</li>
+                <li>Проведение переговоров, подбор площадок, подрядчиков;</li>
+                <li>Контроль проведения мероприятий;</li>
+                <li>Ведение документооборота;</li>
+                <li>Презентация услуг компании.</li>
+              </ul>
+              <p><b>Заработная плата:</b></p>
+              <ul>
+                <li>По результатам собеседования</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </main>
       <footer class="footer">

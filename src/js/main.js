@@ -3,7 +3,11 @@
 
     const ACTIVE_CLASS = 'active'
 
+    const SHOW_CLASS = 'show'
+
     const MOBILE_OPEN_CLASS = 'mobile-open'
+
+    const INVALID_CLASS = 'invalid'
 
     const PLAN_WIDTH = 1024
 
@@ -177,20 +181,52 @@
       })
     }
 
-    // popup
+    // popup + file custom + error input focus
     {
+      const FILE = '.js-file'
+
+      let fileList = null
+
+      const fileCustom = ($el) => {
+        const $file = $el.find(FILE)
+
+        $file.jfilestyle({
+          text: 'Выбрать...',
+          placeholder: 'Файл не выбран',
+          dragdrop: false,
+          onChange: (files) => { fileList = files }
+        })
+      }
+      fileCustom($document)
+
+      const onErrorInputFocus = ($el) => {
+        const $input = $el.find('input')
+
+        $input.on('focus change', (e) => {
+          const $this = $(e.currentTarget)
+          const $parent = $this.parent()
+          $parent.removeClass(INVALID_CLASS)
+          $parent.parent().removeClass(INVALID_CLASS)
+        })
+      }
+      onErrorInputFocus($document)
+
       new jBox('Modal', {
         attach: '.js-popup',
         onOpen: function () {
           const $source = this.source
           const $target = $($source.data('target'))
+          $target.find(FILE).jfilestyle('destroy')
           const html = $target.html()
           $target.html('')
           this.setContent(html)
+          fileCustom(this.content)
+          onErrorInputFocus(this.content)
         },
         onCloseComplete: function () {
           const $source = this.source
           const $target = $($source.data('target'))
+          this.content.find(FILE).jfilestyle('destroy')
           const html = this.content.html()
           this.setContent('')
           $target.html(html)
@@ -275,6 +311,20 @@
         } else {
           $float.removeClass(SCROLL_TOP + ' ' + SCROLL_BOTTOM)
         }
+      })
+    }
+
+    // history
+    {
+      const $historyButtons = $('.js-history')
+      const $sections = $('.history > section[hidden]')
+      $historyButtons.on('click', (e) => {
+        const $this = $(e.currentTarget)
+        const $target = $($this.data('target'))
+        $historyButtons.removeClass(ACTIVE_CLASS)
+        $sections.removeClass(SHOW_CLASS)
+        $this.addClass(ACTIVE_CLASS)
+        $target.addClass(SHOW_CLASS)
       })
     }
 
