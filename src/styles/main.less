@@ -5716,32 +5716,43 @@ div.jfilestyle {
 
 .history {
 
-  &-years {
-    display: flex;
-    width: 100%;
-    overflow-x: auto;
-
-    & .simplebar {
-
-      &-content {
-        display: flex;
-      }
-    }
-  }
-
   &__button {
-    display: block;
-    padding: 1rem .5rem;
+    width: 5rem;
+    padding: .5rem 0;
     font-size: 2rem;
     line-height: 2.5rem;
     position: relative;
-    margin: 0 .5rem;
+    margin-right: .5rem;
     font-family: 'Circe', sans-serif;
     font-weight: bold;
     transition: color .3s;
 
-    &:hover, &.active {
-      color: #40b550;
+    &:hover {
+      color: #1b39ba;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 3px;
+      background-color: #1b39ba;
+      opacity: 0;
+      transition: opacity .3s, width .3s;
+    }
+
+    &.active {
+
+      &:after {
+        opacity: 1;
+        width: 100%;
+      }
+    }
+
+    &:last-child {
+      margin-right: 0;
     }
   }
 

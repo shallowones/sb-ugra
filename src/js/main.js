@@ -316,15 +316,31 @@
 
     // history
     {
-      const $historyButtons = $('.js-history')
       const $sections = $('.history > section[hidden]')
-      $historyButtons.on('click', (e) => {
-        const $this = $(e.currentTarget)
-        const $target = $($this.data('target'))
-        $historyButtons.removeClass(ACTIVE_CLASS)
-        $sections.removeClass(SHOW_CLASS)
-        $this.addClass(ACTIVE_CLASS)
-        $target.addClass(SHOW_CLASS)
+
+      new Swiper('.js-history', {
+        slidesPerView: 'auto',
+        on: {
+          init: function () {
+            const $buttons = this.slides
+
+            $buttons.each((index, button) => {
+              const $this = $(button)
+              if ($this.hasClass(ACTIVE_CLASS)) {
+                this.slideTo(index)
+              }
+            })
+
+            $buttons.on('click', (e) => {
+              const $this = $(e.currentTarget)
+              const $target = $($this.data('target'))
+              $buttons.removeClass(ACTIVE_CLASS)
+              $sections.removeClass(SHOW_CLASS)
+              $this.addClass(ACTIVE_CLASS)
+              $target.addClass(SHOW_CLASS)
+            })
+          }
+        }
       })
     }
 

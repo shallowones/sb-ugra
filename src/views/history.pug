@@ -11,22 +11,23 @@ block content
       h1 История
 
       .history
-        .history-years.js-scrollbar
-          button(type="button", data-target="#year-2016").history__button.js-history.active 2016
-          button(type="button", data-target="#year-2015").history__button.js-history 2015
-          button(type="button", data-target="#year-2014").history__button.js-history 2014
-          button(type="button", data-target="#year-2013").history__button.js-history 2013
-          button(type="button", data-target="#year-2012").history__button.js-history 2012
-          button(type="button", data-target="#year-2011").history__button.js-history 2011
-          button(type="button", data-target="#year-2010").history__button.js-history 2010
-          button(type="button", data-target="#year-2009").history__button.js-history 2009
-          button(type="button", data-target="#year-2008").history__button.js-history 2008
-          button(type="button", data-target="#year-2007").history__button.js-history 2007
-          button(type="button", data-target="#year-2006").history__button.js-history 2006
-          button(type="button", data-target="#year-2005").history__button.js-history 2005
-          button(type="button", data-target="#year-2004").history__button.js-history 2004
-          button(type="button", data-target="#year-2003").history__button.js-history 2003
-        section#year-2016(hidden).show
+        .swiper-container.js-history
+          .swiper-wrapper
+            button(type="button", data-target="#year-2016").swiper-slide.history__button 2016
+            button(type="button", data-target="#year-2015").swiper-slide.history__button.active 2015
+            button(type="button", data-target="#year-2014").swiper-slide.history__button 2014
+            button(type="button", data-target="#year-2013").swiper-slide.history__button 2013
+            button(type="button", data-target="#year-2012").swiper-slide.history__button 2012
+            button(type="button", data-target="#year-2011").swiper-slide.history__button 2011
+            button(type="button", data-target="#year-2010").swiper-slide.history__button 2010
+            button(type="button", data-target="#year-2009").swiper-slide.history__button 2009
+            button(type="button", data-target="#year-2008").swiper-slide.history__button 2008
+            button(type="button", data-target="#year-2007").swiper-slide.history__button 2007
+            button(type="button", data-target="#year-2006").swiper-slide.history__button 2006
+            button(type="button", data-target="#year-2005").swiper-slide.history__button 2005
+            button(type="button", data-target="#year-2004").swiper-slide.history__button 2004
+            button(type="button", data-target="#year-2003").swiper-slide.history__button 2003
+        section#year-2016(hidden)
           h4 Секция 2016го года
           p.
             Эффективность деятельности Фонда подтверждена высокой оценкой рейтингового
@@ -51,7 +52,7 @@ block content
             мероприятии подали заявки 52 молодых предпринимателя. 3 победителя
             регионального этапа прошли в финал Всероссийского этапа, 1 – стал победителем
             в номинации «Открытие года».
-        section#year-2015(hidden)
+        section#year-2015(hidden).show
           h4 Секция 2015го года
           p.
             Эффективность деятельности Фонда подтверждена высокой оценкой рейтингового
