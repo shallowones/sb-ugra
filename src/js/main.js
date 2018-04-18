@@ -19,6 +19,8 @@
 
     const $page = $('.page')
 
+    const is = (el) => { return typeof el !== 'undefined' && el.length}
+
     // slider
     {
       new Swiper('.js-slider', {
@@ -190,12 +192,14 @@
       const fileCustom = ($el) => {
         const $file = $el.find(FILE)
 
-        $file.jfilestyle({
-          text: 'Выбрать...',
-          placeholder: 'Файл не выбран',
-          dragdrop: false,
-          onChange: (files) => { fileList = files }
-        })
+        if (is($file)) {
+          $file.jfilestyle({
+            text: 'Выбрать...',
+            placeholder: 'Файл не выбран',
+            dragdrop: false,
+            onChange: (files) => { fileList = files }
+          })
+        }
       }
       fileCustom($document)
 
