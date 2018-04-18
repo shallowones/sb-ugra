@@ -477,6 +477,20 @@ template {
     transform: translateY(-137px);
   }
 }
+@keyframes error {
+  25% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 ::-webkit-input-placeholder {
   color: #848e99;
   font-family: 'Roboto', sans-serif;
@@ -5758,4 +5772,27 @@ div.jfilestyle > .focus-jfilestyle:focus {
 }
 .history > section[hidden].show {
   display: block;
+}
+.animate-error {
+  animation: error 0.2s 3 ease-in-out;
+}
+.with-loader {
+  position: relative;
+}
+.with-loader:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.85) url('../images/loader.gif') no-repeat center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s , visibility .3s;
+}
+.with-loader.wait:after {
+  opacity: 1;
+  visibility: visible;
 }

@@ -187,8 +187,6 @@
     {
       const FILE = '.js-file'
 
-      let fileList = null
-
       const fileCustom = ($el) => {
         const $file = $el.find(FILE)
 
@@ -196,8 +194,7 @@
           $file.jfilestyle({
             text: 'Выбрать...',
             placeholder: 'Файл не выбран',
-            dragdrop: false,
-            onChange: (files) => { fileList = files }
+            dragdrop: false
           })
         }
       }
@@ -221,9 +218,7 @@
           const $source = this.source
           const $target = $($source.data('target'))
           const $file = $target.find(FILE)
-          if (is($file)) {
-            $file.jfilestyle('destroy')
-          }
+          is($file) && $file.jfilestyle('destroy')
           const html = $target.html()
           $target.html('')
           this.setContent(html)
@@ -234,9 +229,7 @@
           const $source = this.source
           const $target = $($source.data('target'))
           const $file = this.content.find(FILE)
-          if (is($file)) {
-            is($file) && $file.jfilestyle('destroy')
-          }
+          is($file) && $file.jfilestyle('destroy')
           const html = this.content.html()
           this.setContent('')
           $target.html(html)
