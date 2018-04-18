@@ -89,12 +89,12 @@
       })
 
       // если ест на странице кастомный селект
-      if ($select.length) {
+      /*if ($select.length) {
         // то по скроллу страницы закрываем попап
         $page.on('scroll', () => {
           $select.selectmenu('close')
         })
-      }
+      }*/
     }
 
     // calendar TODO возможно придется менять при разработке
@@ -220,7 +220,10 @@
         onOpen: function () {
           const $source = this.source
           const $target = $($source.data('target'))
-          $target.find(FILE).jfilestyle('destroy')
+          const $file = $target.find(FILE)
+          if (is($file)) {
+            $file.jfilestyle('destroy')
+          }
           const html = $target.html()
           $target.html('')
           this.setContent(html)
@@ -230,6 +233,10 @@
         onCloseComplete: function () {
           const $source = this.source
           const $target = $($source.data('target'))
+          const $file = this.content.find(FILE)
+          if (is($file)) {
+            $file.jfilestyle('destroy')
+          }
           this.content.find(FILE).jfilestyle('destroy')
           const html = this.content.html()
           this.setContent('')
