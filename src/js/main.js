@@ -202,13 +202,16 @@
 
       const onErrorInputFocus = ($el) => {
         const $input = $el.find('input')
-
-        $input.on('focus change', (e) => {
+        const $area = $el.find('textarea')
+        const f = (e) => {
           const $this = $(e.currentTarget)
           const $parent = $this.parent()
           $parent.removeClass(INVALID_CLASS)
           $parent.parent().removeClass(INVALID_CLASS)
-        })
+        }
+
+        $input.on('focus change', f)
+        $area.on('focus change', f)
       }
       onErrorInputFocus($document)
 
