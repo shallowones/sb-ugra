@@ -235,9 +235,8 @@
           const $target = $($source.data('target'))
           const $file = this.content.find(FILE)
           if (is($file)) {
-            $file.jfilestyle('destroy')
+            is($file) && $file.jfilestyle('destroy')
           }
-          this.content.find(FILE).jfilestyle('destroy')
           const html = this.content.html()
           this.setContent('')
           $target.html(html)
