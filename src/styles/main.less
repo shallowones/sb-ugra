@@ -3912,6 +3912,7 @@ a.breadcrumbs__item {
 }
 
 .form {
+  position: relative;
 
   &-control {
     display: flex;
@@ -4248,6 +4249,10 @@ a.breadcrumbs__item {
       margin-bottom: .5rem;
     }
 
+    &.mar-0 {
+      margin-bottom: 0;
+    }
+
     @media @mobile {
       display: block;
       margin-bottom: 1rem;
@@ -4408,7 +4413,7 @@ a.breadcrumbs__item {
   &.popup {
     max-width: 100%;
     width: 40rem;
-    padding: 1rem 2rem 0;
+    padding: 1rem 2rem;
 
     & .form-control {
 
@@ -4439,6 +4444,38 @@ a.breadcrumbs__item {
 
     &.auto {
       width: auto;
+    }
+  }
+
+  &-success {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #40b550 url('../images/svg/tick-inside-circle.svg') no-repeat center ~"calc(50% - 5rem)";
+    background-size: 5rem;
+    color: #fff;
+    font-family: 'Circe', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    border-radius: 4px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+    transition: visibility .3s, opacity .3s;
+  }
+
+  &.ok {
+
+    & > .form-success {
+      opacity: 1;
+      visibility: visible;
     }
   }
 }
