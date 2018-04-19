@@ -238,6 +238,7 @@
             gCaptcha.render($captcha[0])
           }
         },
+
         onCloseComplete: function () {
           const $source = this.source
           const $target = $($source.data('target'))
