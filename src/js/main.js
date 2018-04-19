@@ -230,8 +230,8 @@
 
           // rerender captcha
           const gCaptcha = window.grecaptcha
-          if (typeof gCaptcha !== 'undefined' && gCaptcha.hasOwnProperty('render')) {
-            const $captcha = this.content.find('.g-recaptcha')
+          const $captcha = this.content.find('.g-recaptcha')
+          if (is($captcha) && typeof gCaptcha !== 'undefined' && gCaptcha.hasOwnProperty('render')) {
             $captcha.html('')
             gCaptcha.render($captcha[0]);
           }
