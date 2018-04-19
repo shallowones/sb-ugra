@@ -19,7 +19,7 @@
 
     const $page = $('.page')
 
-    const is = (el) => { return typeof el !== 'undefined' && el.length}
+    const is = (el) => { return typeof el !== 'undefined' && el.length }
 
     // slider
     {
@@ -215,7 +215,7 @@
       }
       onErrorInputFocus($document)
 
-      new jBox('Modal', {
+      const modal = new jBox('Modal', {
         attach: '.js-popup',
         onOpen: function () {
           const $source = this.source
@@ -233,7 +233,7 @@
           const $captcha = this.content.find('.g-recaptcha')
           if (is($captcha) && typeof gCaptcha !== 'undefined' && gCaptcha.hasOwnProperty('render')) {
             $captcha.html('')
-            gCaptcha.render($captcha[0]);
+            gCaptcha.render($captcha[0])
           }
         },
         onCloseComplete: function () {
@@ -246,6 +246,9 @@
           $target.html(html)
         }
       })
+
+      // событие закрытие попапа
+      $document.on('closeModal', modal.close.bind(modal))
     }
 
     // menu
