@@ -9,6 +9,8 @@
 
     const INVALID_CLASS = 'invalid'
 
+    const OK_CLASS = 'ok'
+
     const PLAN_WIDTH = 1024
 
     const $html = $('html')
@@ -241,6 +243,7 @@
           const $target = $($source.data('target'))
           const $file = this.content.find(FILE)
           is($file) && $file.jfilestyle('destroy')
+          this.content.find('.' + OK_CLASS).removeClass(OK_CLASS)
           const html = this.content.html()
           this.setContent('')
           $target.html(html)
