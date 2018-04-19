@@ -1,4 +1,4 @@
-(function ($, Swiper, jBox, SimpleBar) {
+(function ($, Swiper, jBox, SimpleBar, window) {
   $(function () {
 
     const ACTIVE_CLASS = 'active'
@@ -227,6 +227,14 @@
           this.setContent(html)
           fileCustom(this.content)
           onErrorInputFocus(this.content)
+
+          // rerender captcha
+          const gCaptcha = window.grecaptcha
+          if (typeof gCaptcha !== 'undefined' && gCaptcha.hasOwnProperty('render')) {
+            const $captcha = this.content.find('.g-recaptcha')
+            $captcha.html('')
+            gCaptcha.render($captcha[0]);
+          }
         },
         onCloseComplete: function () {
           const $source = this.source
@@ -351,4 +359,4 @@
     }
 
   })
-})(jQuery, Swiper, jBox, SimpleBar)
+})(jQuery, Swiper, jBox, SimpleBar, window)
