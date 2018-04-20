@@ -4814,6 +4814,16 @@ a.breadcrumbs__item:after {
     margin-left: 0;
   }
 }
+.file.removed:after {
+  content: '';
+  position: absolute;
+  left: 3.125rem;
+  top: 60px;
+  width: 14px;
+  height: 14px;
+  background: #fff url('../images/svg/close-red.svg') no-repeat center;
+  background-size: 22px;
+}
 .file[href$='.doc']:before,
 .file[href$='.docx']:before {
   background-image: url('../images/svg/doc.svg');
