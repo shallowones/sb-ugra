@@ -1,1 +1,17 @@
-<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>Elements / Icons / S / YouTube</title><defs><path d="M10.2 14.571V9.428L14.876 12 10.2 14.571zm10.424-6.697c-.207-.738-.817-1.319-1.592-1.516C17.63 6 12 6 12 6s-5.629 0-7.032.358c-.775.197-1.385.778-1.592 1.516C3 9.21 3 12 3 12s0 2.79.376 4.126c.207.738.817 1.319 1.592 1.516C6.37 18 12 18 12 18s5.629 0 7.032-.358c.775-.197 1.385-.778 1.592-1.516C21 14.79 21 12 21 12s0-2.79-.376-4.126z" id="a"/></defs><use fill="#40b550" xlink:href="#a" fill-rule="evenodd"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>Elements / Icons / S /  YouTube</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M10.2,14.5714084 L10.2,9.42845048 L14.876281,12.0000706 L10.2,14.5714084 Z M20.6238054,7.87368149 C20.4168169,7.13623161 19.8069638,6.55527464 19.0324978,6.35814156 C17.628769,6 11.9999259,6 11.9999259,6 C11.9999259,6 6.37123102,6 4.96750216,6.35814156 C4.19303618,6.55527464 3.58318311,7.13623161 3.37619459,7.87368149 C3,9.21071508 3,11.9999294 3,11.9999294 C3,11.9999294 3,14.7892849 3.37619459,16.1261774 C3.58318311,16.8636273 4.19303618,17.4447254 4.96750216,17.6417173 C6.37123102,18 11.9999259,18 11.9999259,18 C11.9999259,18 17.628769,18 19.0324978,17.6417173 C19.8069638,17.4447254 20.4168169,16.8636273 20.6238054,16.1261774 C21,14.7892849 21,11.9999294 21,11.9999294 C21,11.9999294 21,9.21071508 20.6238054,7.87368149 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Elements-/-Icons-/-S-/--YouTube">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Fill-1" fill="#40b550" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>
