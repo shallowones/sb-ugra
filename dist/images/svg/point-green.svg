@@ -1,17 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
-    <title>Elements / Icons / S /  Point</title>
-    <desc>Created with Sketch.</desc>
-    <defs>
-        <path d="M12,3 C8.68285714,3 6,5.817 6,9.3 C6,14.025 12,21 12,21 C12,21 18,14.025 18,9.3 C18,5.817 15.3171429,3 12,3 Z M12,11.55 C10.8171429,11.55 9.85714286,10.542 9.85714286,9.3 C9.85714286,8.058 10.8171429,7.05 12,7.05 C13.1828571,7.05 14.1428571,8.058 14.1428571,9.3 C14.1428571,10.542 13.1828571,11.55 12,11.55 Z" id="path-1"></path>
-    </defs>
-    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Elements-/-Icons-/-S-/--Point">
-            <mask id="mask-2" fill="white">
-                <use xlink:href="#path-1"></use>
-            </mask>
-            <use id="Mask" fill="#40b550" fill-rule="nonzero" xlink:href="#path-1"></use>
-        </g>
-    </g>
-</svg>
+<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>Elements / Icons / S / Point</title><defs><path d="M12 3C8.683 3 6 5.817 6 9.3 6 14.025 12 21 12 21s6-6.975 6-11.7C18 5.817 15.317 3 12 3zm0 8.55c-1.183 0-2.143-1.008-2.143-2.25s.96-2.25 2.143-2.25c1.183 0 2.143 1.008 2.143 2.25s-.96 2.25-2.143 2.25z" id="a"/></defs><use fill="#40b550" xlink:href="#a"/></svg>

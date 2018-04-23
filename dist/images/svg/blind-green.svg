@@ -1,17 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
-    <title>Elements / Icons / S /  Blind</title>
-    <desc>Created with Sketch.</desc>
-    <defs>
-        <path d="M11,12 C11,14.209139 9.209139,16 7,16 C4.790861,16 3,14.209139 3,12 L1,12 L1,10 L3.53512878,10 C4.22674762,8.80439726 5.51943529,8 7,8 C8.30852804,8 9.47030375,8.62832141 10.2000818,9.59971887 C10.7014641,9.22314263 11.3246732,9 12,9 C12.6753268,9 13.2985359,9.22314263 13.7999182,9.59971887 C14.5296963,8.62832141 15.691472,8 17,8 C18.4805647,8 19.7732524,8.80439726 20.4648712,10 L23,10 L23,12 L21,12 C21,14.209139 19.209139,16 17,16 C14.790861,16 13,14.209139 13,12 C13,11.4477153 12.5522847,11 12,11 C11.4477153,11 11,11.4477153 11,12 Z M17,14 C18.1045695,14 19,13.1045695 19,12 C19,10.8954305 18.1045695,10 17,10 C15.8954305,10 15,10.8954305 15,12 C15,13.1045695 15.8954305,14 17,14 Z M7,14 C8.1045695,14 9,13.1045695 9,12 C9,10.8954305 8.1045695,10 7,10 C5.8954305,10 5,10.8954305 5,12 C5,13.1045695 5.8954305,14 7,14 Z" id="path-1"></path>
-    </defs>
-    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Elements-/-Icons-/-S-/--Blind">
-            <mask id="mask-2" fill="white">
-                <use xlink:href="#path-1"></use>
-            </mask>
-            <use id="Rectangle-15" fill="#40b550" xlink:href="#path-1"></use>
-        </g>
-    </g>
-</svg>
+<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>Elements / Icons / S / Blind</title><defs><path d="M11 12a4 4 0 1 1-8 0H1v-2h2.535a3.998 3.998 0 0 1 6.665-.4A2.987 2.987 0 0 1 12 9c.675 0 1.299.223 1.8.6a3.998 3.998 0 0 1 6.665.4H23v2h-2a4 4 0 1 1-8 0 1 1 0 0 0-2 0zm6 2a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM7 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" id="a"/></defs><use fill="#40b550" xlink:href="#a" fill-rule="evenodd"/></svg>
