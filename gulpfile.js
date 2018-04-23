@@ -46,11 +46,12 @@ const manifest = () => combine(rev.manifest(manifestArguments), gulp.dest(`./${f
 const clean = () => del(`./${folder}`)
 
 const images = () => gulp.src('./src/images/**/*.{jpg,png,svg,gif}')
-  .pipe(gulpIf(isProduction, imageMin({
-    svgoPlugins: [{
-      convertPathData: false
-    }]
-  })))
+  .pipe(gulpIf(isProduction, imageMin([
+    imageMin.jpegtran(),
+    imageMin.optipng({
+      quality: '65-80'
+    })
+  ])))
   .pipe(gulp.dest(`./${folder}/images`))
 
 const fonts = () => gulp.src('./src/fonts/**/*')

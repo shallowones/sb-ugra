@@ -1,1 +1,17 @@
-<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M13 9V7.2c0-.78.18-1.2 1.44-1.2H16V3h-2.4c-3 0-4.2 1.98-4.2 4.2V9H7v3h2.4v9H13v-9h2.64L16 9h-3z" id="a"/></defs><use fill="#40b550" xlink:href="#a"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>Elements / Icons / S /  Facebook</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M13,9 L13,7.2 C13,6.42 13.18,6 14.44,6 L16,6 L16,3 L13.6,3 C10.6,3 9.4,4.98 9.4,7.2 L9.4,9 L7,9 L7,12 L9.4,12 L9.4,21 L13,21 L13,12 L15.64,12 L16,9 L13,9 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Elements-/-Icons-/-S-/--Facebook">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Shape" fill="#40b550" fill-rule="nonzero" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>
