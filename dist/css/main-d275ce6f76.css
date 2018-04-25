@@ -5754,6 +5754,10 @@ a.pag__item:hover {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
+.animation {
+  opacity: 0;
+  transform: translateY(100px);
+}
 .loader {
   position: fixed;
   left: 0;
