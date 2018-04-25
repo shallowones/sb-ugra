@@ -366,5 +366,19 @@
       })
     }
 
+    // sumo select
+    {
+      $('.js-sumo').each((index, el) => {
+        const $this = $(el)
+        $this.SumoSelect({
+          placeholder: $this.data('placeholder')
+        })
+        $this.on('sumo:closing', (e) => {
+          const isSelected = !!e.currentTarget.selectedOptions.length
+          $this.toggleClass('selected', isSelected)
+        })
+      })
+    }
+
   })
 })(jQuery, Swiper, jBox, SimpleBar, window)

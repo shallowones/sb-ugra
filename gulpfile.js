@@ -77,7 +77,7 @@ const styles = () => {
       : packageJson.browserslist[DEV]
   })
 
-  return gulp.src('./src/styles/*.less')
+  return gulp.src('./src/styles/main.less')
     .pipe(plumber(plumberArguments))
     .pipe(less({
       paths: ['node_modules'],

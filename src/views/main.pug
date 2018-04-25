@@ -1,9 +1,9 @@
 extends layout
 
-block scripts
+//-block scripts
   script(src="js/app/animation.js")
 
-block loader
+//-block loader
   .loader.js-loader
     .loader__img
 
@@ -237,20 +237,20 @@ block content
             #animation-trigger-9
         .events-right
           #animation-7.animation.events-filter(data-delay="0.8")
-            select(data-placeholder="Город").select.with-icon.point.js-select
+            select(data-placeholder="Город", multiple).select.with-icon.point.js-sumo
               option(value="1") Москва
               option(value="2") Санкт-Петербург
               option(value="3") Ханты-Мансийск
-            select(data-placeholder="Тренер").select.with-icon.person.js-select
+            select(data-placeholder="Тренер", multiple).select.with-icon.person.js-sumo
               option(value="1") Иванов А.С.
               option(value="2") Петров Ф.В.
               option(value="3") Кульков И.Я.
-            select(data-placeholder="Тип мероприятия").select.with-icon.event.js-select
+            select(data-placeholder="Тип мероприятия", multiple).select.with-icon.event.js-sumo
               option(value="1") Творческое
               option(value="2") Профессиональное
               option(value="3") Координальное
               option(value="4") Первый модуль технического обучения
-            select(data-placeholder="Проект").select.with-icon.project.js-select
+            select(data-placeholder="Проект", multiple).select.with-icon.project.js-sumo
               option(value="1") Старт
               option(value="2") Бизнес
               option(value="3") Вуман
