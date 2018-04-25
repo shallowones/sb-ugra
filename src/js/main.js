@@ -86,17 +86,17 @@
         const $this = $(el)
         $this.selectmenu({
           placeholder: $this.data('placeholder'),
-          disabled: true // TODO remove this
+          //disabled: true // TODO remove this
         })
       })
 
       // если ест на странице кастомный селект
-      /*if ($select.length) {
+      if ($select.length) {
         // то по скроллу страницы закрываем попап
         $page.on('scroll', () => {
           $select.selectmenu('close')
         })
-      }*/
+      }
     }
 
     // calendar TODO возможно придется менять при разработке
@@ -122,7 +122,7 @@
 
       if ($calendar.length) {
         $calendar.datepicker({
-          disabled: true // TODO remove this
+          //disabled: true // TODO remove this
         })
       }
     }
@@ -310,12 +310,13 @@
 
       const $float = $('.js-float')
       const $header = $('.header')
+      const plusPixels = $header.offset().top
 
       let previousPosition = 0
       $page.scroll((e) => {
         const headerTopPosition = $header.offset().top
         const currentPosition = e.currentTarget.scrollTop
-        if (currentPosition > headerTopPosition) {
+        if (currentPosition > headerTopPosition + plusPixels) {
           if (previousPosition > currentPosition) {
             if (previousPosition - currentPosition > DIFF_MORE + headerTopPosition) {
               $float.removeClass(SCROLL_BOTTOM)

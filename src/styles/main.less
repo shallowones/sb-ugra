@@ -922,6 +922,59 @@ img {
   }
 }
 
+.links {
+  width: 100%;
+  height: 46px;
+  background-color: #fff;
+
+  &-wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & > .link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      font-size: 16px;
+      transition: background-color .3s, color .3s;
+
+      &:before {
+        content: '';
+        display: inline-block;
+        vertical-align: top;
+        width: 60px;
+        height: 100%;
+        background: no-repeat center;
+        background-size: 40px;
+      }
+
+      &.ciss {
+
+        &:before {
+          background-image: url('../images/ciss-1.png');
+        }
+      }
+
+      &.business {
+
+        &:before {
+          background-image: url('../images/business.svg');
+        }
+      }
+
+      &:hover {
+        background-color: #f1f1f1;
+      }
+    }
+  }
+}
+
 .col {
 
   &-3 {
@@ -1181,6 +1234,11 @@ img {
     width: 100%;
     height: 100%;
     background-color: rgba(11, 24, 79, .5);
+  }
+
+  &.big {
+    width: ~"calc(100% - 4rem)";
+    padding-right: 1.5rem;
   }
 
   @media @plan {
