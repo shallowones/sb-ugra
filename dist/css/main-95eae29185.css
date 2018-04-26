@@ -1570,6 +1570,9 @@ img {
   font-size: 14px;
   font-weight: 500;
 }
+.header-bottom-right > div {
+  height: 100%;
+}
 .header-bottom:after {
   content: '';
   position: absolute;
