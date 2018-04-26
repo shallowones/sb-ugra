@@ -973,11 +973,32 @@ img {
       &:hover {
         background-color: #f1f1f1;
       }
+
+      @media @plan-mini {
+        //height: 50px;
+      }
     }
+
+    @media @plan-mini {
+      //display: block;
+    }
+  }
+
+  @media @plan {
+    //height: 60px;
+    display: none;
+  }
+
+  @media @plan-mini {
+    //height: auto;
   }
 }
 
 .col {
+
+  &-4 {
+    width: 25%;
+  }
 
   &-3 {
     width: 33.333%;
@@ -1197,11 +1218,11 @@ img {
 }
 
 .competition {
+  max-width: 100%;
   width: 354px;
-  height: 196px;
   margin: 0 auto;
   position: relative;
-  padding: 1.5rem 50% 1.5rem 1.5rem;
+  padding: 1.5rem;
   font-family: 'Circe', sans-serif;
   font-weight: bold;
   color: #fff;
@@ -1209,7 +1230,6 @@ img {
   background-size: cover;
   border-radius: 4px;
   overflow: hidden;
-  max-width: 100%;
 
   & > span {
     position: relative;
@@ -1228,6 +1248,12 @@ img {
     }
   }
 
+  & > .button {
+    font-size: 14px;
+    padding-top: 6px;
+    padding-bottom: 4px;
+  }
+
   &:before {
     content: '';
     position: absolute;
@@ -1240,7 +1266,7 @@ img {
 
   &.big {
     width: ~"calc(100% - 4rem)";
-    padding-right: 1.5rem;
+    height: 196px;
   }
 
   @media @plan {
@@ -2937,6 +2963,14 @@ a.main-news__item {
       height: 4px;
       background-color: #40b550;
       border-radius: 100%;
+    }
+
+    & > a {
+      transition: color .3s;
+
+      &:hover {
+        color: #40b550;
+      }
     }
   }
 }

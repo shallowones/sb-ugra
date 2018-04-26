@@ -99,7 +99,7 @@
       }
     }
 
-    // calendar TODO возможно придется менять при разработке
+    // calendar
     {
       $.datepicker.regional['ru'] = {
         closeText: 'Закрыть',
