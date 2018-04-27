@@ -3754,6 +3754,11 @@ a.breadcrumbs__item {
     }
   }
 
+  & .partners-block {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
   @media @plan {
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -5130,6 +5135,21 @@ a.breadcrumbs__item {
         margin-bottom: 1rem;
       }
     }
+
+    &.small {
+
+      & .gallery-item {
+        height: 600px;
+
+        @media @plan-mini {
+          height: 400px;
+        }
+
+        @media @mobile {
+          height: 300px;
+        }
+      }
+    }
   }
 }
 
@@ -6171,4 +6191,130 @@ div.jfilestyle {
       top: 42px;
     }
   }
+}
+
+.support {
+
+  &-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    @media @plan-mini {
+      display: block;
+    }
+  }
+
+  &-left {
+
+    @media @plan-mini {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &-line {
+    display: flex;
+    margin-bottom: 1rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &-title {
+    width: 14rem;
+    font-weight: 500;
+    padding-right: 1rem;
+  }
+
+  &-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media @plan-mini {
+      display: block;
+      text-align: right;
+    }
+  }
+
+  &-video {
+    max-width: 100%;
+    width: 654px;
+    height: 354px;
+    border: 2px solid #1b39ba;
+    border-radius: 4px;
+    overflow: hidden;
+
+    &-block {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 2rem 0;
+      margin-bottom: 2rem;
+
+      @media @plan-mini {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+
+    & > iframe {
+      width: 100%;
+      height: 100%;
+    }
+
+    @media @plan-mini {
+      margin-bottom: 2rem;
+    }
+
+    @media @mobile {
+      height: 300px;
+    }
+  }
+
+  &-logo {
+    width: 200px;
+    height: 200px;
+    background: no-repeat center;
+    background-size: cover;
+
+    @media @plan-mini {
+      margin: 0 auto;
+    }
+  }
+
+  &-benefits {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem 2rem;
+
+    &__item {
+      width: ~"calc(50% - 4rem)";
+      display: flex;
+      align-items: center;
+      padding: 2rem;
+      border: 1px solid #dde1e5;
+      border-radius: 4px;
+      margin-bottom: 2rem;
+
+      @media @plan-mini {
+        width: 100%;
+        padding: 1.5rem;
+      }
+    }
+
+    @media @plan-mini {
+      display: block;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+.big-text {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
 }
