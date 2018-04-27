@@ -1,22 +1,18 @@
 .mobile
-  nav.menu
-    ul
-      li
-        button(type="button", data-target="#menu-1").active О фонде
-      li
-        button(type="button", data-target="#menu-2") Поддержка
-      li
-        button(type="button", data-target="#menu-3") Проекты
-      li
-        a(href="#") Календарь
-      li
-        a(href="#") Полезная информация
-      li
-        a(href="#") Объявления
-      li
-        a(href="#") Центр инноваций социальн...
+  .swiper-container.menu.js-mobile-menu
+    .swiper-wrapper
+      button(type="button", data-target="#menu-1").swiper-slide
+        span О фонде
+      button(type="button", data-target="#menu-2").swiper-slide
+        span Поддержка
+      button(type="button", data-target="#menu-3").swiper-slide
+        span Проекты
+      a(href="#").swiper-slide
+        span Календарь
+      button(type="button", data-target="#menu-4").swiper-slide.active
+        span Партнеры
   section.menu-section
-    #menu-1.menu-hidden.active
+    #menu-1.menu-hidden
       .menu-hidden-inner
         .wrapper
           .col-4
@@ -189,3 +185,14 @@
                 .date 02.02.2018
                 .delimiter
                 .green Конкурс
+    #menu-4.menu-hidden.show
+      .menu-hidden-inner
+        .wrapper
+          .col-2
+            .competition.big(style="background-image: url('images/slider-1.png')")
+              span Центр инноваций социальной сферы
+                a(href="#").button Перейти
+          .col-2
+            .competition.big(style="background-image: url('images/slider-1.png')")
+              span Портал малого и среднего предпринимательства Югры
+                a(href="#").button Перейти

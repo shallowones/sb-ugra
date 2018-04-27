@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="js/vendor/fancybox/jquery.fancybox.min.css">
     <link rel="stylesheet" href="js/vendor/jbox/jbox.min.css">
     <link rel="stylesheet" href="js/vendor/simplebar/simplebar.min.css">
-    <link rel="stylesheet" href="css/main-95eae29185.css">
+    <link rel="stylesheet" href="css/main-7ce1d3aef8.css">
   </head>
   <body>
     <div class="page">
@@ -890,25 +890,16 @@
         </div>
       </footer>
       <div class="mobile">
-        <nav class="menu">
-          <ul>
-            <li>
-              <button class="active" type="button" data-target="#menu-1">О фонде</button>
-            </li>
-            <li>
-              <button type="button" data-target="#menu-2">Поддержка</button>
-            </li>
-            <li>
-              <button type="button" data-target="#menu-3">Проекты</button>
-            </li>
-            <li><a href="#">Календарь</a></li>
-            <li><a href="#">Полезная информация</a></li>
-            <li><a href="#">Объявления</a></li>
-            <li><a href="#">Центр инноваций социальн...</a></li>
-          </ul>
-        </nav>
+        <div class="swiper-container menu js-mobile-menu">
+          <div class="swiper-wrapper">
+            <button class="swiper-slide" type="button" data-target="#menu-1"><span>О фонде</span></button>
+            <button class="swiper-slide" type="button" data-target="#menu-2"><span>Поддержка</span></button>
+            <button class="swiper-slide" type="button" data-target="#menu-3"><span>Проекты</span></button><a class="swiper-slide" href="#"><span>Календарь</span></a>
+            <button class="swiper-slide active" type="button" data-target="#menu-4"><span>Партнеры</span></button>
+          </div>
+        </div>
         <section class="menu-section">
-          <div class="menu-hidden active" id="menu-1">
+          <div class="menu-hidden" id="menu-1">
             <div class="menu-hidden-inner">
               <div class="wrapper">
                 <div class="col-4">
@@ -1073,6 +1064,18 @@
               </div>
             </div>
           </div>
+          <div class="menu-hidden show" id="menu-4">
+            <div class="menu-hidden-inner">
+              <div class="wrapper">
+                <div class="col-2">
+                  <div class="competition big" style="background-image: url('images/slider-1.png')"><span>Центр инноваций социальной сферы<a class="button" href="#">Перейти</a></span></div>
+                </div>
+                <div class="col-2">
+                  <div class="competition big" style="background-image: url('images/slider-1.png')"><span>Портал малого и среднего предпринимательства Югры<a class="button" href="#">Перейти</a></span></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
       </div>
     </div>
@@ -1085,6 +1088,6 @@
     <script src="js/vendor/simplebar/simplebar.min.js"></script>
     <script src="js/vendor/jfilestyle/jquery-filestyle.min.js"></script>
     <script src="js/app/jquery-3a318afa79.sumoselect.js"></script>
-    <script src="js/app/main-249038e7ea.js"></script>
+    <script src="js/app/main-84e3ef9c4c.js"></script>
   </body>
 </html>

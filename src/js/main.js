@@ -153,22 +153,43 @@
 
     // mobile
     {
-      // button
-      $('.js-mobile').on('click', () => {
-        $html.toggleClass(MOBILE_OPEN_CLASS)
+      const $sections = $('.menu-section .menu-hidden')
+
+      // slider
+      const mobileMenuSlider = new Swiper('.js-mobile-menu', {
+        slidesPerView: 'auto',
+        on: {
+          init: function () {
+            const $buttons = this.slides
+
+            $buttons.each((index, button) => {
+              const $this = $(button)
+              if ($this.is('button')) {
+                const $target = $($this.data('target'))
+                $this.on('click', () => {
+                  $buttons.removeClass(ACTIVE_CLASS)
+                  $sections.removeClass(SHOW_CLASS)
+                  $this.addClass(ACTIVE_CLASS)
+                  $target.addClass(SHOW_CLASS)
+                })
+              }
+            })
+          }
+        }
       })
 
-      // menu
-      const $menuItem = $('.mobile .menu > ul > li > button')
-      const $menuSection = $('.mobile .menu-section > .menu-hidden')
-      $menuItem.on('click', (e) => {
-        e.preventDefault()
-        const $this = $(e.currentTarget)
-        const $section = $($this.data('target'))
-        $menuItem.removeClass(ACTIVE_CLASS)
-        $this.addClass(ACTIVE_CLASS)
-        $menuSection.removeClass(ACTIVE_CLASS)
-        $section.addClass(ACTIVE_CLASS)
+      // button
+      $('.js-mobile').on('click', () => {
+        const isActive = $html.hasClass(MOBILE_OPEN_CLASS)
+        $html.toggleClass(MOBILE_OPEN_CLASS, !isActive)
+        if (!isActive) {
+          mobileMenuSlider.slides.each((index, button) => {
+            const $this = $(button)
+            if ($this.hasClass(ACTIVE_CLASS)) {
+              mobileMenuSlider.slideTo(index)
+            }
+          })
+        }
       })
 
       $window.resize((e) => {
