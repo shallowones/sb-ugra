@@ -997,6 +997,10 @@ img {
   &-4 {
     width: 25%;
 
+    @media @plan {
+      width: 50%;
+    }
+
     @media @plan-mini {
       width: 100%;
     }
@@ -2996,6 +3000,7 @@ a.main-news__item {
   overflow-x: hidden;
   overflow-y: auto;
   margin-left: -2rem;
+  min-height: 7.25rem;
 
   & .simplebar-content {
     display: flex;
@@ -3141,7 +3146,7 @@ a.main-news__item {
   }
 
   &__item {
-    display: block;
+    //display: block;
     width: 256px;
     border-radius: 4px;
     background-color: #f4f7fb;
@@ -3149,27 +3154,36 @@ a.main-news__item {
     padding: 1rem 1rem 2.5rem 1rem;
     margin: 0 0 2rem 2rem;
 
+    display: flex;
+    flex-direction: column;
+    padding-bottom: .5rem;
+
+
     &-title {
       font-family: 'Circe', sans-serif;
       font-weight: bold;
       font-size: 14px;
       line-height: 20px;
-      margin-bottom: .5rem;
       transition: color .3s;
+
+      margin-bottom: 1rem;
     }
 
     &-bottom {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      padding: 0 1rem;
+      //position: absolute;
+      //left: 0;
+      //bottom: 0;
+      //padding: .5rem 1rem;
       width: 100%;
-      height: 2.5rem;
+      //height: 2.5rem;
       overflow: hidden;
       font-size: 14px;
       line-height: 14px;
       display: flex;
       align-items: center;
+      flex-wrap: wrap;
+
+      margin-top: auto;
 
       & > .date {
         color: #97a4b1;
@@ -6310,4 +6324,11 @@ div.jfilestyle {
 .big-text {
   font-size: 1.25rem;
   line-height: 1.5rem;
+}
+
+.bx-panel {
+
+  @media @plan {
+    display: none;
+  }
 }

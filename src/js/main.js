@@ -11,6 +11,8 @@
 
     const OK_CLASS = 'ok'
 
+    const WAIT_CLASS = 'wait'
+
     const PLAN_WIDTH = 1024
 
     const $html = $('html')
@@ -308,6 +310,38 @@
             }
           )
         }
+      })
+
+      $document.on('click', '.js-project-filter', (e) => {
+        const $this = $(e.currentTarget)
+        const $projects = $this.parent().parent().parent().find('.js-projects')
+        const $projectBlocks = $this.parent().parent().find('.js-project-block')
+        const url = $projects.parent().find('input[name=projectsAjaxFolder]').val()
+        const data = {}
+
+        $this.parent().find('button.' + ACTIVE_CLASS).removeClass(ACTIVE_CLASS)
+        $this.addClass(ACTIVE_CLASS)
+
+        $projectBlocks.each((index, el) => {
+          const $el = $(el)
+          const propertyCode = $el.data('property-code')
+          data[propertyCode] = $el.find('button.' + ACTIVE_CLASS).val() || ''
+        })
+
+        const $simpleBarContent = $projects.find('.simplebar-content')
+        const $area = ($simpleBarContent.length)
+          ? $simpleBarContent
+          : $projects
+
+        $projects.addClass(WAIT_CLASS)
+        $.ajax({
+          url,
+          data,
+          success: (html) => {
+            $area.html(html)
+            $projects.removeClass(WAIT_CLASS)
+          }
+        })
       })
     }
 
