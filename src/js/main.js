@@ -330,12 +330,12 @@
       const DIFF_MORE = 200
 
       const $float = $('.js-float')
-      const $header = $('.header')
-      const plusPixels = $header.offset().top
+      const $headerBack = $('.header-back')
+      const plusPixels = $headerBack.offset().top
 
       let previousPosition = 0
       $page.scroll((e) => {
-        const headerTopPosition = $header.offset().top
+        const headerTopPosition = $headerBack.offset().top
         const currentPosition = e.currentTarget.scrollTop
         if (currentPosition > headerTopPosition + plusPixels) {
           if (previousPosition > currentPosition) {
