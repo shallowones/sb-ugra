@@ -3604,13 +3604,11 @@ a.main-news__item:hover:before {
   max-height: 62vh;
   overflow-x: hidden;
   overflow-y: auto;
-  margin-left: -1rem;
+  margin-left: -2rem;
 }
 .projects .simplebar-content {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -3753,12 +3751,11 @@ a.main-news__item:hover:before {
 .projects__item {
   display: block;
   width: 256px;
-  margin-bottom: 2rem;
   border-radius: 4px;
   background-color: #f4f7fb;
   position: relative;
   padding: 1rem 1rem 2.5rem 1rem;
-  margin-left: 1rem;
+  margin: 0 0 2rem 2rem;
 }
 .projects__item-title {
   font-family: 'Circe', sans-serif;
@@ -3793,6 +3790,7 @@ a.main-news__item:hover:before {
   .projects__item {
     width: calc(33.333% - 1rem);
     margin-bottom: 1rem;
+    margin-left: 0;
   }
 }
 @media (max-width: 768px) {
@@ -5831,6 +5829,7 @@ a.pag__item:hover {
       justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-left: 0;
 }
 .animation {
   opacity: 0;

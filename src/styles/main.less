@@ -2995,13 +2995,11 @@ a.main-news__item {
   max-height: 62vh;
   overflow-x: hidden;
   overflow-y: auto;
-  margin-left: -1rem;
+  margin-left: -2rem;
 
   & .simplebar-content {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
-
   }
 
   &-filter {
@@ -3145,12 +3143,11 @@ a.main-news__item {
   &__item {
     display: block;
     width: 256px;
-    margin-bottom: 2rem;
     border-radius: 4px;
     background-color: #f4f7fb;
     position: relative;
     padding: 1rem 1rem 2.5rem 1rem;
-    margin-left: 1rem;
+    margin: 0 0 2rem 2rem;
 
     &-title {
       font-family: 'Circe', sans-serif;
@@ -3189,6 +3186,7 @@ a.main-news__item {
     @media @plan {
       width: ~"calc(33.333% - 1rem)";
       margin-bottom: 1rem;
+      margin-left: 0;
     }
 
     @media @plan-mini {
@@ -5450,6 +5448,7 @@ a.pag__item {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-left: 0;
   }
 }
 
