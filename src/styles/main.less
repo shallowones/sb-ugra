@@ -2712,10 +2712,12 @@ a.main-news__item {
           width: 50%;
           display: inline-block;
           vertical-align: top;
+          padding-right: 1rem;
         }
 
         @media @plan-mini {
           width: 100%;
+          padding-right: 0;
         }
       }
 
@@ -3649,6 +3651,7 @@ a.breadcrumbs__item {
   }
 
   & p {
+    margin-bottom: 2rem;
 
     & a {
       color: #1b39ba;
@@ -3657,6 +3660,10 @@ a.breadcrumbs__item {
       &:hover {
         color: #40b550;
       }
+    }
+
+    @media @plan {
+      margin-bottom: 1rem;
     }
   }
 

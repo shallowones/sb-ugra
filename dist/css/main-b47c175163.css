@@ -3327,11 +3327,13 @@ a.main-news__item:hover:before {
     width: 50%;
     display: inline-block;
     vertical-align: top;
+    padding-right: 1rem;
   }
 }
 @media (max-width: 768px) {
   .footer-menu-col > .col {
     width: 100%;
+    padding-right: 0;
   }
 }
 @media (max-width: 1200px) {
@@ -4190,12 +4192,20 @@ a.breadcrumbs__item:after {
     padding-bottom: 0;
   }
 }
+.detail p {
+  margin-bottom: 2rem;
+}
 .detail p a {
   color: #1b39ba;
   transition: color .3s;
 }
 .detail p a:hover {
   color: #40b550;
+}
+@media (max-width: 1024px) {
+  .detail p {
+    margin-bottom: 1rem;
+  }
 }
 .detail ol,
 .detail ul {
