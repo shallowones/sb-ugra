@@ -1737,6 +1737,10 @@ img {
   -ms-flex-pack: justify;
       justify-content: space-between;
 }
+.align-center {
+  -ms-flex-align: center;
+      align-items: center;
+}
 .menu {
   height: 100%;
   margin-right: 1rem;
@@ -4202,6 +4206,9 @@ a.breadcrumbs__item:after {
 .detail p a:hover {
   color: #40b550;
 }
+.detail p.no-mar {
+  margin-bottom: 0;
+}
 @media (max-width: 1024px) {
   .detail p {
     margin-bottom: 1rem;
@@ -4528,6 +4535,39 @@ a.breadcrumbs__item:after {
   .gray-block .file {
     width: 100%;
     margin-right: 0;
+  }
+}
+.gray-block.flex {
+  -ms-flex-align: center;
+      align-items: center;
+}
+@media (max-width: 768px) {
+  .gray-block.flex > .left {
+    margin-bottom: 1rem;
+  }
+}
+.gray-block.flex > .right {
+  margin-left: auto;
+}
+@media (max-width: 768px) {
+  .gray-block.flex > .right {
+    margin-left: 0;
+  }
+}
+@media (max-width: 1024px) {
+  .gray-block.flex {
+    padding-bottom: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .gray-block.flex {
+    display: block;
+    text-align: center;
+  }
+}
+@media (max-width: 480px) {
+  .gray-block.flex {
+    padding-bottom: 1rem;
   }
 }
 @media (max-width: 1024px) {
@@ -5372,6 +5412,10 @@ a.breadcrumbs__item:after {
 .accordion-hidden {
   display: none;
   padding: 0 5.5rem 2rem 2rem;
+}
+.accordion-hidden > p:last-child,
+.accordion-hidden > .table:last-child {
+  margin-bottom: 0;
 }
 @media (max-width: 768px) {
   .accordion-hidden {
