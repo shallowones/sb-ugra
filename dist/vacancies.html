@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="js/vendor/fancybox/jquery.fancybox.min.css">
     <link rel="stylesheet" href="js/vendor/jbox/jbox.min.css">
     <link rel="stylesheet" href="js/vendor/simplebar/simplebar.min.css">
-    <link rel="stylesheet" href="css/main-74ea58d488.css">
+    <link rel="stylesheet" href="css/main-e55f6b98d7.css">
   </head>
   <body>
     <div class="page">
@@ -391,11 +391,15 @@
                     <input class="form-control__check" type="checkbox" id="vac-radio-1">
                     <label class="form-control__label" for="vac-radio-1">Я согласен на обработку персональных данных<span class="req">*</span></label>
                   </div>
-                  <div class="form-control min-mar">
-                    <div class="text-right gray small"><span class="req">*</span><i>– поля, обязательные для заполнения</i></div>
-                  </div>
-                  <div class="form-control bottom mar-0"><img src="images/recaptcha-demo.gif" width="308" height="82">
-                    <button class="button big blue" type="submit">Отправить</button>
+                  <div class="form-control bottom small-mar">
+                    <!--img(src="images/recaptcha-demo.gif", width="308", height="82")-->
+                    <div class="captcha"><img src="images/captcha-bitrix.jpg" width="180" height="40">
+                      <input class="form-control__input" type="text" placeholder="Введите код">
+                    </div>
+                    <div class="text-right">
+                      <div class="form-desc"><span class="req">*</span><i>– поля, обязательные для заполнения</i></div>
+                      <button class="button big blue" type="submit">Отправить</button>
+                    </div>
                   </div>
                   <div class="form-success">Спасибо, Ваше резюме принято в обработку.</div>
                 </form>

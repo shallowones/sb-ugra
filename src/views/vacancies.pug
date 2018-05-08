@@ -62,13 +62,16 @@ block content
                 input(type="checkbox")#vac-radio-1.form-control__check
                 label(for="vac-radio-1").form-control__label Я согласен на обработку персональных данных
                   span.req *
-              .form-control.min-mar
-                .text-right.gray.small
-                  span.req *
-                  i – поля, обязательные для заполнения
-              .form-control.bottom.mar-0
-                img(src="images/recaptcha-demo.gif", width="308", height="82")
-                button(type="submit").button.big.blue Отправить
+              .form-control.bottom.small-mar
+                //img(src="images/recaptcha-demo.gif", width="308", height="82")
+                .captcha
+                  img(src="images/captcha-bitrix.jpg", width="180", height="40")
+                  input(type="text", placeholder="Введите код").form-control__input
+                .text-right
+                  .form-desc
+                    span.req *
+                    i – поля, обязательные для заполнения
+                  button(type="submit").button.big.blue Отправить
               .form-success Спасибо, Ваше резюме принято в обработку.
 
       .vacancies
