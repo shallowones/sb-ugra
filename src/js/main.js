@@ -261,10 +261,15 @@
 
           // rerender captcha
           const gCaptcha = window.grecaptcha
-          const $captcha = this.content.find('.g-recaptcha')
-          if (is($captcha) && typeof gCaptcha !== 'undefined' && gCaptcha.hasOwnProperty('render')) {
-            $captcha.html('')
-            gCaptcha.render($captcha[0])
+          const $reCaptcha = this.content.find('.g-recaptcha')
+          if (is($reCaptcha) && typeof gCaptcha !== 'undefined' && gCaptcha.hasOwnProperty('render')) {
+            $reCaptcha.html('')
+            gCaptcha.render($reCaptcha[0])
+            $reCaptcha.removeAttr('style')
+          }
+          const $bxCaptcha = this.content.find('.captcha')
+          if (is($bxCaptcha)) {
+            $bxCaptcha.removeAttr('style')
           }
         },
 
