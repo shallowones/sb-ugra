@@ -13,6 +13,12 @@
 
     const WAIT_CLASS = 'wait'
 
+    const GO_CLASS = 'go'
+
+    const UP_CLASS = 'up'
+
+    const END_CLASS = 'end'
+
     const PLAN_WIDTH = 1024
 
     const $html = $('html')
@@ -433,6 +439,61 @@
           $this.toggleClass('selected', isSelected)
         })
       })
+    }
+
+    // инициализация слайдера на главной
+    {
+      const slider = new Swiper('.js-main-slider', {
+        init: false,
+        slidesPerView: 'auto',
+        navigation: {
+          nextEl: '.js-next',
+          prevEl: '.js-prev'
+        },
+        effect: 'fade',
+        speed: 500,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false
+        },
+        simulateTouch: false,
+        breakpoints: {
+          1024: {
+            simulateTouch: true
+          }
+        },
+        on: {
+          init: function () {
+            const {realIndex} = this
+            this.$timers = this.$el.find('.js-timer')
+            const $currentSlide = $(this.slides[realIndex])
+            const $currentTimer = $(this.$timers[realIndex])
+            $currentTimer.addClass(GO_CLASS)
+            $currentSlide.addClass(UP_CLASS)
+          },
+          slideChangeTransitionStart: function () {
+            const {$timers, previousIndex} = this
+            const $previousSlide = $(this.slides[previousIndex])
+            const $prevTimer = $($timers[previousIndex])
+            $prevTimer.addClass(END_CLASS)
+            $previousSlide.removeClass(UP_CLASS)
+          },
+          slideChangeTransitionEnd: function () {
+            const {$timers, realIndex, previousIndex} = this
+            const $currentSlide = $(this.slides[realIndex])
+            const $currentTimer = $($timers[realIndex])
+            const $previousSlide = $(this.slides[previousIndex])
+            const $prevTimer = $($timers[previousIndex])
+            $prevTimer.removeClass(GO_CLASS + ' ' + END_CLASS)
+            $currentTimer.addClass(GO_CLASS)
+            $previousSlide.removeClass(UP_CLASS)
+            $currentSlide.addClass(UP_CLASS)
+          }
+        }
+      })
+      window.exports = {
+        mainSlider: slider
+      }
     }
 
   })

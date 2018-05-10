@@ -1,0 +1,1 @@
+"use strict";!function(i,n){i(function(){n.exports.mainSlider.init()})}(jQuery,window);

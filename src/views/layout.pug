@@ -46,6 +46,7 @@ html(lang="ru")
       meta(name=item.name, content=item.content)
     each item in css
       link(rel="stylesheet", href=item)
+    block css
 
   body
     block loader

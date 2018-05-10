@@ -77,7 +77,7 @@ const styles = () => {
       : packageJson.browserslist[DEV]
   })
 
-  return gulp.src('./src/styles/main.less')
+  gulp.src('./src/styles/main.less')
     .pipe(plumber(plumberArguments))
     .pipe(less({
       paths: ['node_modules'],
@@ -85,6 +85,16 @@ const styles = () => {
     }))
     .pipe(addSrc.prepend('./node_modules/normalize.css/normalize.css'))
     .pipe(concat('main.css'))
+    .pipe(gulpIf(isProduction, rev()))
+    .pipe(gulp.dest(`./${folder}/css`))
+    .pipe(gulpIf(isProduction, manifest()))
+
+  return gulp.src('./src/styles/animation.less')
+    .pipe(plumber(plumberArguments))
+    .pipe(less({
+      paths: ['node_modules'],
+      plugins: [autoPrefixPlugin]
+    }))
     .pipe(gulpIf(isProduction, rev()))
     .pipe(gulp.dest(`./${folder}/css`))
     .pipe(gulpIf(isProduction, manifest()))

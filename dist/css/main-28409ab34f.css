@@ -5900,58 +5900,6 @@ a.pag__item:hover {
       flex-wrap: wrap;
   margin-left: 0;
 }
-.animation {
-  opacity: 0;
-  transform: translateY(100px);
-}
-.loader {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #fff;
-  z-index: 100;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: center;
-      justify-content: center;
-}
-.loader__img {
-  width: 316px;
-  height: 75px;
-  background: url(../images/logo.svg) no-repeat center;
-  background-size: 276px;
-  animation: fadein .5s linear;
-}
-.loader__img:before {
-  content: '';
-  position: absolute;
-  left: calc(50% - 158px);
-  top: calc(50% - 36px);
-  width: 74px;
-  height: 74px;
-  background: url('../images/shape.svg') no-repeat center;
-  background-size: 100%;
-  animation: loader 1.25s infinite .5s ease;
-}
-@media (max-width: 480px) {
-  .loader__img:before {
-    left: calc(50% - 122px);
-    top: calc(50% - 33px);
-    width: 66px;
-    height: 66px;
-  }
-}
-@media (max-width: 480px) {
-  .loader__img {
-    background-size: 250px;
-    width: 290px;
-    background-position-x: right;
-  }
-}
 .simplebar-track {
   width: 4px;
   background-color: rgba(27, 57, 186, 0.1);
