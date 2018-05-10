@@ -77,7 +77,7 @@ const styles = () => {
       : packageJson.browserslist[DEV]
   })
 
-  gulp.src('./src/styles/main.less')
+  return gulp.src('./src/styles/main.less')
     .pipe(plumber(plumberArguments))
     .pipe(less({
       paths: ['node_modules'],
@@ -88,6 +88,14 @@ const styles = () => {
     .pipe(gulpIf(isProduction, rev()))
     .pipe(gulp.dest(`./${folder}/css`))
     .pipe(gulpIf(isProduction, manifest()))
+}
+
+const stylesAnimation = () => {
+  const autoPrefixPlugin = new LessAutoPrefix({
+    browsers: (isProduction)
+      ? packageJson.browserslist[PROD]
+      : packageJson.browserslist[DEV]
+  })
 
   return gulp.src('./src/styles/animation.less')
     .pipe(plumber(plumberArguments))
@@ -193,7 +201,8 @@ const vendorScripts = [
 
 const watch = () => {
   gulp.watch('./src/views/**/*.pug', views)
-  gulp.watch('./src/styles/*.less', styles)
+  gulp.watch('./src/styles/main.less', styles)
+  gulp.watch('./src/styles/animation.less', stylesAnimation)
   gulp.watch('./src/images/**/*.{jpg,jpeg,png,svg,gif}', images)
   gulp.watch('./src/js/*.js', scripts)
 }
@@ -209,7 +218,7 @@ const serve = () => {
 
 gulp.task('default', gulp.series(
   clean,
-  gulp.series(styles, scripts, ...vendorScripts),
+  gulp.series(styles, stylesAnimation, scripts, ...vendorScripts),
   gulp.parallel(views, fonts, images),
   gulpIf(!isProduction, gulp.parallel(serve, watch), (cb) => cb())
 ))

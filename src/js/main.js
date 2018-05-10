@@ -501,5 +501,18 @@
       }
     }
 
+    // presets
+    {
+      $('.js-preset').on('click', (e) => {
+        const $this = $(e.currentTarget)
+        const $target = $($this.data('target'))
+        const $parent = $this.parent().parent()
+        $parent.find('section').attr('hidden', true)
+        $target.removeAttr('hidden')
+        $this.parent().find('.js-preset').removeClass(ACTIVE_CLASS)
+        $this.addClass(ACTIVE_CLASS)
+      })
+    }
+
   })
 })(jQuery, Swiper, jBox, SimpleBar, window)

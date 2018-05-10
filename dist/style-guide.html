@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="js/vendor/fancybox/jquery.fancybox.min.css">
     <link rel="stylesheet" href="js/vendor/jbox/jbox.min.css">
     <link rel="stylesheet" href="js/vendor/simplebar/simplebar.min.css">
-    <link rel="stylesheet" href="css/main-28409ab34f.css">
+    <link rel="stylesheet" href="css/main-779a519479.css">
   </head>
   <body>
     <div class="page">
@@ -357,6 +357,55 @@
             <div class="right">
               <button class="button" type="button">Направить заключение</button>
             </div>
+          </div><br><br>
+          <div class="presets">
+            <div class="presets-controls">
+              <button class="presets__button js-preset active" type="button" data-target="#mentors">Наставники</button>
+              <button class="presets__button js-preset" type="button" data-target="#instructed">Наставляемые</button>
+            </div>
+            <section id="mentors">
+              <div class="news-item"><a class="news-item__img" href="#" style="background-image: url('images/presets-1.jpg')"></a>
+                <div class="news-item-right">
+                  <div class="news-item__name">Макар Копылов</div>
+                  <p>
+                    Заместитель директора по маркетингу, соучредитель ООО «Юридическое лицо».
+                    Опыт работы – 13 лет. Оказывает помощь в вопросах экономики управления
+                    предприятием, различных аспектов ведения бизнеса, маркетинга, оптимизации
+                    внутренней организации предприятия, ведения переговоров, ценообразования,
+                    менеджмента, технико-экономического анализа и статистики.
+                  </p>
+                </div>
+              </div>
+              <div class="news-item"><a class="news-item__img" href="#" style="background-image: url('images/presets-2.jpg')"></a>
+                <div class="news-item-right">
+                  <div class="news-item__name">Ярослав Савин</div>
+                  <p>
+                    Генеральный директор ООО «НВ-Трейд», 8 лет в бизнесе в сферах: торговля
+                    (розница, опт), строительство (инженерные сети).
+                  </p>
+                </div>
+              </div>
+              <div class="center">
+                <!-- добавить атрибут disabled во время ajax-запроса-->
+                <button class="button blue-text icon-left load" type="button">Загрузить еще</button>
+              </div>
+            </section>
+            <section id="instructed" hidden>
+              <div class="news-item"><a class="news-item__img" href="#" style="background-image: url('images/presets-3.jpg')"></a>
+                <div class="news-item-right">
+                  <div class="news-item__name">Наталья Киосе</div>
+                  <p>
+                    Предприниматель, директор АНО ЦТиК «Веста», учредитель сети логопедических
+                    центров «Речетория», логопед высшей квалификационной категории,
+                    МВА (мастер делового администрирования), кандидат педагогических наук,
+                    эксперт в области системы менеджмента качества.
+                  </p>
+                </div>
+              </div>
+              <div class="center">
+                <button class="button blue-text icon-left load" type="button" disabled>Загрузить еще</button>
+              </div>
+            </section>
           </div><br><br>
           <h3 class="blue">Видеоплеер 1</h3>
           <div class="video-block big">
@@ -1096,6 +1145,6 @@
     <script src="js/vendor/simplebar/simplebar.min.js"></script>
     <script src="js/vendor/jfilestyle/jquery-filestyle.min.js"></script>
     <script src="js/app/jquery-3a318afa79.sumoselect.js"></script>
-    <script src="js/app/main-7dc043e531.js"></script>
+    <script src="js/app/main-1433856275.js"></script>
   </body>
 </html>

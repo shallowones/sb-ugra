@@ -40,6 +40,47 @@ block content
       br
       br
 
+      .presets
+        .presets-controls
+          button(type="button", data-target="#mentors").presets__button.js-preset.active Наставники
+          button(type="button", data-target="#instructed").presets__button.js-preset Наставляемые
+        section#mentors
+          .news-item
+            a(href="#", style="background-image: url('images/presets-1.jpg')").news-item__img
+            .news-item-right
+              .news-item__name Макар Копылов
+              p.
+                Заместитель директора по маркетингу, соучредитель ООО «Юридическое лицо».
+                Опыт работы – 13 лет. Оказывает помощь в вопросах экономики управления
+                предприятием, различных аспектов ведения бизнеса, маркетинга, оптимизации
+                внутренней организации предприятия, ведения переговоров, ценообразования,
+                менеджмента, технико-экономического анализа и статистики.
+          .news-item
+            a(href="#", style="background-image: url('images/presets-2.jpg')").news-item__img
+            .news-item-right
+              .news-item__name Ярослав Савин
+              p.
+                Генеральный директор ООО «НВ-Трейд», 8 лет в бизнесе в сферах: торговля
+                (розница, опт), строительство (инженерные сети).
+          .center
+            // добавить атрибут disabled во время ajax-запроса
+            button(type="button").button.blue-text.icon-left.load Загрузить еще
+        section#instructed(hidden)
+          .news-item
+            a(href="#", style="background-image: url('images/presets-3.jpg')").news-item__img
+            .news-item-right
+              .news-item__name Наталья Киосе
+              p.
+                Предприниматель, директор АНО ЦТиК «Веста», учредитель сети логопедических
+                центров «Речетория», логопед высшей квалификационной категории,
+                МВА (мастер делового администрирования), кандидат педагогических наук,
+                эксперт в области системы менеджмента качества.
+          .center
+            button(type="button", disabled).button.blue-text.icon-left.load Загрузить еще
+
+      br
+      br
+
       h3.blue Видеоплеер 1
       .video-block.big
         .video
