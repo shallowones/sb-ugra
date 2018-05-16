@@ -21,6 +21,8 @@
 
     const PLAN_WIDTH = 1024
 
+    const MOBILE_WIDTH = 480
+
     const $html = $('html')
 
     const $document = $(document)
@@ -88,23 +90,6 @@
           }
         }
       })
-
-      const $select = $('.js-select')
-      $select.each((index, el) => {
-        const $this = $(el)
-        $this.selectmenu({
-          placeholder: $this.data('placeholder'),
-          //disabled: true // TODO remove this
-        })
-      })
-
-      // если ест на странице кастомный селект
-      if ($select.length) {
-        // то по скроллу страницы закрываем попап
-        $page.on('scroll', () => {
-          $select.selectmenu('close')
-        })
-      }
     }
 
     // calendar
@@ -117,8 +102,8 @@
         monthNamesShort: ['янв', 'фев', 'мар', 'апр', 'май', 'июн', 'июл', 'авг', 'сен', 'окт', 'ноя', 'дек'],
         dayNamesShort: ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'],
         dayNamesMin: ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'],
-        dateFormat: 'dd/mm/yy',
-        firstDay: 1,
+        dateFormat: 'dd.mm.yy',
+        firstDay: 0,
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''
@@ -129,8 +114,16 @@
       const $calendar = $('.js-calendar')
 
       if ($calendar.length) {
-        $calendar.datepicker({
-          //disabled: true // TODO remove this
+        $calendar.each((index, el) => {
+          const $this = $(el)
+          $this.datepicker().parent().on('click', (e) => {
+            if (e.target.tagName !== 'INPUT') {
+              const command = ($this.datepicker('widget').is(':visible'))
+                ? 'hide'
+                : 'show'
+              $this.datepicker(command)
+            }
+          })
         })
       }
     }
@@ -214,9 +207,10 @@
       })
     }
 
-    // popup + file custom + error input focus
+    // popup + file custom + select custom + error input focus
     {
       const FILE = '.js-file'
+      const SELECT = '.js-select'
 
       const fileCustom = ($el) => {
         const $file = $el.find(FILE)
@@ -230,6 +224,26 @@
         }
       }
       fileCustom($document)
+
+      const selectCustom = ($el) => {
+        const $select = $el.find(SELECT)
+
+        // если есть на странице кастомный селект
+        if (is($select)) {
+          $select.each((index, el) => {
+            const $this = $(el)
+            $this.selectmenu({
+              placeholder: $this.data('placeholder')
+            })
+          })
+
+          // то по скроллу страницы закрываем попап
+          $page.on('scroll', () => {
+            $select.selectmenu('close')
+          })
+        }
+      }
+      selectCustom($document)
 
       const onErrorInputFocus = ($el) => {
         const $input = $el.find('input')
@@ -253,10 +267,12 @@
           const $target = $($source.data('target'))
           const $file = $target.find(FILE)
           is($file) && $file.jfilestyle('destroy')
+          $target.find('.ui-selectmenu-button').remove()
           const html = $target.html()
           $target.html('')
           this.setContent(html)
           fileCustom(this.content)
+          selectCustom(this.content)
           onErrorInputFocus(this.content)
 
           // rerender captcha
@@ -277,7 +293,9 @@
           const $source = this.source
           const $target = $($source.data('target'))
           const $file = this.content.find(FILE)
+          const $select = this.content.find(SELECT)
           is($file) && $file.jfilestyle('destroy')
+          is($select) && $select.selectmenu('destroy')
           this.content.find('.' + OK_CLASS).removeClass(OK_CLASS)
           const html = this.content.html()
           this.setContent('')
@@ -437,12 +455,18 @@
       $('.js-sumo').each((index, el) => {
         const $this = $(el)
         $this.SumoSelect({
-          placeholder: $this.data('placeholder')
+          placeholder: $this.data('placeholder'),
+          floatWidth: MOBILE_WIDTH,
+          locale: ['OK', 'Отмена', 'Выбрать все']
         })
         $this.on('sumo:closing', (e) => {
-          const isSelected = !!e.currentTarget.selectedOptions.length
+          const isSelected = !!e.currentTarget.value
           $this.toggleClass('selected', isSelected)
         })
+        if (el.hasOwnProperty('sumo')) {
+          const ul = el.sumo.ul
+          typeof ul !== 'undefined' && new SimpleBar(ul[0])
+        }
       })
     }
 

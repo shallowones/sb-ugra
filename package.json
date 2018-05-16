@@ -49,7 +49,7 @@
     "jquery.datepicker-selectmenu": "^1.0.0",
     "normalize.css": "^7.0.0",
     "scrollmagic": "^2.0.5",
-    "simplebar": "^2.6.0",
+    "simplebar": "^2.6.1",
     "swiper": "^4.1.6"
   },
   "eslintConfig": {

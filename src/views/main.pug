@@ -241,9 +241,17 @@ block content
             #animation-trigger-9
         .events-right
           #animation-7.animation.events-filter(data-delay="0.8")
-            select(data-placeholder="Город", multiple).select.with-icon.point.js-sumo
-              option(value="1") Москва
+            select(data-placeholder="Город", multiple).select.with-icon.point.js-sumo.selected
+              option(value="1", selected) Москва
               option(value="2") Санкт-Петербург
+              option(value="3") Ханты-Мансийск
+              option(value="3") Ханты-Мансийск
+              option(value="3") Ханты-Мансийск
+              option(value="3") Ханты-Мансийск
+              option(value="3") Ханты-Мансийск
+              option(value="3") Ханты-Мансийск
+              option(value="3") Ханты-Мансийск
+              option(value="3") Ханты-Мансийск
               option(value="3") Ханты-Мансийск
             select(data-placeholder="Тренер", multiple).select.with-icon.person.js-sumo
               option(value="1") Иванов А.С.
@@ -260,8 +268,8 @@ block content
               option(value="3") Вуман
               option(value="4") Конкурс детского творчества "Предпринимательство сегодня"
             .calendar
-              // календарь пока что от jquery ui, при разработке возможна смена
               input(type="text", value="Календарь", readonly).calendar__input.js-calendar
+
           #animation-8.animation.events-right-wrapper(data-delay="1.1")
             .events-list.js-scrollbar
               each item in [0, 1]
