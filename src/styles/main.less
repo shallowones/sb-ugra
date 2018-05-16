@@ -2008,9 +2008,7 @@ a.main-news__item {
 
   &-left {
     width: 276px;
-    background: #4961c8 url('../images/events.jpg') no-repeat center;
-    //background: #4961c8 url('../images/events-2.png') no-repeat center;
-    //background: #4961c8 url('../images/events-3.png') no-repeat center;
+    background: #4961c8 url('../images/events.jpg') no-repeat center right;
     background-size: auto;
     box-shadow: 0 20px 40px 0 rgba(27, 57, 186, 0.2);
     border-radius: 4px 0 0 4px;
@@ -2020,6 +2018,7 @@ a.main-news__item {
       padding-left: 0;
       border-radius: 0;
       box-shadow: none;
+      background-position-x: center;
     }
 
     @media @mobile {
@@ -2405,6 +2404,26 @@ a.main-news__item {
       /*@media @plan {
         padding-top: 2rem;
       }*/
+
+      @media @plan {
+        padding-left: 10px;
+      }
+
+      @media @mobile {
+        padding-left: 6px;
+      }
+    }
+
+    & > span {
+      display: block;
+
+      @media @plan {
+        padding-left: 10px;
+      }
+
+      @media @mobile {
+        padding-left: 6px;
+      }
     }
 
     @media @plan {
