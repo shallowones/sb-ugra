@@ -497,39 +497,46 @@
         setText: function () {
           var O = this;
           O.placeholder = "";
-          /*if (O.is_multi) {
+          var is_placeholder = false;
+
+          if (!O.E.hasClass('full')) {
+            is_placeholder = true;
+            O.placeholder = settings.placeholder
+          } else {
+            if (O.is_multi) {
               sels = O.E.find(':selected').not(':disabled'); //selected options.
 
               for (i = 0; i < sels.length; i++) {
-                  if (i + 1 >= settings.csvDispCount && settings.csvDispCount) {
-                      if (sels.length == O.E.find('option').length && settings.captionFormatAllSelected) {
-                          O.placeholder = settings.captionFormatAllSelected.replace(/\{0\}/g, sels.length)+',';
-                      } else {
-                          O.placeholder = settings.captionFormat.replace(/\{0\}/g, sels.length)+',';
-                      }
-
-                      break;
+                if (i + 1 >= settings.csvDispCount && settings.csvDispCount) {
+                  if (sels.length == O.E.find('option').length && settings.captionFormatAllSelected) {
+                    O.placeholder = settings.captionFormatAllSelected.replace(/\{0\}/g, sels.length)+',';
+                  } else {
+                    O.placeholder = settings.captionFormat.replace(/\{0\}/g, sels.length)+',';
                   }
-                  else O.placeholder += $(sels[i]).text() + ", ";
+
+                  break;
+                }
+                else O.placeholder += $(sels[i]).text() + ", ";
               }
               O.placeholder = O.placeholder.replace(/,([^,]*)$/, '$1'); //remove unexpected "," from last.
-          }
-          else {
+            }
+            else {
               O.placeholder = O.E.find(':selected').not(':disabled').text();
-          }
+            }
 
-          var is_placeholder = false;
+            is_placeholder = false;
 
-          if (!O.placeholder) {
+            if (!O.placeholder) {
 
               is_placeholder = true;
 
               O.placeholder = O.E.attr('placeholder');
               if (!O.placeholder)                  //if placeholder is there then set it
-                  O.placeholder = O.E.find('option:disabled:selected').text();
-          }*/
-          var is_placeholder = true;
-          O.placeholder = settings.placeholder
+                O.placeholder = O.E.find('option:disabled:selected').text();
+            }
+
+            O.placeholder = O.placeholder ? (settings.prefix + ' ' + O.placeholder) : settings.placeholder
+          }
 
           //set display text
           O.caption.html(O.placeholder);

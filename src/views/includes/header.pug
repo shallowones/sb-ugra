@@ -67,10 +67,11 @@ header.header
                       label(for="ask-input-5").form-control__label Тема
                         span.req *
                     .form-control-right
-                      select#ask-input-5.select.js-select
-                        option(value="1") Бизнес образование
-                        option(value="2") Консультация по грантам
-                        option(value="3") Консультация по предоставлению компенсации затрат
+                      select#ask-input-5.select.js-sumo.full
+                        each item in [1, 2, 3, 4, 5]
+                          option(value="1") Бизнес образование
+                          option(value="2") Консультация по грантам
+                          option(value="3") Консультация по предоставлению компенсации затрат
                   .form-control
                     .form-control-left
                       label(for="ask-input-6").form-control__label Текст сообщения

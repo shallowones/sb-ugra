@@ -2712,12 +2712,12 @@ a.main-news__item {
 
 .footer {
   background-color: #3b4256;
-  padding-top: 5rem;
+  padding-top: 2rem;
 
   &-top {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 5rem;
+    padding-bottom: 2rem;
     border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 
     & > .header__logo {
@@ -2745,10 +2745,6 @@ a.main-news__item {
       @media @plan {
         display: none;
       }
-    }
-
-    @media @desktop-mini {
-      padding-bottom: 2rem;
     }
 
     @media @plan {
@@ -2943,7 +2939,7 @@ a.main-news__item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2.75rem 0 3rem;
+    padding: 2rem 0;
     color: #fff;
 
     & > .left {
@@ -2998,11 +2994,6 @@ a.main-news__item {
       }
     }
 
-    @media @desktop-mini {
-      padding-top: 2rem;
-      padding-bottom: 2rem;
-    }
-
     @media @plan {
       font-size: 14px;
       line-height: 20px;
@@ -3014,10 +3005,6 @@ a.main-news__item {
       font-size: inherit;
       line-height: inherit;
     }
-  }
-
-  @media @desktop-mini {
-    padding-top: 3rem;
   }
 
   @media @plan {
@@ -4532,6 +4519,11 @@ a.breadcrumbs__item {
     &.small-mar {
       margin-bottom: .5rem;
       margin-top: .5rem;
+    }
+
+    & .SumoSelect {
+      width: 100%;
+      margin: 0;
     }
 
     @media @mobile {
@@ -6272,6 +6264,7 @@ div.jfilestyle {
 
           &:hover {
             background-color: #eee;
+            cursor: pointer;
           }
 
           &.selected {
@@ -6320,6 +6313,42 @@ div.jfilestyle {
     &.selected + .CaptionCont:after {
       opacity: 1;
     }
+
+    &.full {
+
+      & + .CaptionCont {
+        display: block;
+        width: 100%;
+        height: 3rem;
+        border: 1px solid #dde1e6;
+        border-radius: 4px;
+        padding: 12px 36px 12px 24px;
+
+        &:after {
+          display: none;
+        }
+
+        & > span {
+          padding: 0;
+
+          &:before {
+            display: none;
+          }
+
+          &:after {
+            width: 3rem;
+            height: 3rem;
+            top: 0;
+            background-image: url('../images/svg/pub-blue.svg');
+          }
+        }
+      }
+
+      & ~ .optWrapper {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
+    }
   }
 
   &:hover, &:focus, &.open {
@@ -6340,6 +6369,17 @@ div.jfilestyle {
 
     & > .optWrapper {
       top: 42px;
+    }
+
+    & > .full {
+
+      & + .CaptionCont {
+        border-bottom-left-radius: 0;
+      }
+
+      & ~ .optWrapper {
+        top: ~"calc(3rem - 1px)";
+      }
     }
   }
 }

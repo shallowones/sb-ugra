@@ -210,7 +210,7 @@
     // popup + file custom + select custom + error input focus
     {
       const FILE = '.js-file'
-      const SELECT = '.js-select'
+      const SELECT = '.js-sumo'
 
       const fileCustom = ($el) => {
         const $file = $el.find(FILE)
@@ -232,18 +232,40 @@
         if (is($select)) {
           $select.each((index, el) => {
             const $this = $(el)
-            $this.selectmenu({
-              placeholder: $this.data('placeholder')
+            $this.SumoSelect({
+              placeholder: $this.data('placeholder'),
+              floatWidth: MOBILE_WIDTH,
+              locale: ['OK', 'Отмена', 'Выбрать все']
             })
+            $this.on('sumo:closing', (e) => {
+              const isSelected = !!e.currentTarget.value
+              $this.toggleClass('selected', isSelected)
+            })
+            if (el.hasOwnProperty('sumo')) {
+              const ul = el.sumo.ul
+              is(ul) &&  new SimpleBar(ul[0])
+            }
           })
 
           // то по скроллу страницы закрываем попап
           $page.on('scroll', () => {
-            $select.selectmenu('close')
+            $select.each((index, el) => {
+              if (el.hasOwnProperty('sumo')) {
+                el.sumo.hideOpts()
+              }
+            })
           })
         }
       }
       selectCustom($document)
+
+      const destroySelectCustom = ($select) => {
+        $select.each((index, el) => {
+          if (el.hasOwnProperty('sumo')) {
+            el.sumo.unload()
+          }
+        })
+      }
 
       const onErrorInputFocus = ($el) => {
         const $input = $el.find('input')
@@ -262,12 +284,14 @@
 
       const modal = new jBox('Modal', {
         attach: '.js-popup',
+        isolateScroll: false,
         onOpen: function () {
           const $source = this.source
           const $target = $($source.data('target'))
           const $file = $target.find(FILE)
+          const $select = $target.find(SELECT)
           is($file) && $file.jfilestyle('destroy')
-          $target.find('.ui-selectmenu-button').remove()
+          is($select) && destroySelectCustom($select)
           const html = $target.html()
           $target.html('')
           this.setContent(html)
@@ -295,7 +319,7 @@
           const $file = this.content.find(FILE)
           const $select = this.content.find(SELECT)
           is($file) && $file.jfilestyle('destroy')
-          is($select) && $select.selectmenu('destroy')
+          is($select) && destroySelectCustom($select)
           this.content.find('.' + OK_CLASS).removeClass(OK_CLASS)
           const html = this.content.html()
           this.setContent('')
@@ -446,26 +470,6 @@
               $target.addClass(SHOW_CLASS)
             })
           }
-        }
-      })
-    }
-
-    // sumo select
-    {
-      $('.js-sumo').each((index, el) => {
-        const $this = $(el)
-        $this.SumoSelect({
-          placeholder: $this.data('placeholder'),
-          floatWidth: MOBILE_WIDTH,
-          locale: ['OK', 'Отмена', 'Выбрать все']
-        })
-        $this.on('sumo:closing', (e) => {
-          const isSelected = !!e.currentTarget.value
-          $this.toggleClass('selected', isSelected)
-        })
-        if (el.hasOwnProperty('sumo')) {
-          const ul = el.sumo.ul
-          typeof ul !== 'undefined' && new SimpleBar(ul[0])
         }
       })
     }
