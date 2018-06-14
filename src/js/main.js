@@ -100,10 +100,10 @@
           'сентябрь', 'октябрь', 'ноябрь', 'декабрь'
         ],
         monthNamesShort: ['янв', 'фев', 'мар', 'апр', 'май', 'июн', 'июл', 'авг', 'сен', 'окт', 'ноя', 'дек'],
-        dayNamesShort: ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'],
-        dayNamesMin: ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'],
+        dayNamesShort: ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'],
+        dayNamesMin: ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'],
         dateFormat: 'dd.mm.yy',
-        firstDay: 0,
+        firstDay: 1,
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''
